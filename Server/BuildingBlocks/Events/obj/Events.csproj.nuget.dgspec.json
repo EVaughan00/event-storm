@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj": {}
+  },
+  "projects": {
+    "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj",
+        "projectName": "Events",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[6.2.4, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

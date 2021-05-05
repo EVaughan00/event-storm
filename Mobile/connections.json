@@ -1,0 +1,22 @@
+{
+    "development": {
+        "api": {
+            "Host": "10.1.10.31",
+            "Port": 8000
+        },
+        "identity": {
+            "Host": "192.168.0.19",
+            "Port": 5000
+        }
+    },
+    "production": {
+        "api": {
+            "Host": "127.0.0.1",
+            "Port": 8000
+        },
+        "identity": {
+            "Host": "127.0.0.1",
+            "Port": 5000            
+        }
+    }
+}

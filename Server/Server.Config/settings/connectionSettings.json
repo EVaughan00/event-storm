@@ -1,0 +1,28 @@
+{
+    "MongoDB": {        
+        "Host": "127.0.0.1",
+        "Port": "27017",
+        "Database": "ServerDB",
+        "Username": "",
+        "Password": ""
+    },
+    "EventBus": {
+      "Connection": "rabbitmq://127.0.0.1",
+      "UserName": "guest",
+      "Password": "guest",
+      "Definition": "Server.API.Events",
+      "RetryCount": 5
+    },
+    "ElkStack": {
+      "Logstash": "http://127.0.0.1:8080",
+      "ElasticSearch": "127.0.0.1:9200"
+    },
+    "Services": {             
+        "Server": {
+            "Host": "127.0.0.1",
+            "Http": 8000,
+            "Https": 8000,
+            "Grpc": 8080
+        }
+    }
+}

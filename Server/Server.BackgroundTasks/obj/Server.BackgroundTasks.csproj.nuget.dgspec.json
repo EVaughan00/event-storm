@@ -1,0 +1,540 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/evaughan/Documents/Projects/event-storm/Server/Server.BackgroundTasks/Server.BackgroundTasks.csproj": {}
+  },
+  "projects": {
+    "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj",
+        "projectName": "Events",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[6.2.4, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/SeedWork.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/SeedWork.csproj",
+        "projectName": "SeedWork",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/SeedWork.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj",
+        "projectName": "Utils",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[5.1.4, )"
+            },
+            "Grpc.Core": {
+              "target": "Package",
+              "version": "[2.28.1, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.28.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/evaughan/Documents/Projects/event-storm/Server/Server.BackgroundTasks/Server.BackgroundTasks.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/Server.BackgroundTasks/Server.BackgroundTasks.csproj",
+        "projectName": "Server.BackgroundTasks",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.BackgroundTasks/Server.BackgroundTasks.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.BackgroundTasks/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/SeedWork.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/SeedWork.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/Server.Domain/Server.Domain.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Domain/Server.Domain.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/Server.Infrastructure/Server.Infrastructure.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Infrastructure/Server.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AspNetCore.HealthChecks.Rabbitmq": {
+              "target": "Package",
+              "version": "[3.0.3, )"
+            },
+            "Autofac": {
+              "target": "Package",
+              "version": "[5.1.4, )"
+            },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[6.2.4, )"
+            },
+            "MassTransit.RabbitMq": {
+              "target": "Package",
+              "version": "[6.2.4, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.HealthChecks": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[2.1.3, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.1.1-dev-00216, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[4.0.0-dev-00834, )"
+            },
+            "Serilog.Sinks.Http": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[4.1.0-dev-00166, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj",
+        "projectName": "Server.Config",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/evaughan/Documents/Projects/event-storm/Server/Server.Domain/Server.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Domain/Server.Domain.csproj",
+        "projectName": "Server.Domain",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Domain/Server.Domain.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/SeedWork.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/SeedWork.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/evaughan/Documents/Projects/event-storm/Server/Server.Infrastructure/Server.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Infrastructure/Server.Infrastructure.csproj",
+        "projectName": "Server.Infrastructure",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Infrastructure/Server.Infrastructure.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Events/Events.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/SeedWork.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/SeedWork.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj"
+              },
+              "/home/evaughan/Documents/Projects/event-storm/Server/Server.Domain/Server.Domain.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Domain/Server.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

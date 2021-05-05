@@ -1,0 +1,9 @@
+/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/bin/Debug/netstandard2.1/Utils.deps.json
+/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/bin/Debug/netstandard2.1/Utils.dll
+/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/bin/Debug/netstandard2.1/Utils.pdb
+/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/obj/Debug/netstandard2.1/Utils.csprojAssemblyReference.cache
+/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/obj/Debug/netstandard2.1/Utils.AssemblyInfoInputs.cache
+/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/obj/Debug/netstandard2.1/Utils.AssemblyInfo.cs
+/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/obj/Debug/netstandard2.1/Utils.csproj.CoreCompileInputs.cache
+/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/obj/Debug/netstandard2.1/Utils.dll
+/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/obj/Debug/netstandard2.1/Utils.pdb

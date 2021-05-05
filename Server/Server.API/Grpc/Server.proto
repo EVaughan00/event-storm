@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+package ServerGrpcApi;
+
+service ServerGrpc {
+    rpc AddServer(ServerMessage) returns (ServerActionResponse) {}
+}
+
+message ServerMessage {
+    string Reference = 1;
+}   
+
+message ServerActionResponse {
+    bool Success = 1;
+}

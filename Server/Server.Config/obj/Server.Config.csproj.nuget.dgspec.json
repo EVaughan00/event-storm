@@ -1,0 +1,134 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj": {}
+  },
+  "projects": {
+    "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj",
+        "projectName": "Utils",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[5.1.4, )"
+            },
+            "Grpc.Core": {
+              "target": "Package",
+              "version": "[2.28.1, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.28.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj",
+        "projectName": "Server.Config",
+        "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/Server.Config.csproj",
+        "packagesPath": "/home/evaughan/.nuget/packages/",
+        "outputPath": "/home/evaughan/Documents/Projects/event-storm/Server/Server.Config/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/evaughan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj": {
+                "projectPath": "/home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/Utils/Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/evaughan/.dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
