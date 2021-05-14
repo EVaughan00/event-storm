@@ -62,17 +62,16 @@ const Selector: FunctionComponent<SelectorProps> = (props) => {
 
   return (
     <View style={styles.selectorContainer}>
-    <Text
-      style={
-        props.active
-          ? [styles.selector, extraStyles, props.style, styles.activeSelector]
-          : [styles.selector, extraStyles, props.style]
-      }
-      onPress={() => props.onPress(props.index)}
-    >
-      {props.children}
-    </Text>
-    {props.active && <SelectionDivivder/>}
+      <Text
+        style={
+          props.active
+            ? [styles.selector, extraStyles, props.style, styles.activeSelector]
+            : [styles.selector, extraStyles, props.style]
+        }
+        onPress={() => props.onPress(props.index)}
+      >
+        {props.children}
+      </Text>
     </View>
 
   );

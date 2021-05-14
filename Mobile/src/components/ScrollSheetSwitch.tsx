@@ -1,50 +1,34 @@
 import React, { FunctionComponent, useEffect, useRef, useState } from "react";
-import { View, StyleSheet, Dimensions, NativeSyntheticEvent, NativeScrollEvent } from "react-native";
+import {
+  Dimensions,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+  StyleSheet,
+} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import { AppStore } from "../AppStore";
-import { HomeLists } from "../helpers/consts";
-import { SelectableViewModel } from "../models/ViewModel";
-import { BaseStore, IActions, IState } from "../utils/BaseStore";
-import Card from "./Card";
-import { MaterialInput } from "./Form/Material/MaterialInput";
-import ScrollSheet from "./ScrollSheet";
-import { Typography } from "./Typography";
+import Solution from "../models/Solution";
+import { SearchableItem, SearchableScrollSheet } from "./ScrollSheet";
 
 interface Props {
   scrollSheets: string[];
-  justifyContent?: "center" | "space-evenly" | "space-between" | "space-around";
-  currentSheet: number
-  selectSheet: (sheetIndex: number) => void
+  currentSheet: number;
+  selectSheet: (sheetIndex: number) => void;
+  searchable?: boolean;
+  onScroll?: (event: NativeScrollEvent) => void;
+  onScrollBegin?: (event: NativeScrollEvent) => void;
 }
 
 const ScrollSheetSwitch: FunctionComponent<Props> = (props) => {
-  const [searchValue, setSearchValue] = useState("");
   const [manualScroll, setManualScroll] = useState(false);
+  const [syncronizedCollapseOffset, setSyncronizedCollapseOffset] = useState(0);
+
   const scrollView = useRef<ScrollView>(null);
 
-  const dynamicStyles = {
-    container: {
-      justifyContent: props.justifyContent
-        ? props.justifyContent
-        : "space-around",
-    },
-  };
-
-  const mapScrollSheets = (current: number) => {
-    return props.scrollSheets.map((selection: string, index: number) => (
-      <ScrollSheet key={index}>
-        <MaterialInput
-          size={"small"}
-          style={styles.input}
-          value={searchValue}
-          onChangeText={setSearchValue}
-          label={"Search for " + selection + "..."}
-        />
-        <Card item={new SelectableViewModel("example")} onPress={() => {}} />
-        <Card item={new SelectableViewModel("example")} onPress={() => {}} />
-      </ScrollSheet>
-    ));
-  };
+  const solutions: SearchableItem[] = [
+    new Solution("Solution 123"),
+    new Solution("Solution abc"),
+    new Solution("Solution xyz"),
+  ];
 
   useEffect(() => {
     if (scrollView.current !== null && !manualScroll) {
@@ -58,29 +42,49 @@ const ScrollSheetSwitch: FunctionComponent<Props> = (props) => {
   const handleManualScroll = (
     event: NativeSyntheticEvent<NativeScrollEvent>
   ) => {
-      if (manualScroll) {
+    if (manualScroll) {
+      var index = Math.max(
+        Math.floor(
+          event.nativeEvent.contentOffset.x /
+            (Dimensions.get("window").width / 2)
+        ),
+        0
+      );
 
-        var index = Math.max(Math.floor(event.nativeEvent.contentOffset.x/(Dimensions.get("window").width/2)),0)
-
-        if (index != props.currentSheet) {
-          props.selectSheet(index);
-          setManualScroll(false)
-        }
+      if (index != props.currentSheet) {
+        props.selectSheet(index);
+        setManualScroll(false);
       }
+    }
   };
 
+  const mapScrollSheets = (current: number) => {
+    return props.scrollSheets.map((selection: string, index: number) => (
+      <SearchableScrollSheet
+        key={index}
+        items={solutions}
+        searchLabel={"Search for " + selection + "..."}
+        emptySearchResult={"Oops.. couldn't find any"}
+        syncronizedCollapseOffset={syncronizedCollapseOffset}
+        updateSynchronizedCollapseOffset={setSyncronizedCollapseOffset}
+        active={index == current}
+        collapseSize={120}
+        onScroll={props.onScroll}
+        onScrollBegin={props.onScrollBegin}
+      ></SearchableScrollSheet>
+    ));
+  };
 
   return (
     <ScrollView
-      contentContainerStyle={[styles.container, dynamicStyles.container]}
+      contentContainerStyle={styles.container}
       horizontal={true}
+      showsHorizontalScrollIndicator={false}
       snapToOffsets={[0, Dimensions.get("window").width]}
       ref={scrollView}
       onScrollBeginDrag={() => setManualScroll(true)}
       onMomentumScrollEnd={() => setManualScroll(false)}
       onScroll={handleManualScroll}
-      bounces={false}
-      alwaysBounceHorizontal={false}
     >
       {mapScrollSheets(props.currentSheet)}
     </ScrollView>
@@ -89,19 +93,11 @@ const ScrollSheetSwitch: FunctionComponent<Props> = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 220,
     flexDirection: "row",
     justifyContent: "space-around",
     width: 2 * Dimensions.get("window").width,
   },
-  listContainer: {
-  },
-  input: {
-    width: 350,
-    backgroundColor: "#fff",
-    borderRadius: 4,
-    elevation: 10
-  },
+  listContainer: {},
   selector: {
     color: "white",
   },

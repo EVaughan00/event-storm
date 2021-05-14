@@ -5,12 +5,14 @@ import { BaseStore } from "../../utils/BaseStore";
 
 export interface HomeState {
     currentList: HomeLists
-    verticalScrollEvent: NativeScrollEvent
+    verticalScroll: NativeScrollEvent
+    beginVerticalScroll: NativeScrollEvent
 }
 
 export interface HomeActions {
     selectList: (list: HomeLists) => void
-    updateVerticalScrollEvent: (event: NativeScrollEvent) => void
+    updateVerticalScroll: (event: NativeScrollEvent) => void
+    updateBeginVerticalScroll: (event: NativeScrollEvent) => void
 }
 
 export class HomeStore 
@@ -20,7 +22,8 @@ export class HomeStore
     protected prototype = HomeStore.prototype;
     protected initialState = {
         currentList: HomeLists.SOLUTIONS,
-        verticalScrollEvent: {} as NativeScrollEvent
+        verticalScroll: {} as NativeScrollEvent,
+        beginVerticalScroll: {} as NativeScrollEvent,
     }
 
     constructor() {
@@ -29,15 +32,23 @@ export class HomeStore
 
     public selectList(list: HomeLists) {
         this.setState({
+            ...this.state,
             currentList: list,
-            verticalScrollEvent: this.state.verticalScrollEvent
         })
     }
 
-    public updateVerticalScrollEvent(event: NativeScrollEvent) {
+    public updateVerticalScroll(event: NativeScrollEvent) {
         this.setState({
-            currentList: this.state.currentList,
-            verticalScrollEvent: event
+            ...this.state,
+            verticalScroll: event,
+
+        })
+    }
+
+    public updateBeginVerticalScroll(event: NativeScrollEvent) {
+        this.setState({
+            ...this.state,
+            beginVerticalScroll: event,
         })
     }
 }

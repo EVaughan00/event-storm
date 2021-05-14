@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from 'uuid';
-import { CardListableItem } from '../components/CardList';
 import { SelectableViewModel } from './ViewModel';
 import Event from './Event';
 import Metrics from './Metrics';
@@ -80,5 +79,6 @@ export default class Solution extends SelectableViewModel {
     public addTask(task: Task) {
         this._tasks.push(task);
     }
+
 
 }

@@ -8,6 +8,7 @@ import { LargeHeader } from "../../../components/Header";
 import { SelectionSwitch } from "../../../components/SelectionSwitch";
 import { Typography } from "../../../components/Typography";
 import { SvgLightning } from "../../../icons/Lightning";
+import theme from "../../../theme";
 
 export const Selections: string[] = ["solutions", "templates"];
 
@@ -22,27 +23,8 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = (props) => {
 
   const [home] = AppStore.home.use();
 
-  const slowScrollAnimation = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    if (home.verticalScrollEvent.contentOffset != undefined) {
-      Animated.timing(slowScrollAnimation, {
-        toValue: -home.verticalScrollEvent.contentOffset.y*0.3,
-        duration: 1,
-        easing: Easing.linear,
-        useNativeDriver: true,
-      }).start(() => {});
-    }
-    return () => {};
-  }, [home.verticalScrollEvent.contentOffset]);
-
   const dynamicStyles = {
     interactables: {
-      transform: [
-        {
-          translateY: slowScrollAnimation
-        },
-      ],
     }
   };
 
@@ -51,7 +33,8 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = (props) => {
       <Animated.View style={[styles.interactables, dynamicStyles.interactables]}>
         <TopRowContent></TopRowContent>
       </Animated.View>
-      <LargeHeader > 
+      <LargeHeader 
+      > 
       <MiddleRowContent
             title={"Event Storming For The"}
             subTitle={"modern.developer;"}
@@ -95,11 +78,13 @@ const styles = StyleSheet.create({
   interactables: {
     width: "100%",
     position: 'absolute',
-    zIndex: 1
+    zIndex: 1,
+    justifyContent: 'flex-start'
   },
   topContainer: {
     flex: 1,
-    marginTop: StatusBar.currentHeight ? StatusBar.currentHeight + 10 : 0 + 10,
+    marginTop: StatusBar.currentHeight ? StatusBar.currentHeight : 0,
+    height: 70
   },
   middleContainer: {
     flex: 1,

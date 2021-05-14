@@ -1,44 +1,32 @@
 import React, { FunctionComponent, useEffect, useRef } from "react";
-import {
-  Dimensions,
-  NativeScrollEvent,
-  NativeSyntheticEvent,
-  StyleSheet,
-} from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { Animated, Dimensions, Easing, StyleSheet, View } from "react-native";
 import { AppStore } from "../../../AppStore";
 import { ScrollSheetSwitch } from "../../../components/ScrollSheetSwitch";
-import { sleep } from "../../../helpers/sleep";
 import { Selections } from "./Header";
 
 interface Props {}
 
 const HomeBody: FunctionComponent<Props> = (props) => {
+
   const [home, homeActions] = AppStore.home.use();
 
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={style.container}
-      onScroll={({ nativeEvent }) =>
-        homeActions.updateVerticalScrollEvent(nativeEvent)
-      }
-      onMomentumScrollEnd={({ nativeEvent }) =>
-        homeActions.updateVerticalScrollEvent(nativeEvent)
-      }
-    >
+    <View style={[style.container]}>
       <ScrollSheetSwitch
         scrollSheets={Selections}
-        justifyContent={"center"}
         currentSheet={home.currentList}
         selectSheet={homeActions.selectList}
+        onScrollBegin={homeActions.updateBeginVerticalScroll}
+        onScroll={homeActions.updateVerticalScroll}
       />
-    </ScrollView>
+    </View>
   );
 };
 
 const style = StyleSheet.create({
-  container: {},
+  container: {
+    marginTop: 100,
+  },
 });
 
 export { HomeBody };

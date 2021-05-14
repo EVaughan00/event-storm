@@ -2,9 +2,11 @@
 import React, { FC, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { AppNavigation } from '../../../AppNavigation';
+import { FloatingAddButton } from '../../../components/FloatingAddButton';
 import { NavigationProps } from '../../../helpers/NavigationProps';
 import { AuthenticationContext } from '../../../providers/AuthenticationProvider';
 import { HomeBody } from '../components/Body';
+import { HomeFooter } from '../components/Footer';
 import { HomeHeader } from '../components/Header';
 
 export interface HomeScreenProps {
@@ -25,6 +27,7 @@ const HomeScreen: FC<NavigationProps<AppNavigation, "Home">> = props => {
       <SafeAreaView style={styles.safeAreaView}>
         <HomeHeader  />
         <HomeBody />
+        <HomeFooter />
       </SafeAreaView>
     </View>
   );
