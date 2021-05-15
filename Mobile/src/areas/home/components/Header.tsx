@@ -33,8 +33,7 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = (props) => {
       <Animated.View style={[styles.interactables, dynamicStyles.interactables]}>
         <TopRowContent></TopRowContent>
       </Animated.View>
-      <LargeHeader 
-      > 
+      <LargeHeader> 
       <MiddleRowContent
             title={"Event Storming For The"}
             subTitle={"modern.developer;"}

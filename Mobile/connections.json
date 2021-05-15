@@ -1,7 +1,7 @@
 {
     "development": {
         "api": {
-            "Host": "10.1.10.31",
+            "Host": "10.91.156.10",
             "Port": 8000
         },
         "identity": {

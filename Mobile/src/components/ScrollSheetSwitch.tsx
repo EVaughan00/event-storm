@@ -13,6 +13,7 @@ interface Props {
   scrollSheets: string[];
   currentSheet: number;
   selectSheet: (sheetIndex: number) => void;
+  collapseOffset: number;
   searchable?: boolean;
   onScroll?: (event: NativeScrollEvent) => void;
   onScrollBegin?: (event: NativeScrollEvent) => void;
@@ -68,7 +69,7 @@ const ScrollSheetSwitch: FunctionComponent<Props> = (props) => {
         syncronizedCollapseOffset={syncronizedCollapseOffset}
         updateSynchronizedCollapseOffset={setSyncronizedCollapseOffset}
         active={index == current}
-        collapseSize={120}
+        collapseOffset={props.collapseOffset}
         onScroll={props.onScroll}
         onScrollBegin={props.onScrollBegin}
       ></SearchableScrollSheet>

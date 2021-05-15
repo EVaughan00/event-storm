@@ -15,6 +15,7 @@ using Server.Domain;
 namespace Server.API
 {
     using Infrastructure;
+    using Server.Infrastructure;
     using Services;
 
     public class Startup
@@ -41,6 +42,7 @@ namespace Server.API
                 .AddHostedService<LifeTime>()
                 .AddSingleton<EventTracker>()
                 .AddSingleton<IEmailSender, EmailSender>()
+                .AddSingleton<SolutionFactory>()
                 .AddNotifications()
                 .AddCustomAuthentication(Configuration)                
                 .AddCustomMvc();

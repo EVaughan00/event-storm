@@ -15,6 +15,7 @@ const HomeBody: FunctionComponent<Props> = (props) => {
       <ScrollSheetSwitch
         scrollSheets={Selections}
         currentSheet={home.currentList}
+        collapseOffset={120}
         selectSheet={homeActions.selectList}
         onScrollBegin={homeActions.updateBeginVerticalScroll}
         onScroll={homeActions.updateVerticalScroll}

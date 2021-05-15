@@ -18,7 +18,7 @@ namespace Server.API.Controllers
     public class PasswordController : Controller
     {        
         private readonly IUserQueries _userQueries;
-        private readonly ILogger<AccountController> _logger;
+        private readonly ILogger<PasswordController> _logger;
         private readonly IMediator _mediator;
         private readonly IPasswordResetRepository _passwordResets;
         private readonly IEmailSender _emailSender;
@@ -26,7 +26,7 @@ namespace Server.API.Controllers
         public PasswordController(
             IEmailSender emailSender,
             IUserQueries userQueries,
-            ILogger<AccountController> logger, 
+            ILogger<PasswordController> logger, 
             IMediator mediator,
             IPasswordResetRepository passwordResets)
         {

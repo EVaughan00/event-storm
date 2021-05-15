@@ -21,7 +21,7 @@ namespace Server.API.Services {
         public async Task<Response> Execute(string email, string subject, string message) {
             try {
                 var messageBody = new SendGridMessage() {
-                    From = new EmailAddress("donotreply@ceep.nrel.gov", "NREL CEEP Web Tool"),
+                    From = new EmailAddress("donotreply@innovators.com", "Event Storm"),
                     Subject = subject,
                     PlainTextContent = message,
                     HtmlContent = message

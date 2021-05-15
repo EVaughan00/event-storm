@@ -2,6 +2,8 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using BuildingBlocks.SeedWork;
 using System.Net.Mail;
+using System.Collections.Generic;
+using System;
 
 namespace Server.Domain
 {
@@ -19,6 +21,12 @@ namespace Server.Domain
 
         [BsonElement("Password")]
         public Password Password { get; private set; }
+
+        [BsonElement("Solutions")]
+        public List<SolutionReference> Solutions { get; private set;}
+
+        [BsonElement("Templates")]
+        public List<TemplateReference> Templates { get; private set;}
 
         [BsonIgnore]
         public FullName FullName { get; private set; }
@@ -59,6 +67,29 @@ namespace Server.Domain
         {
             if (password != null && Password == null)
                 Password = password;
+        }
+
+        public void AddSolution(Solution solution) {
+
+            if (Solutions.FindIndex(found => found.Value().Equals(solution.Id)) != -1)
+                throw new ServerDomainException("Duplicate solution cannot be added");
+
+            solution.AddOwner(this);
+            
+            Solutions.Add(new SolutionReference(solution.Id));
+        }
+        public void AssignSolution(Solution solution) {
+
+            if (Solutions.FindIndex(found => found.Value().Equals(solution.Id)) != -1)
+                throw new ServerDomainException("Duplicate solution cannot be assigned");
+
+            Solutions.Add(new SolutionReference(solution.Id));
+        }
+        public void AddTemplate(Template template) {
+            if (Templates.FindIndex(found => found.Value().Equals(template.Reference)) != -1)
+                throw new ServerDomainException("Duplicate template cannot be added");
+
+            Templates.Add(new TemplateReference(template.Id));
         }
 
         public bool Equals(User user)

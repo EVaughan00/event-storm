@@ -20,7 +20,7 @@ interface Props {
   updateSynchronizedCollapseOffset: (value: number) => void;
   onScroll?: (event: NativeScrollEvent) => void
   onScrollBegin?: (event: NativeScrollEvent) => void
-  collapseSize: number;
+  collapseOffset: number;
   children?: any;
 }
 
@@ -82,8 +82,8 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
   useEffect(() => {
     if (scrollRef.current != null && !props.active) {
       offset =
-        props.syncronizedCollapseOffset > props.collapseSize
-          ? Math.max(props.collapseSize, scrollOffset)
+        props.syncronizedCollapseOffset > props.collapseOffset
+          ? Math.max(props.collapseOffset, scrollOffset)
           : props.syncronizedCollapseOffset;
       scrollRef.current.scrollTo({
         y: offset,
@@ -99,8 +99,8 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
   }
 
   const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    if (props.onScroll != undefined) {
-      props.onScroll(event.nativeEvent)
+    if (props.onScrollBegin != undefined) {
+      props.onScrollBegin(event.nativeEvent)
     } 
     if (props.active) {
       props.updateSynchronizedCollapseOffset(event.nativeEvent.contentOffset.y);
@@ -110,7 +110,7 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
 
   const dynamicStyle = {
     scrollView: {
-      paddingTop: props.collapseSize ? props.collapseSize : 0,
+      paddingTop: props.collapseOffset ? props.collapseOffset : 0,
     },
   };
 
