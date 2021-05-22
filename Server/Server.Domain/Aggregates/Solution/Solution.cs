@@ -1,4 +1,5 @@
 using BuildingBlocks.SeedWork;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
@@ -7,53 +8,63 @@ namespace Server.Domain
 {
     public class Solution : Entity, IAggregateRoot
     {
-        [BsonElement("Reference")]
-        public Guid Reference { get; private set; }
-
         [BsonElement("Name")]
         public string Name { get; private set; }
 
-        [BsonElement("Owner")]
-        public UserReference Owner { get; private set; }
+        [BsonElement("OwnerId")]
+        public ObjectId OwnerId { get; private set; }
 
         [BsonElement("Description")]
-        public string Description { get; private set; }
+        public SolutionDescription Description { get; private set; }
 
         [BsonElement("TempatedAs")]
-        public List<string> TempatedAs { get; private set; }
+        public List<TemplateId> TempatedAs { get; private set; }
 
         [BsonElement("FromTemplate")]
-        public string FromTemplate { get; private set; }
+        public TemplateId FromTemplateId { get; private set; }
 
-        [BsonElement("EventStorm")]
-        public SolutionAreaReference EventStorm { get; private set; }
+        [BsonElement("Tools")]
+        public Tools Tools { get; private set; }
 
-        [BsonElement("TaskStack")]
-        public SolutionAreaReference TaskStack { get; private set; }
-
-        [BsonElement("ModelRepository")]
-        public SolutionAreaReference ModelRepository { get; private set; }
+        [BsonElement("MetricsId")]
+        public ObjectId MetricsId { get; private set; }
 
         public Solution(string name) {
             Name = name;
-            Reference = Guid.NewGuid();
+        }
+        public void UseTools(Tools tools) {
+            Tools = tools;
         }
 
         public void AddOwner(User user) {
-            if (Owner != null)
+            if (OwnerId != new ObjectId())
                 throw new ServerDomainException("Solution owner already exists");
 
-            Owner = new UserReference(user.Id);
+            OwnerId = user.Id;
         }
 
-        public void AddEventStorm(EventStorm eventStorm) {
-            EventStorm = new SolutionAreaReference(eventStorm.Reference);
+        public void Describe(SolutionDescription description) {
+            Description = description;
         }
-        public void AddTaskStack(TaskStack taskStack) {
-            TaskStack = new SolutionAreaReference(taskStack.Reference);
+
+        public void FromTemplate(Template template)
+        {
+            FromTemplateId = new TemplateId(template.Id);
+
+            Name = template.Name; 
         }
-        public void AddTaskStack(ModelRepository modelRepository) {
-            ModelRepository = new SolutionAreaReference(modelRepository.Reference);
+    }
+
+    public class SolutionId : ValueObject
+    {
+        private ObjectId _value;
+
+        public SolutionId(ObjectId value) {
+            _value = value;
+        }
+        protected override IEnumerable<object> GetAtomicValues()
+        {
+            yield return _value;
         }
     }
 }

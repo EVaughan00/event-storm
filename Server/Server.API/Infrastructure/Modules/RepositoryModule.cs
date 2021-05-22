@@ -28,6 +28,26 @@ namespace Server.API.Infrastructure
                 .As<ISessionRepository>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<SolutionRepository>()
+                .As<ISolutionRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<TemplateRepository>()
+                .As<ITemplateRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<EventStormRepository>()
+                .As<IEventStormRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ModelRepoRepository>()
+                .As<IModelRepoRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<TaskStackRepository>()
+                .As<ITaskStackRepository>()
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<PasswordResetRepository>()
                 .As<IPasswordResetRepository>()
                 .InstancePerLifetimeScope();

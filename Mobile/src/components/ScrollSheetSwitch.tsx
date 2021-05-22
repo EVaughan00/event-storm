@@ -25,6 +25,12 @@ const ScrollSheetSwitch: FunctionComponent<Props> = (props) => {
 
   const scrollView = useRef<ScrollView>(null);
 
+  var snapToScrollOffsets: number[] = []
+
+  props.scrollSheets.forEach((sheet, index) => {
+    snapToScrollOffsets.push(index * Dimensions.get("window").width)
+  });
+
   const solutions: SearchableItem[] = [
     new Solution("Solution 123"),
     new Solution("Solution abc"),
@@ -77,11 +83,12 @@ const ScrollSheetSwitch: FunctionComponent<Props> = (props) => {
   };
 
   return (
+
     <ScrollView
       contentContainerStyle={styles.container}
       horizontal={true}
       showsHorizontalScrollIndicator={false}
-      snapToOffsets={[0, Dimensions.get("window").width]}
+      snapToOffsets={snapToScrollOffsets}
       ref={scrollView}
       onScrollBeginDrag={() => setManualScroll(true)}
       onMomentumScrollEnd={() => setManualScroll(false)}

@@ -42,7 +42,6 @@ namespace Server.API
                 .AddHostedService<LifeTime>()
                 .AddSingleton<EventTracker>()
                 .AddSingleton<IEmailSender, EmailSender>()
-                .AddSingleton<SolutionFactory>()
                 .AddNotifications()
                 .AddCustomAuthentication(Configuration)                
                 .AddCustomMvc();
@@ -52,6 +51,7 @@ namespace Server.API
             container.Populate(services);
             container.RegisterModule(new EventBusModule());
             container.RegisterModule(new RepositoryModule());
+            container.RegisterModule(new ServiceModule());
             container.RegisterModule(new IntegrationEventsModule());
             container.RegisterModule(new MediatorModule());
 

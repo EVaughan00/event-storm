@@ -93,14 +93,14 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
   }, [props.syncronizedCollapseOffset]);
 
   const handleBeginScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    if (props.onScrollBegin != undefined) {
+    if (props.onScrollBegin != undefined && props.active) {
       props.onScrollBegin(event.nativeEvent)
     } 
   }
 
   const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    if (props.onScrollBegin != undefined) {
-      props.onScrollBegin(event.nativeEvent)
+    if (props.onScroll != undefined && props.active) {
+      props.onScroll(event.nativeEvent)
     } 
     if (props.active) {
       props.updateSynchronizedCollapseOffset(event.nativeEvent.contentOffset.y);

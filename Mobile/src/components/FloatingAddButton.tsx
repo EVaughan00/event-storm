@@ -10,6 +10,7 @@ interface Props {
   scrollThreshold?: number;
   beginScroll: NativeScrollPoint;
   activeScroll: NativeScrollPoint;
+  onPress: () => void
 }
 
 const FloatingAddButton: FunctionComponent<Props> = (props) => {
@@ -63,7 +64,7 @@ const FloatingAddButton: FunctionComponent<Props> = (props) => {
 
   return (
     <Animated.View style={[styles.plusButton, dynamicStyle.plusButton]}>
-      <TouchableOpacity style={styles.plusButtonOpacity}>
+      <TouchableOpacity onPress={props.onPress} style={styles.plusButtonOpacity}>
         <Typography.SubTitle level={2} style={styles.plus}>
           +
         </Typography.SubTitle>

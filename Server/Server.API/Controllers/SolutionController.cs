@@ -14,7 +14,6 @@ namespace Server.API.Controllers
     using Models;
     using Commands;
     using Notifications;
-    using Server.API.Application.Models.Solution;
 
     [Route("solutions")]
     [ApiController]
@@ -35,11 +34,11 @@ namespace Server.API.Controllers
         [HttpPut("create")]
         [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         [ProducesResponseType((int) HttpStatusCode.OK)]
-        public async Task<IActionResult> Create(CreateSolution solution)
+        public async Task<IActionResult> Create(SolutionBlueprint blueprint)
         {
             return await this.ApiAction(async () => {        
                 await _mediator.Send(new CreateSolutionCommand { 
-                    Name = solution.Name
+                    SolutionBlueprint = blueprint
                 });
 
                 return Ok();

@@ -1,19 +1,18 @@
 using System;
 using System.Collections.Generic;
 using BuildingBlocks.SeedWork;
-using MongoDB.Bson;
 
 namespace Server.Domain
 {
-    public class SolutionReference : ValueObject
+    public class Percent : ValueObject
     {
-        private ObjectId _value;
-
-        public SolutionReference(ObjectId value) {
-            this._value = value;
+        private double _value;
+        public Percent() {}
+        public Percent(int percent) {
+            _value = percent;
         }
-        public ObjectId Value() {
-            return _value;
+        public Percent(string percent) {
+            _value = Convert.ToDouble(percent);
         }
         protected override IEnumerable<object> GetAtomicValues()
         {
