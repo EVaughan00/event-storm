@@ -8,6 +8,7 @@ using Server.Infrastructure;
 
 namespace Server.API.Commands
 {
+    using System;
     using Models;
 
     public class LoginUserCommand : Command<bool> 
@@ -33,9 +34,16 @@ namespace Server.API.Commands
 
         public override async Task<bool> HandleEvent(LoginUserCommand command, CancellationToken token)
         {
-            var user = await _users.GetByEmail(command.Login.Email);
+            User user = null;
 
-            if (!user.Password.Equals(command.Login.Password)){
+            try {
+                user = await _users.GetByEmail(command.Login.Email);
+            } catch {
+                throw new ApiException().
+                    AddError("password", "That username and / or password are incorrect");
+            }
+
+            if (user != null && !user.Password.Equals(command.Login.Password)){
                 _logger.LogInformation($"Log in failed: Incorrect password");
 
                 throw new ApiException()

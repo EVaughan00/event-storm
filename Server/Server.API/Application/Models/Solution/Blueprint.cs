@@ -18,6 +18,6 @@ namespace Server.API.Models
         [Required(AllowEmptyStrings=true)]
         public string TemplateId { get; set; }
         public SelectedTools SelectedTools {get; set;}
-        public List<CollaboratorDTO> Collaborators { get; set; }
+        public List<ContributorDTO> Contributors { get; set; }
     }
 }

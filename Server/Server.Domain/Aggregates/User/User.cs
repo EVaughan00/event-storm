@@ -22,10 +22,10 @@ namespace Server.Domain
         [BsonElement("Password")]
         public Password Password { get; private set; }
 
-        [BsonElement("Solutions")]
+        [BsonElement("SolutionIds")]
         public List<ObjectId> SolutionIds { get; private set;}
 
-        [BsonElement("Templates")]
+        [BsonElement("TemplateIds")]
         public List<ObjectId> TemplateIds { get; private set;}
 
         [BsonIgnore]
@@ -35,6 +35,9 @@ namespace Server.Domain
         {
             SetName(firstName, lastName);
             Email = new MailAddress(email);
+
+            SolutionIds = new List<ObjectId>();
+            TemplateIds = new List<ObjectId>();
         }
 
         public void SetName(string first, string last)
@@ -68,25 +71,16 @@ namespace Server.Domain
             if (password != null && Password == null)
                 Password = password;
         }
-
         public void AddSolution(Solution solution) {
 
-            if (SolutionIds.FindIndex(id => id.Equals(solution.Id)) != -1)
+            if (SolutionIds.Contains(solution.Id))
                 throw new ServerDomainException("Duplicate solution cannot be added");
-
-            solution.AddOwner(this);
-
-            SolutionIds.Add(solution.Id);
-        }
-        public void AssignSolution(Solution solution) {
-
-            if (SolutionIds.FindIndex(id => id.Equals(solution.Id)) != -1)
-                throw new ServerDomainException("Duplicate solution cannot be assigned");
 
             SolutionIds.Add(solution.Id);
         }
         public void AddTemplate(Template template) {
-            if (TemplateIds.FindIndex(id => id.Equals(template.Id)) != -1)
+
+            if (TemplateIds.Contains(template.Id))
                 throw new ServerDomainException("Duplicate template cannot be added");
 
             TemplateIds.Add(template.Id);
@@ -107,19 +101,6 @@ namespace Server.Domain
             user.SetPassword(Password);
 
             return user;
-        }
-    }
-
-    public class UserId : ValueObject
-    {
-        private ObjectId _value;
-
-        public UserId(ObjectId value) {
-            _value = value;
-        }
-        protected override IEnumerable<object> GetAtomicValues()
-        {
-            yield return _value;
         }
     }
 }

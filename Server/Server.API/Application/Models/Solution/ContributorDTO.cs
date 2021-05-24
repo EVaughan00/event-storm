@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Server.API.Models
 {
-    public class CollaboratorDTO
+    public class ContributorDTO
     {
         [Required(ErrorMessage = "Collaborator name is required")]
         public string Name { get; set; }

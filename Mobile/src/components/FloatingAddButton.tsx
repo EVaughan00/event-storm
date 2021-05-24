@@ -7,6 +7,7 @@ import { Typography } from "./Typography";
 
 interface Props {
   showOnUpdate: any;
+  hide?: boolean;
   scrollThreshold?: number;
   beginScroll: NativeScrollPoint;
   activeScroll: NativeScrollPoint;
@@ -33,7 +34,7 @@ const FloatingAddButton: FunctionComponent<Props> = (props) => {
   }, [showPlusButton]);
 
   useEffect(() => {
-    setShowPlusButton(true)
+      setShowPlusButton(!props.hide)
   }, [props.showOnUpdate]);
 
   useEffect(() => {
@@ -41,7 +42,7 @@ const FloatingAddButton: FunctionComponent<Props> = (props) => {
     initialScrollOffset = props.beginScroll ? props.beginScroll.y : 0
     scrollDelta = activeScrollOffset - initialScrollOffset
 
-    if (scrollDelta < threshold) {
+    if (scrollDelta < threshold && !props.hide) {
       setShowPlusButton(true);
     }
     if (scrollDelta > threshold) {

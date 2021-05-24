@@ -27,18 +27,29 @@ namespace Server.Domain
         public TaskStack TaskStack { get; private set;}  
         public void Add(Tool tool) {
 
-            if (tool is EventStorm) {
-                EventStorm = (EventStorm)tool;
-                EventStormId = tool.Id;
-            }
+            if (tool is EventStorm) 
+                SetEventStorm(tool);
             
-            if (tool is ModelRepository)
-                ModelRepository = (ModelRepository)tool;
-                ModelRepositoryId = tool.Id;
+            if (tool is ModelRepository) 
+                SetModelRepository(tool);
             
-            if (tool is TaskStack)
-                TaskStack = (TaskStack)tool;
-                TaskStackId = tool.Id;
+            if (tool is TaskStack) 
+                SetTaskStack(tool);
+        }
+
+        public void SetEventStorm(Tool tool) {
+            EventStorm = (EventStorm)tool;
+            EventStormId = tool.Id;
+        }
+
+        public void SetModelRepository(Tool tool) {
+            ModelRepository = (ModelRepository)tool;
+            ModelRepositoryId = tool.Id;
+        }
+
+        public void SetTaskStack(Tool tool) {
+            TaskStack = (TaskStack)tool;
+            TaskStackId = tool.Id;
         }
     }
 }

@@ -32,25 +32,36 @@ namespace Server.API.Services
 
         }
 
-        public async Task<Tools> SelectNew(ISelectableTools selected)
+        public async Task<Tools> Select(Tools tools, ISelectableTools selection)
         {
-                var eventStorm = DeveloperToolbox.EventStorm;
-                var modelRepo = DeveloperToolbox.ModelRepository;
-                var taskStack = DeveloperToolbox.TaskStack;
 
-                eventStorm.SetAsActive(selected.EventStorm);
-                modelRepo.SetAsActive(selected.ModelRepository);
-                taskStack.SetAsActive(selected.TaskStack);
+            Tool eventStorm;
+            Tool modelRepository;
+            Tool taskStack;
 
-                Tools tools = new Tools();
+            Tools selected = new Tools();
 
-                tools.Add(eventStorm);
-                tools.Add(taskStack);
-                tools.Add(modelRepo);
+            try {
+                eventStorm = await _eventStorms.GetById(tools.EventStormId.ToString());
+                modelRepository = await _modelRepos.GetById(tools.ModelRepositoryId.ToString());
+                taskStack = await _taskStacks.GetById(tools.TaskStackId.ToString());
+            } catch {
+                eventStorm = tools.EventStorm;
+                modelRepository = tools.ModelRepository;
+                taskStack = tools.TaskStack;
+            }
 
-                await Task.CompletedTask;
+            eventStorm.SetAsActive(selection.EventStorm);
+            modelRepository.SetAsActive(selection.ModelRepository);
+            taskStack.SetAsActive(selection.TaskStack);
 
-                return tools;
+            selected.Add(eventStorm);
+            selected.Add(modelRepository);
+            selected.Add(taskStack);
+
+            await Task.CompletedTask;
+
+            return selected;
         }
     }
 }

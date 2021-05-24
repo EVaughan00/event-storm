@@ -8,6 +8,18 @@ namespace Server.Infrastructure
     public static class DeveloperToolbox
     {
 
+        public static Tools Tools {
+            get {
+                Tools tools = new Tools();
+
+                tools.Add(EventStorm);
+                tools.Add(ModelRepository);
+                tools.Add(TaskStack);
+
+                return tools;
+            }
+        }
+
         public static Tool EventStorm {
             get {
                 var eventStorm = new EventStorm();

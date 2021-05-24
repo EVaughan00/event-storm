@@ -5,7 +5,7 @@ namespace Server.API.Services
 {
     public interface IToolboxService
     {
-        Task<Tools> SelectNew(ISelectableTools tools);
+        Task<Tools> Select(Tools tools, ISelectableTools selection);
         Task Create(Tools tools);
         
     }

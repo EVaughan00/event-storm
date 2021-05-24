@@ -1,14 +1,14 @@
 import { AxiosRequestConfig } from "axios";
 import { API } from "../../api";
 import { ApiClient } from "../../utils/ApiClient";
-import { SolutionBlueprint } from "./models/SolutionBlueprint";
+import { SolutionBlueprint, SolutionBlueprintDTO } from "./models/SolutionBlueprint";
 
-export class AccountService {
+export class SolutionService {
 
-    public static createSolution(blueprint: SolutionBlueprint) {
+    public static createSolution(blueprint: SolutionBlueprintDTO) {
         const requestConfig: AxiosRequestConfig = {
             method: "PUT",
-            url: API.server.account.register,
+            url: API.server.solution.create,
             data: blueprint
         };
 

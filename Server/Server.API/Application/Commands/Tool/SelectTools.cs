@@ -44,7 +44,9 @@ namespace Server.API.Commands
         {
             var solution = await _solutions.GetById(command.SolutionId);
 
-            Tools tools = await _toolboxService.SelectNew(command.SelectedTools);
+            Tools tools = DeveloperToolbox.Tools;
+
+            tools = await _toolboxService.Select(tools, command.SelectedTools);
 
             solution.UseTools(tools);
 

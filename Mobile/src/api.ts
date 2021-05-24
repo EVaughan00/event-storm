@@ -21,6 +21,10 @@ export const API = {
             delete: `${ENV.connections.api}/account/delete`, // DELETE
         },
 
+        solution: {
+            create: `${ENV.connections.api}/solutions/create`, // PUT
+        },
+
         password: {
             update: `${ENV.connections.api}/password/update`, // POST
             requestReset: `${ENV.connections.api}/password/reset`, // POST

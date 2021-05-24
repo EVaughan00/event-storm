@@ -10,6 +10,9 @@ namespace Server.Domain
         public SolutionDescription(string value) {
             _value = value;
         }
+        public void SetValue(string value) {
+            _value = value;
+        }
         protected override IEnumerable<object> GetAtomicValues()
         {
             yield return _value;

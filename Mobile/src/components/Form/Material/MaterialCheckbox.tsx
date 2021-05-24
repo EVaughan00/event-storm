@@ -27,7 +27,7 @@ const MaterialCheckbox: FunctionComponent<Props> = props => {
     }
     
     const Label = () => (
-        <Title level={5} style={[styles.label, { color: props.errorText ? theme.colors.error : undefined }]}>
+        <Title level={5} style={[styles.label, { color: props.errorText ? theme.colors.error : theme.colors.strong }]}>
             { label }{ errorText ? "*" : "" }
         </Title> 
     );
@@ -46,8 +46,7 @@ const MaterialCheckbox: FunctionComponent<Props> = props => {
     return (
         <View style={styles.container}>
             <View style={containerStyle}>
-                { !!label && (labelPlacement == "left" || labelPlacement == "top") && <Label />}
-
+                { !!label && (labelPlacement == "left" || labelPlacement == "top") && <Label  />}
                 <Ripple onPress={() => handleChange(!isChecked) } style={[styles.ripple, {
                     marginLeft: labelPlacement == "left" ? 1 : undefined, 
                     marginRight: labelPlacement == "right" ? 1 : undefined,

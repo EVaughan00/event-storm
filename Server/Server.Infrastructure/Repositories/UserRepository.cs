@@ -28,13 +28,16 @@ namespace Server.Infrastructure
             await Task.CompletedTask;
             _users.InsertOne(user);
         }
+        public async Task<User> GetById(ObjectId id) {
+            return await GetById(id.ToString());
+        }
 
         public async Task<User> GetById(string id) 
         {
             var result = _users.FindOne(u => u.Id == new ObjectId(id));
 
             if (result == null) 
-                throw new ServerInfrastructureException($"No user with an id: \"{id}\" exists");
+                throw new ServerInfrastructureException($"No user with id: \"{id}\" exists");
 
             await Task.CompletedTask;
             return result;
@@ -45,14 +48,9 @@ namespace Server.Infrastructure
             email = email.ToLower();
             var result = _users.FindOne(u => u.Email.Equals(email));
 
-            if (result == null) 
-            {
-                var ex = new ApiException($"That username and / or password are incorrect");
-                ex.AddError("password", ex.Message);
-
-                throw ex;
-            }
-
+            if (result == null)
+                throw new ServerInfrastructureException($"No user with email: \"{email}\" exists");
+            
             await Task.CompletedTask;
             return result;
         }

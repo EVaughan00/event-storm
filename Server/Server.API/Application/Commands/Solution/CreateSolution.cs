@@ -14,12 +14,12 @@ namespace Server.API.Commands
     using Notifications;
     using Server.API.Services;
 
-    public class CreateSolutionCommand : Command<bool> 
-    { 
+    public class CreateSolutionCommand : Command<bool>
+    {
         public SolutionBlueprint SolutionBlueprint;
     }
 
-    public class CreateSolutionCommandHandler : CommandHandler<CreateSolutionCommand, bool> 
+    public class CreateSolutionCommandHandler : CommandHandler<CreateSolutionCommand, bool>
     {
         private readonly ILogger<CreateSolutionCommandHandler> _logger;
         private readonly MediatR.IMediator _mediator;
@@ -48,26 +48,37 @@ namespace Server.API.Commands
             await Task.CompletedTask;
 
             var owner = await _users.GetById(command.SolutionBlueprint.OwnerId);
-
             var templateId = command.SolutionBlueprint.TemplateId;
 
             Solution solution = new Solution(command.SolutionBlueprint.Name);
 
-            if (!String.IsNullOrEmpty(templateId)) {
+
+            if (!String.IsNullOrEmpty(templateId))
+            {
                 Template template = await _templates.GetById(templateId);
                 solution.FromTemplate(template);
             }
 
+            solution.Describe(command.SolutionBlueprint.Description);
             solution.AddOwner(owner);
-            
+
             await _solutions.Create(solution);
 
-            try {
-                await _mediator.Send(new SelectToolsCommand() {
+            try
+            {
+                await _mediator.Send(new SelectToolsCommand()
+                {
                     SolutionId = solution.Id.ToString(),
                     SelectedTools = command.SolutionBlueprint.SelectedTools
                 });
-            } catch(Exception e) {
+                await _mediator.Send(new AddContributorsCommand()
+                {
+                    SolutionId = solution.Id.ToString(),
+                    Contributors = command.SolutionBlueprint.Contributors
+                });
+            }
+            catch (Exception e)
+            {
                 await _solutions.Delete(solution);
                 throw e;
             }
@@ -76,5 +87,5 @@ namespace Server.API.Commands
 
             return true;
         }
-    }    
+    }
 }

@@ -40,9 +40,10 @@ namespace Server.Infrastructure
             await Task.CompletedTask;
             return result;
         }
-
-        public async Task<Solution> GetById(string id) 
-        {
+        public async Task<Solution> GetById(ObjectId id) {
+            return await GetById(id.ToString());
+        }
+        public async Task<Solution> GetById(string id) {
             var result = _solutions.FindOne(u => u.Id == new ObjectId(id));
 
             if (result == null) 
