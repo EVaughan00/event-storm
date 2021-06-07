@@ -13,9 +13,7 @@ namespace Server.API.Infrastructure
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<ToolboxService>()
-                .As<IToolboxService>()
-                .InstancePerLifetimeScope();
+
         }
     }
 }

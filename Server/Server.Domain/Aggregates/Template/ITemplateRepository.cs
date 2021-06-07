@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Server.Domain
 {
-    public interface ITemplateRepository : IRepository<Solution>
+    public interface ITemplateRepository : IRepository<Template>
     {
         Task Create(Template template);
         Task<Template> GetById(string id);

@@ -21,24 +21,32 @@ namespace Server.API.Controllers
     {
         private readonly ILogger<SolutionsController> _logger;
         private readonly IMediator _mediator;
+        private readonly IUserQueries _userQueries;
 
         public SolutionsController(
             ILogger<SolutionsController> logger,
-            IMediator mediator
+            IMediator mediator,
+            IUserQueries userQueries
         ) { 
             _logger = logger;
             _mediator = mediator;
+            _userQueries = userQueries;
         }
 
         [AllowAnonymous]
         [HttpPut("create")]
         [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         [ProducesResponseType((int) HttpStatusCode.OK)]
-        public async Task<IActionResult> Create(SolutionBlueprint blueprint)
+        public async Task<IActionResult> Create(SolutionDTO blueprint)
         {
-            return await this.ApiAction(async () => {        
-                await _mediator.Send(new CreateSolutionCommand { 
-                    SolutionBlueprint = blueprint
+            return await this.ApiAction(async () => {    
+
+                var claim = Request.GetIdentityClaims();
+                var user = await _userQueries.GetDetails(claim);
+
+                await _mediator.Send(new CreateSolutionCommand {
+                    User = user,
+                    SolutionDTO = blueprint
                 });
 
                 return Ok();

@@ -99,3 +99,74 @@ System.TimeoutException: A timeout occured after 30000ms selecting a server usin
 2021-05-21 10:13:46.609 -06:00 [INF] Configuring service (Server.BackgroundTasks)...
 2021-05-21 10:13:47.098 -06:00 [INF] Starting event bus connection...
 2021-05-23 18:18:36.116 -06:00 [INF] Stopping event bus connection...
+2021-06-03 09:26:25.308 -06:00 [INF] Configuring service (Server.BackgroundTasks)...
+2021-06-03 09:26:25.712 -06:00 [INF] Starting service (Server.BackgroundTasks)...
+2021-06-03 09:26:56.012 -06:00 [FTL] Service terminated unexpectedly (Server.BackgroundTasks)!
+System.TimeoutException: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (111): Connection refused 127.0.0.1:27017
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.<>c.<ConnectAsync>b__274_0(IAsyncResult iar)
+--- End of stack trace from previous location where exception was thrown ---
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.ConnectAsync(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.HeartbeatAsync(CancellationToken cancellationToken)", LastUpdateTimestamp: "2021-06-03T15:26:55.8619928Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at BuildingBlocks.SeedWork.MongoCollection`1.FindList(Expression`1 callback) in /home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/MongoCollection.cs:line 81
+   at Server.Infrastructure.SessionRepository.GetAll(SessionStatus status) in /home/evaughan/Documents/Projects/event-storm/Server/Server.Infrastructure/Repositories/SessionRepository.cs:line 94
+   at Server.BackgroundTasks.Tasks.ClearExpiredSessionsTask.ExecuteAsync(CancellationToken stoppingToken) in /home/evaughan/Documents/Projects/event-storm/Server/Server.BackgroundTasks/Tasks/ClearExpiredSessionsTask.cs:line 41
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Server.BackgroundTasks.Program.Main(String[] args) in /home/evaughan/Documents/Projects/event-storm/Server/Server.BackgroundTasks/Program.cs:line 31
+2021-06-03 09:43:15.368 -06:00 [INF] Configuring service (Server.BackgroundTasks)...
+2021-06-03 09:43:15.980 -06:00 [INF] Starting event bus connection...
+ndTasks)...
+2021-06-07 10:23:51.308 -06:00 [INF] Configuring service (Server.BackgroundTasks)...
+2021-06-07 10:23:51.598 -06:00 [INF] Starting service (Server.BackgroundTasks)...
+2021-06-07 10:24:21.866 -06:00 [FTL] Service terminated unexpectedly (Server.BackgroundTasks)!
+System.TimeoutException: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "127.0.0.1:27017" }", EndPoint: "127.0.0.1:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (111): Connection refused 127.0.0.1:27017
+   at System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   at System.Net.Sockets.Socket.<>c.<ConnectAsync>b__274_0(IAsyncResult iar)
+--- End of stack trace from previous location where exception was thrown ---
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.ConnectAsync(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.HeartbeatAsync(CancellationToken cancellationToken)", LastUpdateTimestamp: "2021-06-07T16:24:21.7552931Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at BuildingBlocks.SeedWork.MongoCollection`1.FindList(Expression`1 callback) in /home/evaughan/Documents/Projects/event-storm/Server/BuildingBlocks/SeedWork/MongoCollection.cs:line 81
+   at Server.Infrastructure.SessionRepository.GetAll(SessionStatus status) in /home/evaughan/Documents/Projects/event-storm/Server/Server.Infrastructure/Repositories/SessionRepository.cs:line 94
+   at Server.BackgroundTasks.Tasks.ClearExpiredSessionsTask.ExecuteAsync(CancellationToken stoppingToken) in /home/evaughan/Documents/Projects/event-storm/Server/Server.BackgroundTasks/Tasks/ClearExpiredSessionsTask.cs:line 41
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Server.BackgroundTasks.Program.Main(String[] args) in /home/evaughan/Documents/Projects/event-storm/Server/Server.BackgroundTasks/Program.cs:line 31

@@ -2278,3 +2278,698 @@ System.IO.IOException: Failed to bind to address http://0.0.0.0:8000: address al
 2021-05-23 17:54:44.435 -06:00 [INF] Querying user detials [test@email.com]
 2021-05-23 17:54:55.432 -06:00 [INF] Solution: Sometihing new successfully created
 2021-05-23 18:18:33.650 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:33:36.508 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:33:36.790 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:33:37.202 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:33:37.295 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:39:26.147 -06:00 [INF] Validating identity claims [Identity: { email: notevan@gmail.com }, { id: 608e156493312808460dc92d }]
+2021-06-03 08:39:26.193 -06:00 [INF] Invalid identity claims
+2021-06-03 08:40:23.989 -06:00 [INF] test@gmail.com
+2021-06-03 08:40:24.000 -06:00 [INF] test@gmail.com
+2021-06-03 08:40:24.130 -06:00 [INF] User [test@gmail.com] successfully registered
+2021-06-03 08:40:24.292 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8e9d78a03977c3ca6b210 }]
+2021-06-03 08:40:24.292 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8e9d78a03977c3ca6b210 }]
+2021-06-03 08:40:24.295 -06:00 [INF] Claims validated
+2021-06-03 08:40:24.296 -06:00 [INF] Claims validated
+2021-06-03 08:40:24.299 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 08:40:24.299 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 08:42:15.017 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:42:19.853 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:42:20.130 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:42:20.455 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:42:20.523 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:43:02.631 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8e9d78a03977c3ca6b210 }]
+2021-06-03 08:43:02.697 -06:00 [INF] Claims validated
+2021-06-03 08:43:02.701 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 08:44:18.905 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:44:24.378 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:44:24.731 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:44:25.084 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:44:25.149 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:49:04.415 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:49:09.314 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:49:09.583 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:49:09.937 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:49:10.019 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:50:18.522 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:50:23.626 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:50:24.017 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:50:24.480 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:50:24.544 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:52:16.625 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:52:22.128 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:52:22.382 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:52:22.713 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:52:22.776 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:53:32.124 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:53:37.895 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:53:38.138 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:53:38.484 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:53:38.547 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:53:43.195 -06:00 [INF] HERE
+2021-06-03 08:53:55.960 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:54:01.249 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:54:01.517 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:54:01.858 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:54:01.924 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:54:33.982 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:54:39.303 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:54:39.640 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:54:40.068 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:54:40.135 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:54:43.649 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:54:48.609 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 08:54:48.866 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 08:54:49.213 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 08:54:49.277 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 08:54:51.690 -06:00 [INF] Solution tools successfully created
+2021-06-03 08:54:51.736 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 08:54:51.737 -06:00 [INF] Solution: testme successfully created
+2021-06-03 09:00:08.707 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:00:08.714 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:00:08.714 -06:00 [INF] Solution: Sol x successfully created
+2021-06-03 09:03:06.911 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:03:16.546 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:03:16.817 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:03:17.143 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:03:17.209 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:03:26.328 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:03:26.357 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:03:26.357 -06:00 [INF] Solution: testyboi successfully created
+2021-06-03 09:03:42.676 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:03:47.951 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:03:48.216 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:03:48.602 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:03:48.677 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:04:12.962 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:04:18.913 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:04:19.198 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:04:19.560 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:04:19.624 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:04:40.469 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:04:45.613 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:04:45.893 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:04:46.287 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:04:46.355 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:07:11.539 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:07:16.608 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:07:16.976 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:07:17.443 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:07:17.514 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:07:33.286 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:07:33.315 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:07:33.315 -06:00 [INF] Solution: new successfully created
+2021-06-03 09:09:09.361 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:09:14.769 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:09:15.012 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:09:15.357 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:09:15.443 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:10:06.351 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:10:10.758 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:10:11.107 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:10:11.576 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:10:11.666 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:10:32.618 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:10:32.648 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:10:32.657 -06:00 [INF] Solution: anotha successfully created
+2021-06-03 09:10:44.802 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:10:49.228 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:10:49.532 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:10:49.904 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:10:49.967 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:11:29.512 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:11:34.339 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:11:34.579 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:11:34.900 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:11:34.991 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:11:47.177 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:11:51.774 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:11:52.034 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:11:52.379 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:11:52.454 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:13:01.910 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:13:06.317 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:13:06.623 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:13:07.015 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:13:07.096 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:15:55.667 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:16:01.246 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:16:01.621 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:16:02.217 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:16:02.296 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:17:47.655 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8e9d78a03977c3ca6b210 }]
+2021-06-03 09:17:47.673 -06:00 [INF] Invalid identity claims
+2021-06-03 09:18:10.877 -06:00 [INF] test@gmail.com
+2021-06-03 09:18:10.885 -06:00 [INF] test@gmail.com
+2021-06-03 09:18:10.973 -06:00 [INF] User [test@gmail.com] successfully registered
+2021-06-03 09:18:11.085 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8f2b2da2e6028dfc8e149 }]
+2021-06-03 09:18:11.085 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8f2b2da2e6028dfc8e149 }]
+2021-06-03 09:18:11.087 -06:00 [INF] Claims validated
+2021-06-03 09:18:11.088 -06:00 [INF] Claims validated
+2021-06-03 09:18:11.090 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 09:18:11.090 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 09:18:29.841 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:18:29.886 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:18:29.888 -06:00 [INF] Solution: test successfully created
+2021-06-03 09:18:47.711 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:26:42.063 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:26:42.687 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:26:43.648 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:26:43.863 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:27:50.427 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8f2b2da2e6028dfc8e149 }]
+2021-06-03 09:28:20.482 -06:00 [INF] Invalid identity claims
+2021-06-03 09:30:10.485 -06:00 [INF] Successfully logged in user [test@gmail.com]
+2021-06-03 09:30:10.617 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8f2b2da2e6028dfc8e149 }]
+2021-06-03 09:30:10.619 -06:00 [INF] Claims validated
+2021-06-03 09:30:10.621 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 09:30:10.627 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8f2b2da2e6028dfc8e149 }]
+2021-06-03 09:30:10.631 -06:00 [INF] Claims validated
+2021-06-03 09:30:10.634 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 09:30:10.740 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8f2b2da2e6028dfc8e149 }]
+2021-06-03 09:30:10.741 -06:00 [INF] Claims validated
+2021-06-03 09:30:10.742 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 09:30:10.753 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8f2b2da2e6028dfc8e149 }]
+2021-06-03 09:30:10.755 -06:00 [INF] Claims validated
+2021-06-03 09:30:10.756 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 09:30:28.895 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:30:28.921 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:30:28.921 -06:00 [INF] Solution: solx  successfully created
+2021-06-03 09:31:15.659 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:31:22.713 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:31:22.980 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:31:23.423 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:31:23.536 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:31:25.514 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:31:30.288 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:31:30.510 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:31:30.886 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:31:30.950 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:31:46.709 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:31:51.106 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:31:51.381 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:31:51.768 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:31:51.835 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:31:58.278 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:31:58.305 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:31:58.306 -06:00 [INF] Solution: fuq successfully created
+2021-06-03 09:32:12.255 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:32:17.152 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:32:17.434 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:32:17.844 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:32:17.916 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:32:23.177 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:32:23.207 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:32:23.207 -06:00 [INF] Solution: nooo successfully created
+2021-06-03 09:32:37.549 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:32:41.734 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:32:41.962 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:32:42.310 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:32:42.393 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:32:48.350 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:32:48.380 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:32:48.380 -06:00 [INF] Solution: nooooo successfully created
+2021-06-03 09:34:23.989 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:34:28.281 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:34:28.511 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:34:28.837 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:34:28.899 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:34:31.486 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:34:31.531 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:34:31.532 -06:00 [INF] Solution: kk successfully created
+2021-06-03 09:34:45.007 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:34:49.317 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:34:49.558 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:34:49.895 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:34:49.959 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:34:54.455 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:34:54.484 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:34:54.484 -06:00 [INF] Solution: lo successfully created
+2021-06-03 09:35:47.029 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:35:51.488 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:35:51.791 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:35:52.118 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:35:52.190 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:35:56.081 -06:00 [INF] SOlution: p
+2021-06-03 09:35:56.109 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:35:56.112 -06:00 [INF] SOlution: p
+2021-06-03 09:35:56.120 -06:00 [INF] SOlution: p
+2021-06-03 09:35:56.140 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:35:56.141 -06:00 [INF] Solution: p successfully created
+2021-06-03 09:36:18.635 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:36:23.348 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:36:23.577 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:36:23.973 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:36:24.066 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:36:34.108 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:36:38.433 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:36:38.700 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:36:39.109 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:36:39.181 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:36:47.885 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:36:47.918 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:36:47.918 -06:00 [INF] Solution: hhh successfully created
+2021-06-03 09:37:31.154 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:37:35.444 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:37:35.701 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:37:36.050 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:37:36.129 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:37:43.411 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:37:43.442 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:37:43.443 -06:00 [INF] Solution: ppp successfully created
+2021-06-03 09:38:16.472 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:38:39.987 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:38:40.223 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:38:40.620 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:38:40.686 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:38:43.326 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:38:43.356 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:38:43.356 -06:00 [INF] Solution: fhh successfully created
+2021-06-03 09:39:32.974 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:39:38.284 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:39:38.604 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:39:38.962 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:39:39.052 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:39:44.124 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:39:48.951 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:39:49.192 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:39:49.518 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:39:49.588 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:39:52.241 -06:00 [INF] HERE: 
+2021-06-03 09:39:52.300 -06:00 [INF] HERE: srghj
+2021-06-03 09:39:52.327 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:39:52.330 -06:00 [INF] HERE: srghj
+2021-06-03 09:39:52.336 -06:00 [INF] HERE: srghj
+2021-06-03 09:39:52.354 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:39:52.354 -06:00 [INF] Solution: srghj successfully created
+2021-06-03 09:40:14.038 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:40:18.964 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:40:19.236 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:40:19.649 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:40:19.715 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:40:19.746 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:40:24.524 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:40:24.858 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:40:25.340 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:40:25.406 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:40:26.064 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:40:30.255 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:40:30.532 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:40:30.857 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:40:30.928 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:40:38.020 -06:00 [INF] Solution tools successfully created
+2021-06-03 09:40:38.078 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 09:40:38.078 -06:00 [INF] Solution: et hl successfully created
+2021-06-03 11:08:58.703 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+03.811 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:42:04.449 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:42:04.612 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:42:04.617 -06:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address http://0.0.0.0:8000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.EndpointsStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2021-06-03 09:42:04.663 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:42:04.697 -06:00 [FTL] Service terminated unexpectedly (Server.API)!
+System.IO.IOException: Failed to bind to address http://0.0.0.0:8000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.EndpointsStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String startupMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String startupMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at Server.API.Program.Main(String[] args) in /home/evaughan/Documents/Projects/event-storm/Server/Server.API/Program.cs:line 29
+2021-06-03 09:42:57.415 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 09:42:58.487 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 09:42:59.228 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:42:59.416 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 09:42:59.422 -06:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address http://0.0.0.0:8000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.EndpointsStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2021-06-03 09:42:59.467 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 09:42:59.505 -06:00 [FTL] Service terminated unexpectedly (Server.API)!
+System.IO.IOException: Failed to bind to address http://0.0.0.0:8000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.EndpointsStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String startupMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String startupMessage)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.Run(IWebHost host)
+   at Server.API.Program.Main(String[] args) in /home/evaughan/Documents/Projects/event-storm/Server/Server.API/Program.cs:line 29
+2021-06-03 11:09:06.908 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 11:09:07.171 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 11:09:07.503 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:09:07.566 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 11:09:51.668 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8f2b2da2e6028dfc8e149 }]
+2021-06-03 11:09:51.812 -06:00 [INF] Claims validated
+2021-06-03 11:09:51.817 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-03 11:10:00.449 -06:00 [INF] HERE: 
+2021-06-03 11:10:00.574 -06:00 [INF] Solution tools successfully created
+2021-06-03 11:10:00.617 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 11:10:00.618 -06:00 [INF] Solution: dgjk successfully created
+2021-06-03 11:10:36.600 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:10:42.082 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 11:10:42.381 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 11:10:42.761 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:10:42.824 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 11:11:52.478 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:11:57.403 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 11:11:57.692 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 11:11:58.064 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:11:58.169 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 11:12:00.320 -06:00 [INF] HERE: Server.Infrastructure.ServerInfrastructureException: No solution with an id: "60b90d608c802b41376c5fae" exists
+   at Server.Infrastructure.SolutionRepository.GetById(String id) in /home/evaughan/Documents/Projects/event-storm/Server/Server.Infrastructure/Repositories/SolutionRepository.cs:line 49
+   at Server.API.DomainEvents.ContributorAddedToSolutionDomainEventHandler.HandleEvent(ContributorAddedToSolution event, CancellationToken cancellationToken) in /home/evaughan/Documents/Projects/event-storm/Server/Server.API/Application/DomainEvents/ContributorAddedToSolution.cs:line 38
+2021-06-03 11:12:00.394 -06:00 [INF] Solution tools successfully created
+2021-06-03 11:12:00.439 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 11:12:00.440 -06:00 [INF] Solution: ihgf successfully created
+2021-06-03 11:18:38.553 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:18:43.235 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 11:18:43.476 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 11:18:43.798 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:18:43.867 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 11:24:18.924 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:24:24.025 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 11:24:24.295 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 11:24:24.624 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:24:24.726 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 11:25:23.648 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:25:28.249 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 11:25:28.528 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 11:25:28.878 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:25:28.952 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 11:26:38.822 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:26:43.153 -06:00 [INF] Configuring service (Server.API)...
+2021-06-03 11:26:43.412 -06:00 [INF] Starting service (Server.API)...
+2021-06-03 11:26:43.772 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-03 11:26:43.839 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-03 11:26:51.529 -06:00 [INF] Solution tools successfully created
+2021-06-03 11:26:51.561 -06:00 [INF] Solution metrics summary successfully created
+2021-06-03 11:26:51.561 -06:00 [INF] Solution: urn successfully created
+2021-06-03 11:27:42.117 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60b8f2b2da2e6028dfc8e149 }]
+2021-06-03 11:27:42.124 -06:00 [INF] Invalid identity claims
+2021-06-05 10:00:05.031 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-05 10:00:15.343 -06:00 [INF] Configuring service (Server.API)...
+2021-06-05 10:00:15.675 -06:00 [INF] Starting service (Server.API)...
+2021-06-05 10:00:16.067 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-05 10:00:16.181 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-05 10:17:37.541 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-05 10:17:47.191 -06:00 [INF] Configuring service (Server.API)...
+2021-06-05 10:17:47.509 -06:00 [INF] Starting service (Server.API)...
+2021-06-05 10:17:47.937 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-05 10:17:47.996 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-05 10:18:02.178 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-05 10:18:07.868 -06:00 [INF] Configuring service (Server.API)...
+2021-06-05 10:18:08.153 -06:00 [INF] Starting service (Server.API)...
+2021-06-05 10:18:08.585 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-05 10:18:08.659 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-05 10:18:50.672 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 09:33:11.952 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 09:33:12.211 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 09:33:12.620 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 09:33:12.676 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 09:33:25.785 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 09:33:30.028 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 09:33:30.324 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 09:33:30.690 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 09:33:30.753 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 09:34:02.930 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 09:57:53.790 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 09:57:54.048 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 09:57:54.454 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 09:57:54.537 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 09:58:32.761 -06:00 [INF] test@gmail.com
+2021-06-07 09:58:32.778 -06:00 [INF] test@gmail.com
+2021-06-07 09:58:33.036 -06:00 [INF] User [test@gmail.com] successfully registered
+2021-06-07 09:58:33.298 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60be4228413d27546c06ab13 }]
+2021-06-07 09:58:33.298 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60be4228413d27546c06ab13 }]
+2021-06-07 09:58:33.298 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60be4228413d27546c06ab13 }]
+2021-06-07 09:58:33.301 -06:00 [INF] Claims validated
+2021-06-07 09:58:33.301 -06:00 [INF] Claims validated
+2021-06-07 09:58:33.301 -06:00 [INF] Claims validated
+2021-06-07 09:58:33.304 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 09:58:33.304 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 09:58:33.304 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 09:58:33.314 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60be4228413d27546c06ab13 }]
+2021-06-07 09:58:33.316 -06:00 [INF] Claims validated
+2021-06-07 09:58:33.317 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 09:59:18.202 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 09:59:42.556 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:02:22.116 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60be4228413d27546c06ab13 }]
+2021-06-07 10:02:22.124 -06:00 [INF] Claims validated
+2021-06-07 10:02:22.127 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:02:27.579 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60be4228413d27546c06ab13 }]
+2021-06-07 10:02:27.583 -06:00 [INF] Claims validated
+2021-06-07 10:02:27.584 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:03:02.335 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60be4228413d27546c06ab13 }]
+2021-06-07 10:03:02.348 -06:00 [INF] Claims validated
+2021-06-07 10:03:02.350 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:03:25.022 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:04:28.578 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:04:34.467 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:04:34.726 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:04:35.081 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:04:35.166 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:05:49.198 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:05:55.175 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:05:55.485 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:05:55.873 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:05:55.945 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:07:27.789 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:07:34.029 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:07:34.356 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:07:34.832 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:07:34.916 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:12:45.526 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60be4228413d27546c06ab13 }]
+2021-06-07 10:12:45.664 -06:00 [INF] Claims validated
+2021-06-07 10:12:45.683 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:13:01.082 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:13:01.102 -06:00 [INF] HERE
+2021-06-07 10:13:47.781 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:13:52.998 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:13:53.255 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:13:53.610 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:13:53.691 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:13:56.056 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:15:04.789 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:15:09.929 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:15:10.203 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:15:10.586 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:15:10.669 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:15:11.518 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:15:11.687 -06:00 [INF] HERE: Solution already defined
+2021-06-07 10:15:51.191 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:16:04.317 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:16:04.611 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:16:05.023 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:16:05.087 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:16:05.648 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:16:05.793 -06:00 [INF] HERE: Object reference not set to an instance of an object.
+2021-06-07 10:17:40.649 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:17:46.549 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:17:46.809 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:17:47.195 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:17:47.274 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:17:48.458 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:17:48.594 -06:00 [INF] HERE: Object reference not set to an instance of an object.
+2021-06-07 10:18:09.491 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:18:15.506 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:18:15.840 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:18:16.333 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:18:16.399 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:18:17.605 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:18:23.229 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:18:23.517 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:18:23.869 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:18:23.966 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:18:25.515 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:18:25.660 -06:00 [INF] HERE: Object reference not set to an instance of an object.
+2021-06-07 10:18:31.083 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:18:37.251 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:18:37.547 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:18:38.003 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:18:38.083 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:19:10.378 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:19:16.523 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:19:16.806 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:19:17.154 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:19:17.248 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:19:17.711 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:19:17.851 -06:00 [INF] HERE: Object reference not set to an instance of an object.
+2021-06-07 10:19:25.221 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:19:30.768 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:19:31.027 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:19:31.422 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:19:31.489 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:19:33.081 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:19:38.546 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:19:38.801 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:19:39.158 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:19:39.231 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:19:40.528 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:19:40.684 -06:00 [INF] HERE: Object reference not set to an instance of an object.
+2021-06-07 10:19:46.584 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:19:52.048 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:19:52.316 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:19:52.690 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:19:52.773 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:19:56.047 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:19:56.193 -06:00 [INF] HERE: Object reference not set to an instance of an object.
+2021-06-07 10:20:00.549 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:20:06.136 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:20:06.400 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:20:06.889 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:20:06.964 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:20:07.343 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:20:12.744 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:20:13.021 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:20:13.402 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:20:13.486 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:20:19.560 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 10:20:47.883 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:20:58.638 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:20:58.948 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:24:00.329 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:24:00.771 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:24:01.794 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:24:01.987 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:25:06.817 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60be4228413d27546c06ab13 }]
+2021-06-07 10:25:36.857 -06:00 [INF] Invalid identity claims
+2021-06-07 10:28:14.907 -06:00 [INF] user@test.com
+2021-06-07 10:28:14.920 -06:00 [INF] user@test.com
+2021-06-07 10:28:43.546 -06:00 [INF] User [user@test.com] successfully registered
+2021-06-07 10:28:43.874 -06:00 [INF] Validating identity claims [Identity: { email: user@test.com }, { id: 60be491e337a2e1349d90ae3 }]
+2021-06-07 10:28:43.874 -06:00 [INF] Validating identity claims [Identity: { email: user@test.com }, { id: 60be491e337a2e1349d90ae3 }]
+2021-06-07 10:28:43.879 -06:00 [INF] Claims validated
+2021-06-07 10:28:43.880 -06:00 [INF] Claims validated
+2021-06-07 10:28:43.882 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:28:43.882 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:29:03.966 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:29:03.989 -06:00 [INF] HERE
+2021-06-07 10:29:24.518 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:29:30.102 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:29:30.444 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:29:30.872 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:29:30.936 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:29:45.656 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:29:50.698 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:29:50.962 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:29:51.325 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:29:51.396 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:29:56.479 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:30:12.238 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:30:17.188 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:30:17.531 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:30:18.047 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:30:18.141 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:30:22.459 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:30:27.463 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:30:27.716 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:30:28.134 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:30:28.233 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:30:30.678 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:30:52.167 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:30:56.995 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:30:57.258 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:30:57.671 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:30:57.742 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:30:59.864 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:31:06.807 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:31:11.397 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:31:11.611 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:31:11.966 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:31:12.035 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:31:17.898 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:31:18.018 -06:00 [INF] HERE
+2021-06-07 10:31:31.880 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:31:36.425 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:31:36.682 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:31:37.070 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:31:37.139 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:31:38.721 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:31:38.892 -06:00 [INF] HERE 
+2021-06-07 10:32:28.196 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:32:33.493 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:32:33.837 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:32:34.564 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:32:34.693 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:33:21.786 -06:00 [INF] Validating identity claims [Identity: { email: user@test.com }, { id: 60be491e337a2e1349d90ae3 }]
+2021-06-07 10:33:21.951 -06:00 [INF] Claims validated
+2021-06-07 10:33:21.955 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:33:35.309 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:33:35.334 -06:00 [INF] HERE System.Collections.Generic.List`1[Server.API.Models.ContributorDTO]
+2021-06-07 10:33:35.412 -06:00 [INF] Solution: test sol successfully created
+2021-06-07 10:34:23.032 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:35:08.364 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 10:35:08.583 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 10:35:08.978 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 10:35:09.047 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 10:35:12.815 -06:00 [INF] Querying user detials [user@test.com]
+2021-06-07 10:35:12.958 -06:00 [INF] HERE System.Collections.Generic.List`1[Server.API.Models.ContributorDTO]
+2021-06-07 10:35:13.030 -06:00 [INF] Solution: 5dc successfully created
+2021-06-07 10:35:44.864 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)

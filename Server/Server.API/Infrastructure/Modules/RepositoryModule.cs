@@ -36,16 +36,20 @@ namespace Server.API.Infrastructure
                 .As<ITemplateRepository>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<EventStormRepository>()
-                .As<IEventStormRepository>()
+            builder.RegisterType<MetricsSnapshotRepository>()
+                .As<IMetricsSnapshotRepository>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<ModelRepoRepository>()
-                .As<IModelRepoRepository>()
+            builder.RegisterType<EventBlockRepository>()
+                .As<IEventBlockRepository>()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<TaskStackRepository>()
-                .As<ITaskStackRepository>()
+            builder.RegisterType<ModelRepository>()
+                .As<IModelRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<TaskRepository>()
+                .As<ITaskAggregateRepository>()
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<PasswordResetRepository>()

@@ -7,6 +7,7 @@ using BuildingBlocks.Events;
 
 namespace Server.API.DomainEvents
 {
+    using System;
     using Commands;
     public class ContributorAddedToSolutionDomainEventHandler : DomainEventHandler<ContributorAddedToSolution>
     {
@@ -28,17 +29,23 @@ namespace Server.API.DomainEvents
             _users = users;
             AddEventTracking(eventTracker);
         }
-
+ 
         public override async Task HandleEvent(
             ContributorAddedToSolution @event, 
             CancellationToken cancellationToken) 
         {   
-            Solution solution = await _solutions.GetById(@event.SolutionId.ToString());
-            User user = await _users.GetById(@event.UserId.ToString());
+            try {
+                var solution = await _solutions.GetById(@event.SolutionId.ToString());
+                var user = await _users.GetById(@event.UserId.ToString());
 
-            user.AddSolution(solution);
+                // TODO: Send contributor request to user
+                user.AddSolution(solution);
 
-            await _users.Update(user);
+                await _users.Update(user);
+            } catch(Exception e) {
+                throw e;
+            }
+
         }
     }
 }

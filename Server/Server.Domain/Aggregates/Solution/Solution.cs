@@ -6,67 +6,68 @@ using System.Collections.Generic;
 
 namespace Server.Domain
 {
+    public class SolutionBlueprint {
+        public string Name { get; set; }        
+        public string TemplateId { get; set; }
+        public ISolutionDefinition Definition { get; set; }
+        public ISelectableTools SelectedTools { get; set; }
+    }
     public class Solution : Entity, IAggregateRoot
     {
-        [BsonElement("Name")]
         public string Name { get; private set; }
-
-        [BsonElement("OwnerId")]
         public ObjectId OwnerId { get; private set; }
-
-        [BsonElement("Description")]
-        public SolutionDescription Description { get; private set; }
-
-        [BsonElement("TempatedAsIds")]
-        public List<ObjectId> TempatedAsIds { get; private set; }
-
-        [BsonElement("FromTemplateId")]
+        public SolutionDefinition Definition { get; private set; }
+        public Tool EventStorm { get; private set; }
+        public Tool TaskStack { get; private set; }
+        public Tool ModelRepository { get; private set; }
+        // TODO: Move to application query or whatever
+        // [BsonElement("TempatedAsIds")]
+        // public List<ObjectId> TempatedAsIds { get; private set; }
         public ObjectId FromTemplateId { get; private set; }
-
-        [BsonElement("Tools")]
-        public Tools Tools { get; private set; }
-
-        [BsonElement("MetricsId")]
-        public ObjectId MetricsId { get; private set; }
-
-        [BsonElement("ContributorIds")]
         public List<ObjectId> ContributorIds { get; private set; }
-
-        public Solution(string name) {
-            Name = name;
-
+        public Solution() {
             ContributorIds = new List<ObjectId>();
-        }
-        public void UseTools(Tools tools) {
-            Tools = tools;
-        }
+            Definition = new SolutionDefinition();
 
+            EventStorm = new Tool();
+            TaskStack = new Tool();
+            ModelRepository = new Tool();
+        }
+        public void FromBlueprint(SolutionBlueprint blueprint) {
+            Name = blueprint.Name;
+
+            Define(blueprint.Definition);
+            UseTools(blueprint.SelectedTools);
+            
+            if (!String.IsNullOrEmpty(blueprint.TemplateId))
+                FromTemplateId = new ObjectId(blueprint.TemplateId);
+        }
+        public void UseTools(ISelectableTools selection) {
+            EventStorm.SetActive(selection.UseEventStorm);
+            ModelRepository.SetActive(selection.UseModelRepository);
+            TaskStack.SetActive(selection.UseTaskStack);
+        }
         public void AddOwner(User user) {
             if (OwnerId != new ObjectId())
                 throw new ServerDomainException("Solution owner already exists");
 
             OwnerId = user.Id;
-
             AddContributor(user);
         }
+        public void Define(ISolutionDefinition definition) {
 
-        public void Describe(string description) {
+            Definition.From(definition);
 
-            Description = new SolutionDescription(description);
-            
-            if (String.IsNullOrEmpty(description)) {
-                Description.SetValue(Name);
+            if (String.IsNullOrEmpty(definition.Description)) {
+                Definition.SetDescription(Name);
             }
         }
 
-        public void FromTemplate(Template template)
-        {
-            FromTemplateId = template.Id;
-
-            Name = template.Name; 
-        }
-
         public void AddContributor(User contributor) {
+
+            if (ContributorIds.Contains(contributor.Id))
+                throw new ServerDomainException("Solution already has contributor: " + contributor.Email);
+
             ContributorIds.Add(contributor.Id);
 
             AddDomainEvent(new ContributorAddedToSolution() {

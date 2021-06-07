@@ -22,6 +22,7 @@ namespace Server.Domain
         [BsonElement("Password")]
         public Password Password { get; private set; }
 
+        // TODO: Remove this hit
         [BsonElement("SolutionIds")]
         public List<ObjectId> SolutionIds { get; private set;}
 
@@ -72,7 +73,7 @@ namespace Server.Domain
                 Password = password;
         }
         public void AddSolution(Solution solution) {
-
+            
             if (SolutionIds.Contains(solution.Id))
                 throw new ServerDomainException("Duplicate solution cannot be added");
 

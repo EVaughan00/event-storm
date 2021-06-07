@@ -16,7 +16,8 @@ namespace Server.API.Commands
 
     public class CreateSolutionCommand : Command<bool>
     {
-        public SolutionBlueprint SolutionBlueprint;
+        public UserDetails User;
+        public SolutionDTO SolutionDTO;
     }
 
     public class CreateSolutionCommandHandler : CommandHandler<CreateSolutionCommand, bool>
@@ -47,41 +48,25 @@ namespace Server.API.Commands
         {
             await Task.CompletedTask;
 
-            var owner = await _users.GetById(command.SolutionBlueprint.OwnerId);
-            var templateId = command.SolutionBlueprint.TemplateId;
+            Solution solution = new Solution();
+            var owner = await _users.GetById(command.User.Id);
 
-            Solution solution = new Solution(command.SolutionBlueprint.Name);
-
-
-            if (!String.IsNullOrEmpty(templateId))
-            {
-                Template template = await _templates.GetById(templateId);
-                solution.FromTemplate(template);
-            }
-
-            solution.Describe(command.SolutionBlueprint.Description);
-            solution.AddOwner(owner);
-
-            await _solutions.Create(solution);
-
-            try
-            {
-                await _mediator.Send(new SelectToolsCommand()
-                {
-                    SolutionId = solution.Id.ToString(),
-                    SelectedTools = command.SolutionBlueprint.SelectedTools
-                });
-                await _mediator.Send(new AddContributorsCommand()
-                {
-                    SolutionId = solution.Id.ToString(),
-                    Contributors = command.SolutionBlueprint.Contributors
-                });
-            }
-            catch (Exception e)
-            {
-                await _solutions.Delete(solution);
+            try {
+                solution.FromBlueprint(command.SolutionDTO.ToBlueprint());
+                solution.AddOwner(owner);
+            } catch(Exception e) {
                 throw e;
             }
+
+            try {
+                _logger.LogInformation("HERE " + command.SolutionDTO.Contributors);
+                foreach (ContributorDTO contributor in command.SolutionDTO.Contributors)
+                    await _mediator.Send(new AddContributorCommand() {Contributor = contributor});
+
+            } catch (Exception e) {
+                throw e;
+            }
+            await _solutions.Create(solution);
 
             _logger.LogInformation("Solution: " + solution.Name + " successfully created");
 

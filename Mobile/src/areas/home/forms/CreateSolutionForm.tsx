@@ -3,7 +3,8 @@ import { KeyboardAvoidingView, StyleSheet } from 'react-native';
 import { AppStore } from '../../../AppStore';
 import { CustomButton } from '../../../components/CustomButton';
 import { Form } from '../../../components/FormElement';
-import { SolutionBlueprint } from '../../../services/solution/models/SolutionBlueprint';
+import { Typography } from '../../../components/Typography';
+import { SolutionDTO } from '../../../services/solution/models/SolutionDTO';
 import { SolutionService } from '../../../services/solution/SolutionService';
 import theme from '../../../theme';
 
@@ -13,7 +14,7 @@ interface Props {
 
 const CreateSolution: FunctionComponent<Props> = props => {
 
-    const [ blueprint ]  = React.useState(new SolutionBlueprint());
+    const [ solution ]  = React.useState(new SolutionDTO());
 
     const [ account ] = AppStore.account.use();
 
@@ -21,33 +22,31 @@ const CreateSolution: FunctionComponent<Props> = props => {
 
         var userId = account.user ? account.user.id : ""
         
-        return SolutionService.createSolution(blueprint.ToDto(userId))
+        return SolutionService.createSolution(solution)
             .then(() => props.onFinish());
     }
 
     return (
         <KeyboardAvoidingView behavior="height">
-            <Form model={blueprint} onSubmit={handleSubmit}>
+            <Form model={solution} onSubmit={handleSubmit}>
                 <Form.Item field="name">
                     <Form.Input size="small" autoCapitalize="none" label="Name" />
                 </Form.Item>
                 <Form.Item field="description">
                     <Form.Input size="small" label="Description" />
                 </Form.Item>
-                <Form.Item field="eventStorm">
+                <Form.Item field="codeBase">
+                    <Form.Input size="small" label="Code Base" />
+                </Form.Item>
+                <Typography.Title level={2}>Developer Toolbox</Typography.Title>
+                <Form.Item field="useEventStorm">
                     <Form.Checkbox label="Event Storm" color={"primary"} labelPlacement="right" />
                 </Form.Item>
-                <Form.Item field="modelRepository">
+                <Form.Item field="useModelRepository">
                     <Form.Checkbox label="Model Repository" color={"primary"} labelPlacement="right" />
                 </Form.Item>
-                <Form.Item field="taskStack">
+                <Form.Item field="useTaskStack">
                     <Form.Checkbox label="Task Stack" color={"primary"} labelPlacement="right" />
-                </Form.Item>
-                <Form.Item field="contributorName">
-                    <Form.Input size="small" label="Contributor Name" />
-                </Form.Item>
-                <Form.Item field="contributorEmail">
-                    <Form.Input size="small" label="Contributor Email" />
                 </Form.Item>
                 <Form.Item field="submit">
                     <CustomButton ripple size="small" >Submit</CustomButton>
