@@ -20,9 +20,6 @@ namespace Server.Domain
         public Tool EventStorm { get; private set; }
         public Tool TaskStack { get; private set; }
         public Tool ModelRepository { get; private set; }
-        // TODO: Move to application query or whatever
-        // [BsonElement("TempatedAsIds")]
-        // public List<ObjectId> TempatedAsIds { get; private set; }
         public ObjectId FromTemplateId { get; private set; }
         public List<ObjectId> ContributorIds { get; private set; }
         public Solution() {

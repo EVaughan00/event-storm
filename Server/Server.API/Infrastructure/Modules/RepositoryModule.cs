@@ -18,6 +18,14 @@ namespace Server.API.Infrastructure
                 .As<IUserQueries>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<SolutionQueries>()
+                .As<ISolutionQueries>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<TemplateQueries>()
+                .As<ITemplateQueries>()
+                .InstancePerLifetimeScope();
+
             // Register data repositories
             // ex:
             builder.RegisterType<UserRepository>()

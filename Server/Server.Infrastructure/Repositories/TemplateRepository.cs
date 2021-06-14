@@ -53,6 +53,18 @@ namespace Server.Infrastructure
             return result;
         }
 
+        public async Task<List<Template>> GetAllByOwnerId(string id) {
+
+            List<Template> list = new List<Template>();
+
+            foreach (Template template in _templates.FindAll()) 
+                if (template.OwnerId == new ObjectId(id))
+                    list.Add(template);
+
+            await Task.CompletedTask;
+            return list;
+        }
+
         public async Task Update(Template template)
         {
             var existing = _templates.FindOne(u => u.Id == template.Id);

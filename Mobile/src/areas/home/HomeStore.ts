@@ -1,18 +1,21 @@
 import { NativeEventEmitter, NativeScrollEvent, NativeSyntheticEvent, NativeTouchEvent } from "react-native";
 import { HomeLists } from "../../helpers/consts";
+import { CardSection } from "../../components/CardSection";
 import { BaseStore } from "../../utils/BaseStore";
 
 
 export interface HomeState {
-    currentList: HomeLists
+    currentCardSection: number
     verticalScroll: NativeScrollEvent
     beginVerticalScroll: NativeScrollEvent
+    updatedCardSections: boolean
 }
 
 export interface HomeActions {
-    selectList: (list: HomeLists) => void
+    selectCardSection: (section: number) => void
     updateVerticalScroll: (event: NativeScrollEvent) => void
     updateBeginVerticalScroll: (event: NativeScrollEvent) => void
+    updateCardSections: (updated: boolean) => void
 }
 
 export class HomeStore 
@@ -21,19 +24,20 @@ export class HomeStore
 
     protected prototype = HomeStore.prototype;
     protected initialState = {
-        currentList: HomeLists.SOLUTIONS,
+        currentCardSection: 0,
         verticalScroll: {} as NativeScrollEvent,
         beginVerticalScroll: {} as NativeScrollEvent,
+        updatedCardSections: false
     }
 
     constructor() {
         super();                
     }
 
-    public selectList(list: HomeLists) {
+    public selectCardSection(section: number) {
         this.setState({
             ...this.state,
-            currentList: list,
+            currentCardSection: section,
         })
     }
 
@@ -49,6 +53,13 @@ export class HomeStore
         this.setState({
             ...this.state,
             beginVerticalScroll: event,
+        })
+    }
+
+    public updateCardSections(updated: boolean) {
+        this.setState({
+            ...this.state,
+            updatedCardSections: updated,
         })
     }
 }

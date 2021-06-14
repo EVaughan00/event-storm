@@ -9,23 +9,20 @@ namespace Server.Domain
     }
     public class SolutionDefinition : ValueObject
     {
-        private string _description;
-        private string _codeBase;
+        public string Description { get; private set; }
+        public string CodeBase { get; private set; }
         public SolutionDefinition() {}
         public void From(ISolutionDefinition definition) {
-            SetDescription(definition.Description);
-            SetCodeBase(definition.CodeBase);
+            Description = definition.Description;
+            CodeBase = definition.CodeBase;
         }
-        public void SetDescription(string value) {
-            _description = value;
-        }
-        public void SetCodeBase(string value) {
-            _codeBase = value;
+        public void SetDescription(string description) {
+            Description = description;
         }
         protected override IEnumerable<object> GetAtomicValues()
         {
-            yield return _description;
-            yield return _codeBase;
+            yield return Description;
+            yield return CodeBase;
         }
     }
 }

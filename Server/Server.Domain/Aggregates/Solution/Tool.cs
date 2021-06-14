@@ -7,18 +7,14 @@ namespace Server.Domain
 {
     public class Tool : ValueObject
     {        
-        private bool _active;
+        public bool Active { get; private set; }
         public Tool() {}
         public void SetActive(bool active) {
-            _active = active;
+            Active = active;
         }
-        public bool IsActive() {
-            return _active;
-        }
-
         protected override IEnumerable<object> GetAtomicValues()
         {
-            throw new System.NotImplementedException();
+            yield return Active;
         }
     }
 

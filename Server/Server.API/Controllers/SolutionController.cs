@@ -14,26 +14,30 @@ namespace Server.API.Controllers
     using Models;
     using Commands;
     using Notifications;
+    using System.Collections.Generic;
 
-    [Route("solutions")]
+    [Route("solution")]
     [ApiController]
-    public class SolutionsController: Controller 
+    public class SolutionController: Controller 
     {
-        private readonly ILogger<SolutionsController> _logger;
+        private readonly ILogger<SolutionController> _logger;
         private readonly IMediator _mediator;
         private readonly IUserQueries _userQueries;
+        private readonly ISolutionQueries _solutionQueries;
 
-        public SolutionsController(
-            ILogger<SolutionsController> logger,
+        public SolutionController(
+            ILogger<SolutionController> logger,
             IMediator mediator,
-            IUserQueries userQueries
+            IUserQueries userQueries,
+            ISolutionQueries solutionQueries
         ) { 
             _logger = logger;
             _mediator = mediator;
             _userQueries = userQueries;
+            _solutionQueries = solutionQueries;
         }
 
-        [AllowAnonymous]
+        [AuthorizeIdentity]
         [HttpPut("create")]
         [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         [ProducesResponseType((int) HttpStatusCode.OK)]
@@ -50,6 +54,23 @@ namespace Server.API.Controllers
                 });
 
                 return Ok();
+            });
+        }
+
+        [HttpGet("list")]
+        [AuthorizeIdentity]
+        [ProducesResponseType((int) HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(List<SolutionDTO>), (int) HttpStatusCode.OK)]
+        public async Task<IActionResult> List()
+        {
+            return await this.ApiAction(async () => {
+
+                var claim = Request.GetIdentityClaims();
+                var user = await _userQueries.GetDetails(claim);
+
+                var solutions = _solutionQueries.GetList(user);
+
+                return Ok(solutions);
             });
         }
     }

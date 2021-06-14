@@ -1,7 +1,8 @@
 import { AxiosRequestConfig } from "axios";
 import { API } from "../../api";
+import Solution from "../../models/Solution";
 import { ApiClient } from "../../utils/ApiClient";
-import { SolutionDTO } from "./models/SolutionBlueprint";
+import { SolutionDTO } from "./models/SolutionDTO";
 
 export class SolutionService {
 
@@ -13,5 +14,14 @@ export class SolutionService {
         };
 
         return ApiClient.request(requestConfig)
+    }
+
+    public static getSolutions() {
+        const requestConfig: AxiosRequestConfig = {
+            method: "GET",
+            url: API.server.solution.list
+        };
+
+       return ApiClient.request(requestConfig)
     }
 }

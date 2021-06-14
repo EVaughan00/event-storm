@@ -8,8 +8,8 @@ interface LightningProps {
 
 function SvgLightning(props: LightningProps) {
   return (
-    <Svg height={"240"} width={"100%"} style={styles.icon}
-      viewBox="3 4 18 18"
+    <Svg height={"300"} width={"100%"} style={styles.icon}
+      viewBox="2.5 2 18 25"
     >
       <Path 
         d="M20.972 0L5.076 15.803h5.896L6.44 27.793l16.276-15.804h-5.897z"

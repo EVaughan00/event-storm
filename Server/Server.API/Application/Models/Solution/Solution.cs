@@ -38,5 +38,17 @@ namespace Server.API.Models
 
             return blueprint;
         }
+
+        public static SolutionDTO Map(Solution solution) {
+            return new SolutionDTO() {
+                Name = solution.Name,
+                Description = solution.Definition.Description,
+                CodeBase = solution.Definition.CodeBase,
+                TemplateId = solution.FromTemplateId.ToString(),
+                UseEventStorm = solution.EventStorm.Active,
+                UseModelRepository = solution.ModelRepository.Active,
+                UseTaskStack = solution.TaskStack.Active
+            };
+        }
     }
 }

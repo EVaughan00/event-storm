@@ -2973,3 +2973,1837 @@ System.IO.IOException: Failed to bind to address http://0.0.0.0:8000: address al
 2021-06-07 10:35:12.958 -06:00 [INF] HERE System.Collections.Generic.List`1[Server.API.Models.ContributorDTO]
 2021-06-07 10:35:13.030 -06:00 [INF] Solution: 5dc successfully created
 2021-06-07 10:35:44.864 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 18:19:50.466 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 18:19:50.756 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 18:19:51.221 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 18:19:51.286 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 18:20:02.838 -06:00 [INF] Validating identity claims [Identity: { email: test@email.com }, { id: 60a9ad33ed361c57b54b0736 }]
+2021-06-07 18:20:02.948 -06:00 [INF] Invalid identity claims
+2021-06-07 18:24:26.811 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 18:24:31.169 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 18:24:31.426 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 18:24:31.791 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 18:24:31.853 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 18:24:38.729 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 18:24:43.582 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 18:24:44.074 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 18:24:45.055 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 18:24:45.208 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 18:26:41.608 -06:00 [INF] test@gmail.com
+2021-06-07 18:26:41.626 -06:00 [INF] test@gmail.com
+2021-06-07 18:26:41.788 -06:00 [INF] User [test@gmail.com] successfully registered
+2021-06-07 18:26:42.140 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-07 18:26:42.140 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-07 18:26:42.142 -06:00 [INF] Claims validated
+2021-06-07 18:26:42.144 -06:00 [INF] Claims validated
+2021-06-07 18:26:42.145 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 18:26:42.145 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 18:49:01.435 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 18:49:12.844 -06:00 [INF] Configuring service (Server.API)...
+2021-06-07 18:49:13.187 -06:00 [INF] Starting service (Server.API)...
+2021-06-07 18:49:13.627 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-07 18:49:13.693 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-07 19:42:20.159 -06:00 [INF] Successfully logged in user [test@gmail.com]
+2021-06-07 19:42:20.497 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-07 19:42:20.497 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-07 19:42:20.509 -06:00 [INF] Claims validated
+2021-06-07 19:42:20.511 -06:00 [INF] Claims validated
+2021-06-07 19:42:20.515 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 19:42:20.516 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 19:43:51.494 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-07 19:43:51.498 -06:00 [INF] Claims validated
+2021-06-07 19:43:51.498 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 19:44:12.361 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-07 19:44:12.373 -06:00 [INF] Claims validated
+2021-06-07 19:44:12.377 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-07 19:44:29.011 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-07 19:44:29.017 -06:00 [INF] Claims validated
+2021-06-07 19:44:29.020 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 08:59:11.987 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 08:59:22.394 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 08:59:22.744 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 08:59:23.238 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 08:59:23.353 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:11:57.450 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:24:22.431 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:24:22.771 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:24:23.248 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:24:23.372 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:24:48.045 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:24:59.888 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:25:00.269 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:25:00.814 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:25:00.896 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:26:00.820 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:26:07.009 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:26:07.376 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:26:07.974 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:26:08.051 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:26:52.840 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:26:58.818 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:26:59.233 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:26:59.862 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:26:59.970 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:27:30.929 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:27:36.600 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:27:36.977 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:27:37.557 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:27:37.627 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:27:43.964 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:27:49.208 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:27:49.577 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:27:50.115 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:27:50.201 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:33:12.081 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:33:12.396 -06:00 [INF] Claims validated
+2021-06-08 09:33:12.405 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:34:12.052 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:34:12.074 -06:00 [INF] Claims validated
+2021-06-08 09:34:12.079 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:35:36.597 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:35:36.606 -06:00 [INF] Claims validated
+2021-06-08 09:35:36.609 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:36:18.472 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:36:24.856 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:36:25.393 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:36:25.984 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:36:26.106 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:36:31.020 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:36:31.430 -06:00 [INF] Claims validated
+2021-06-08 09:36:31.436 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:36:41.370 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:36:41.378 -06:00 [INF] Claims validated
+2021-06-08 09:36:41.380 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:36:55.439 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:36:55.449 -06:00 [INF] Claims validated
+2021-06-08 09:36:55.547 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:36:55.762 -06:00 [INF] Solution: Test successfully created
+2021-06-08 09:39:20.661 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:39:20.696 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:39:20.708 -06:00 [INF] Claims validated
+2021-06-08 09:39:20.710 -06:00 [INF] Claims validated
+2021-06-08 09:39:20.715 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:39:20.716 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:39:20.720 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:39:20.720 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:40:40.098 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:40:40.098 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:40:40.103 -06:00 [INF] Claims validated
+2021-06-08 09:40:40.103 -06:00 [INF] Claims validated
+2021-06-08 09:40:40.106 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:40:40.106 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:40:40.109 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:40:40.109 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:43:44.399 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:43:44.408 -06:00 [INF] Claims validated
+2021-06-08 09:43:44.411 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:43:44.416 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:43:45.064 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:43:45.072 -06:00 [INF] Claims validated
+2021-06-08 09:43:45.073 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:43:45.075 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:46:58.730 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:46:58.750 -06:00 [INF] Claims validated
+2021-06-08 09:46:58.759 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:46:58.767 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:46:58.816 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:46:58.823 -06:00 [INF] Claims validated
+2021-06-08 09:46:58.830 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:46:58.833 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:47:32.910 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:47:32.911 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:47:32.917 -06:00 [INF] Claims validated
+2021-06-08 09:47:32.918 -06:00 [INF] Claims validated
+2021-06-08 09:47:32.918 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:47:32.919 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:47:32.920 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:47:32.920 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:48:06.259 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:48:06.264 -06:00 [INF] Claims validated
+2021-06-08 09:48:06.265 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:48:06.268 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:48:06.282 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:48:06.289 -06:00 [INF] Claims validated
+2021-06-08 09:48:06.291 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:48:06.295 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:51:59.394 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:52:11.716 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:52:12.170 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:52:12.721 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:52:12.813 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:52:26.537 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:52:33.363 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:52:33.731 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:52:34.356 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:52:34.518 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:52:37.700 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:37.882 -06:00 [INF] Claims validated
+2021-06-08 09:52:37.885 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:37.888 -06:00 [INF] Claims validated
+2021-06-08 09:52:37.893 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:37.893 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:37.896 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:37.896 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:45.176 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:45.211 -06:00 [INF] Claims validated
+2021-06-08 09:52:45.219 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:45.227 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:47.053 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:47.058 -06:00 [INF] Claims validated
+2021-06-08 09:52:47.060 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:47.062 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:51.679 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:51.691 -06:00 [INF] Claims validated
+2021-06-08 09:52:51.695 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:51.699 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:51.853 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:51.858 -06:00 [INF] Claims validated
+2021-06-08 09:52:51.860 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:51.863 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:52.692 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:52.705 -06:00 [INF] Claims validated
+2021-06-08 09:52:52.708 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:52.710 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:53.037 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:53.055 -06:00 [INF] Claims validated
+2021-06-08 09:52:53.061 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:53.067 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:53.314 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:53.318 -06:00 [INF] Claims validated
+2021-06-08 09:52:53.346 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:53.350 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:53.560 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:53.570 -06:00 [INF] Claims validated
+2021-06-08 09:52:53.572 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:53.576 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:54.368 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:54.375 -06:00 [INF] Claims validated
+2021-06-08 09:52:54.378 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:54.381 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:54.609 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:54.612 -06:00 [INF] Claims validated
+2021-06-08 09:52:54.613 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:54.614 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:52:54.811 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:52:54.818 -06:00 [INF] Claims validated
+2021-06-08 09:52:54.820 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:52:54.823 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:53:08.928 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:53:08.937 -06:00 [INF] Claims validated
+2021-06-08 09:53:08.941 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:53:08.944 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:53:09.189 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:53:09.192 -06:00 [INF] Claims validated
+2021-06-08 09:53:09.205 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:53:09.212 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 09:53:26.375 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:53:34.635 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:53:35.053 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:53:35.743 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:53:35.839 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:53:57.208 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:54:03.046 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:54:03.413 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:54:03.972 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:54:04.047 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:54:06.836 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:54:07.087 -06:00 [INF] Claims validated
+2021-06-08 09:54:07.145 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:54:07.245 -06:00 [INF] Solution: New successfully created
+2021-06-08 09:54:34.899 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:54:41.611 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:54:41.984 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:54:42.486 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:54:42.571 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:54:44.819 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 09:54:45.027 -06:00 [INF] Claims validated
+2021-06-08 09:54:45.086 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 09:54:45.186 -06:00 [INF] Solution: This  successfully created
+2021-06-08 09:55:02.605 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:55:08.666 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:55:09.043 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:55:09.665 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:55:09.756 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:55:09.773 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:55:15.343 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 09:55:15.669 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 09:55:16.249 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 09:55:16.353 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 09:57:39.136 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 10:01:28.798 -06:00 [INF] Configuring service (Server.API)...
+2021-06-08 10:01:29.131 -06:00 [INF] Starting service (Server.API)...
+2021-06-08 10:01:29.681 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-08 10:01:29.786 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-08 10:01:58.631 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:01:58.857 -06:00 [INF] Claims validated
+2021-06-08 10:01:58.896 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:01:59.025 -06:00 [INF] Solution: Test successfully created
+2021-06-08 10:02:00.596 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:02:00.602 -06:00 [INF] Claims validated
+2021-06-08 10:02:00.605 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:02:00.609 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 10:02:00.924 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:02:00.931 -06:00 [INF] Claims validated
+2021-06-08 10:02:00.937 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:02:00.942 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 10:02:01.354 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:02:01.384 -06:00 [INF] Claims validated
+2021-06-08 10:02:01.392 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:02:01.399 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 10:02:01.569 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:02:01.575 -06:00 [INF] Claims validated
+2021-06-08 10:02:01.577 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:02:01.580 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 10:02:01.790 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:02:01.816 -06:00 [INF] Claims validated
+2021-06-08 10:02:01.827 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:02:01.834 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 10:03:20.604 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:03:20.608 -06:00 [INF] Claims validated
+2021-06-08 10:03:20.609 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:03:20.611 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 10:03:20.871 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:03:20.880 -06:00 [INF] Claims validated
+2021-06-08 10:03:20.882 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:03:20.894 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 10:03:31.660 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:03:31.674 -06:00 [INF] Claims validated
+2021-06-08 10:03:31.677 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:03:31.679 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 10:03:33.930 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:03:33.934 -06:00 [INF] Claims validated
+2021-06-08 10:03:33.935 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:03:33.937 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-08 10:10:10.396 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:10:10.401 -06:00 [INF] Claims validated
+2021-06-08 10:10:10.407 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:10:12.880 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-08 10:10:12.892 -06:00 [INF] Claims validated
+2021-06-08 10:10:12.944 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-08 10:10:12.949 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:37:33.034 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:37:33.072 -06:00 [INF] Invalid identity claims
+2021-06-10 10:37:56.874 -06:00 [INF] Successfully logged in user [test@gmail.com]
+2021-06-10 10:37:57.011 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:37:57.019 -06:00 [INF] Claims validated
+2021-06-10 10:37:57.021 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:37:57.042 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:37:57.048 -06:00 [INF] Claims validated
+2021-06-10 10:37:57.049 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:38:04.483 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:38:04.494 -06:00 [INF] Claims validated
+2021-06-10 10:38:04.496 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:38:06.585 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:38:06.590 -06:00 [INF] Claims validated
+2021-06-10 10:38:06.592 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:38:06.594 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:39:02.554 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:39:02.556 -06:00 [INF] Claims validated
+2021-06-10 10:39:02.558 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:39:02.560 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:39:37.301 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:39:37.303 -06:00 [INF] Claims validated
+2021-06-10 10:39:37.304 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:39:37.307 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:39:42.326 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:39:42.328 -06:00 [INF] Claims validated
+2021-06-10 10:39:42.329 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:39:42.331 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:39:45.636 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:39:45.637 -06:00 [INF] Claims validated
+2021-06-10 10:39:45.638 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:39:45.639 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:39:59.696 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:39:59.700 -06:00 [INF] Claims validated
+2021-06-10 10:39:59.709 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:39:59.726 -06:00 [INF] Solution: Another successfully created
+2021-06-10 10:40:03.504 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:40:03.512 -06:00 [INF] Claims validated
+2021-06-10 10:40:03.513 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:40:03.514 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:40:21.710 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:40:21.713 -06:00 [INF] Claims validated
+2021-06-10 10:40:21.715 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:40:21.720 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:40:36.014 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:40:36.016 -06:00 [INF] Claims validated
+2021-06-10 10:40:36.016 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:40:36.017 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:41:04.703 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:41:04.705 -06:00 [INF] Claims validated
+2021-06-10 10:41:04.706 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:41:04.708 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:41:30.681 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:41:30.683 -06:00 [INF] Claims validated
+2021-06-10 10:41:30.683 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:41:30.685 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:42:01.626 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:42:01.632 -06:00 [INF] Claims validated
+2021-06-10 10:42:01.633 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:42:01.636 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:43:35.762 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:43:35.764 -06:00 [INF] Claims validated
+2021-06-10 10:43:35.765 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:43:35.766 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:43:44.651 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:43:44.653 -06:00 [INF] Claims validated
+2021-06-10 10:43:44.654 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:43:44.655 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:44:07.180 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:44:07.182 -06:00 [INF] Claims validated
+2021-06-10 10:44:07.185 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:44:07.186 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:44:10.983 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:44:10.986 -06:00 [INF] Claims validated
+2021-06-10 10:44:10.987 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:44:10.989 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:44:19.173 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:44:19.176 -06:00 [INF] Claims validated
+2021-06-10 10:44:19.177 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:44:19.179 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 10:47:12.637 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 10:47:12.639 -06:00 [INF] Claims validated
+2021-06-10 10:47:12.640 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 10:47:12.641 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 11:04:08.580 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:04:08.583 -06:00 [INF] Claims validated
+2021-06-10 11:04:08.585 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:04:08.588 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 11:04:22.964 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:04:22.965 -06:00 [INF] Claims validated
+2021-06-10 11:04:22.965 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:04:22.966 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 11:04:34.431 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:04:34.434 -06:00 [INF] Claims validated
+2021-06-10 11:04:34.435 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:04:34.437 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 11:04:40.006 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:04:40.009 -06:00 [INF] Claims validated
+2021-06-10 11:04:40.009 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:04:40.011 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 11:05:30.177 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:05:30.185 -06:00 [INF] Claims validated
+2021-06-10 11:05:30.186 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:05:30.187 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 11:05:54.532 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:05:54.533 -06:00 [INF] Claims validated
+2021-06-10 11:05:54.534 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:05:54.535 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 11:56:52.220 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:56:52.235 -06:00 [INF] Claims validated
+2021-06-10 11:56:52.241 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:56:54.164 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:56:54.165 -06:00 [INF] Claims validated
+2021-06-10 11:56:54.166 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:56:54.167 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 11:57:47.783 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:57:47.785 -06:00 [INF] Claims validated
+2021-06-10 11:57:47.786 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:57:47.787 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 11:57:55.877 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 11:57:55.891 -06:00 [INF] Claims validated
+2021-06-10 11:57:55.891 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 11:57:55.892 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:01:17.122 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:01:17.124 -06:00 [INF] Claims validated
+2021-06-10 12:01:17.125 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:01:17.127 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:01:27.372 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:01:27.375 -06:00 [INF] Claims validated
+2021-06-10 12:01:27.375 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:01:29.222 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:01:29.224 -06:00 [INF] Claims validated
+2021-06-10 12:01:29.225 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:01:29.226 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:01:39.457 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:01:39.459 -06:00 [INF] Claims validated
+2021-06-10 12:01:39.459 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:01:41.395 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:01:41.399 -06:00 [INF] Claims validated
+2021-06-10 12:01:41.400 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:01:41.402 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:04:22.777 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:04:22.779 -06:00 [INF] Claims validated
+2021-06-10 12:04:22.780 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:04:24.604 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:04:24.606 -06:00 [INF] Claims validated
+2021-06-10 12:04:24.607 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:04:24.610 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:04:59.771 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:04:59.778 -06:00 [INF] Claims validated
+2021-06-10 12:04:59.778 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:05:01.672 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:05:01.673 -06:00 [INF] Claims validated
+2021-06-10 12:05:01.675 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:05:01.681 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:06:05.932 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:06:05.938 -06:00 [INF] Claims validated
+2021-06-10 12:06:05.940 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:06:05.942 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:07:30.752 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:07:30.754 -06:00 [INF] Claims validated
+2021-06-10 12:07:30.754 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:07:32.653 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:07:32.654 -06:00 [INF] Claims validated
+2021-06-10 12:07:32.655 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:07:32.656 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:08:22.660 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:08:22.662 -06:00 [INF] Claims validated
+2021-06-10 12:08:22.662 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:08:28.243 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:08:28.249 -06:00 [INF] Claims validated
+2021-06-10 12:08:28.250 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:08:55.296 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:08:55.298 -06:00 [INF] Claims validated
+2021-06-10 12:08:55.298 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:08:57.247 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:08:57.249 -06:00 [INF] Claims validated
+2021-06-10 12:08:57.250 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:08:57.251 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:11:37.656 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:11:37.657 -06:00 [INF] Claims validated
+2021-06-10 12:11:37.658 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:11:37.660 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:11:41.947 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:11:41.949 -06:00 [INF] Claims validated
+2021-06-10 12:11:41.951 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:11:41.953 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:12:32.703 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:12:32.705 -06:00 [INF] Claims validated
+2021-06-10 12:12:32.706 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:12:47.755 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:12:47.756 -06:00 [INF] Claims validated
+2021-06-10 12:12:47.756 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:12:49.720 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:12:49.722 -06:00 [INF] Claims validated
+2021-06-10 12:12:49.722 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:12:49.723 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:16:16.465 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:16:16.467 -06:00 [INF] Claims validated
+2021-06-10 12:16:16.467 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:16:18.394 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:16:18.402 -06:00 [INF] Claims validated
+2021-06-10 12:16:18.403 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:16:18.407 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:16:58.286 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:16:58.287 -06:00 [INF] Claims validated
+2021-06-10 12:16:58.288 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:16:58.289 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:17:09.680 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:17:09.682 -06:00 [INF] Claims validated
+2021-06-10 12:17:09.682 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:17:11.751 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:17:11.754 -06:00 [INF] Claims validated
+2021-06-10 12:17:11.755 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:17:11.757 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:17:19.262 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:17:19.272 -06:00 [INF] Claims validated
+2021-06-10 12:17:19.272 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:17:19.277 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:18:11.635 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:18:11.643 -06:00 [INF] Claims validated
+2021-06-10 12:18:11.643 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:18:11.645 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:19:44.076 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:19:44.082 -06:00 [INF] Claims validated
+2021-06-10 12:19:44.085 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:19:45.970 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:19:45.971 -06:00 [INF] Claims validated
+2021-06-10 12:19:45.971 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:19:45.972 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:19:58.441 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:19:58.445 -06:00 [INF] Claims validated
+2021-06-10 12:19:58.446 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:20:00.365 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:20:00.366 -06:00 [INF] Claims validated
+2021-06-10 12:20:00.371 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:20:00.372 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:20:54.305 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:20:54.306 -06:00 [INF] Claims validated
+2021-06-10 12:20:54.307 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:20:54.319 -06:00 [INF] Solution: One more successfully created
+2021-06-10 12:24:02.453 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:24:02.454 -06:00 [INF] Claims validated
+2021-06-10 12:24:02.455 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:24:04.301 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 12:24:04.302 -06:00 [INF] Claims validated
+2021-06-10 12:24:04.303 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 12:24:04.303 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 12:25:11.138 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-10 19:47:40.092 -06:00 [INF] Configuring service (Server.API)...
+2021-06-10 19:47:40.430 -06:00 [INF] Starting service (Server.API)...
+2021-06-10 19:47:40.835 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-10 19:47:40.917 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-10 19:59:53.658 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 19:59:53.814 -06:00 [INF] Claims validated
+2021-06-10 19:59:53.819 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 19:59:55.405 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 19:59:55.426 -06:00 [INF] Claims validated
+2021-06-10 19:59:55.449 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 19:59:55.458 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:00:13.543 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:00:13.552 -06:00 [INF] Claims validated
+2021-06-10 20:00:13.595 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:00:13.716 -06:00 [INF] Solution: Another one baby successfully created
+2021-06-10 20:00:14.070 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:00:14.075 -06:00 [INF] Claims validated
+2021-06-10 20:00:14.077 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:00:14.078 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:14:10.954 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:14:10.970 -06:00 [INF] Claims validated
+2021-06-10 20:14:10.974 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:14:12.601 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:14:12.604 -06:00 [INF] Claims validated
+2021-06-10 20:14:12.634 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:14:12.635 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:17:09.969 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:17:09.985 -06:00 [INF] Claims validated
+2021-06-10 20:17:09.989 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:17:11.718 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:17:11.722 -06:00 [INF] Claims validated
+2021-06-10 20:17:11.724 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:17:11.725 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:19:03.557 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:19:03.561 -06:00 [INF] Claims validated
+2021-06-10 20:19:03.566 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:19:03.569 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:20:16.152 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:20:16.155 -06:00 [INF] Claims validated
+2021-06-10 20:20:16.156 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:20:16.158 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:23:16.062 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:23:16.065 -06:00 [INF] Claims validated
+2021-06-10 20:23:16.068 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:23:16.071 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:24:30.935 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:24:30.937 -06:00 [INF] Claims validated
+2021-06-10 20:24:30.939 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:24:30.941 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:34:21.583 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:34:21.584 -06:00 [INF] Claims validated
+2021-06-10 20:34:21.585 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:34:21.586 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:34:36.437 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:34:36.444 -06:00 [INF] Claims validated
+2021-06-10 20:34:36.445 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:34:36.449 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:34:41.823 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:34:41.824 -06:00 [INF] Claims validated
+2021-06-10 20:34:41.825 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:34:41.826 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:34:46.516 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:34:46.517 -06:00 [INF] Claims validated
+2021-06-10 20:34:46.517 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:34:46.518 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:34:54.320 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:34:54.322 -06:00 [INF] Claims validated
+2021-06-10 20:34:54.323 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:34:54.323 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:35:12.664 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:35:12.665 -06:00 [INF] Claims validated
+2021-06-10 20:35:12.666 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:35:12.667 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:35:30.901 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:35:30.902 -06:00 [INF] Claims validated
+2021-06-10 20:35:30.902 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:35:30.903 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:35:37.727 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:35:37.728 -06:00 [INF] Claims validated
+2021-06-10 20:35:37.728 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:35:37.729 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:36:16.696 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:36:16.697 -06:00 [INF] Claims validated
+2021-06-10 20:36:16.697 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:36:16.698 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:36:23.512 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:36:23.513 -06:00 [INF] Claims validated
+2021-06-10 20:36:23.514 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:36:23.514 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:36:28.164 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:36:28.165 -06:00 [INF] Claims validated
+2021-06-10 20:36:28.165 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:36:28.166 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:36:32.093 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:36:32.094 -06:00 [INF] Claims validated
+2021-06-10 20:36:32.095 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:36:32.096 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:36:38.092 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:36:38.094 -06:00 [INF] Claims validated
+2021-06-10 20:36:38.094 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:36:38.095 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:36:42.780 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:36:42.781 -06:00 [INF] Claims validated
+2021-06-10 20:36:42.782 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:36:42.783 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:37:10.812 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:37:10.814 -06:00 [INF] Claims validated
+2021-06-10 20:37:10.814 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:37:10.815 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:38:02.020 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:38:02.021 -06:00 [INF] Claims validated
+2021-06-10 20:38:02.021 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:38:02.022 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:38:06.468 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:38:06.470 -06:00 [INF] Claims validated
+2021-06-10 20:38:06.472 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:38:06.473 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:38:12.791 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:38:12.798 -06:00 [INF] Claims validated
+2021-06-10 20:38:12.800 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:38:12.802 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:38:26.992 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:38:26.993 -06:00 [INF] Claims validated
+2021-06-10 20:38:26.994 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:38:26.995 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:38:43.525 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:38:43.527 -06:00 [INF] Claims validated
+2021-06-10 20:38:43.527 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:38:43.528 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:38:48.593 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:38:48.594 -06:00 [INF] Claims validated
+2021-06-10 20:38:48.595 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:38:48.595 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:39:03.067 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:39:03.068 -06:00 [INF] Claims validated
+2021-06-10 20:39:03.069 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:39:03.069 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:39:07.418 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:39:07.419 -06:00 [INF] Claims validated
+2021-06-10 20:39:07.420 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:39:07.420 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-10 20:39:16.295 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-10 20:39:16.296 -06:00 [INF] Claims validated
+2021-06-10 20:39:16.297 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-10 20:39:16.297 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 17:50:01.188 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 17:50:01.194 -06:00 [INF] Claims validated
+2021-06-11 17:50:01.197 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 17:50:03.601 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 17:50:03.603 -06:00 [INF] Claims validated
+2021-06-11 17:50:03.603 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 17:50:03.605 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 17:59:22.731 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 17:59:22.733 -06:00 [INF] Claims validated
+2021-06-11 17:59:22.734 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:01:13.971 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:01:13.973 -06:00 [INF] Claims validated
+2021-06-11 18:01:13.974 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:01:58.489 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:01:58.490 -06:00 [INF] Claims validated
+2021-06-11 18:01:58.491 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:02:30.313 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:02:30.316 -06:00 [INF] Claims validated
+2021-06-11 18:02:30.317 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:02:41.073 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:02:41.074 -06:00 [INF] Claims validated
+2021-06-11 18:02:41.075 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:04:33.815 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:04:33.823 -06:00 [INF] Claims validated
+2021-06-11 18:04:33.824 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:06:36.203 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:06:36.207 -06:00 [INF] Claims validated
+2021-06-11 18:06:36.208 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:08:09.756 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:08:09.758 -06:00 [INF] Claims validated
+2021-06-11 18:08:09.758 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:10:55.528 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:10:55.530 -06:00 [INF] Claims validated
+2021-06-11 18:10:55.530 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:12:31.123 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:12:31.128 -06:00 [INF] Claims validated
+2021-06-11 18:12:31.129 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:13:13.123 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:13:13.126 -06:00 [INF] Claims validated
+2021-06-11 18:13:13.127 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:15:02.615 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:15:02.616 -06:00 [INF] Claims validated
+2021-06-11 18:15:02.617 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:15:14.118 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:15:14.119 -06:00 [INF] Claims validated
+2021-06-11 18:15:14.120 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:15:26.260 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:15:26.270 -06:00 [INF] Claims validated
+2021-06-11 18:15:26.270 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:15:32.531 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:15:32.536 -06:00 [INF] Claims validated
+2021-06-11 18:15:32.537 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:15:34.125 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:15:34.127 -06:00 [INF] Claims validated
+2021-06-11 18:15:34.127 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:15:34.128 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:16:29.634 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:16:29.639 -06:00 [INF] Claims validated
+2021-06-11 18:16:29.640 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:16:30.961 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:16:30.963 -06:00 [INF] Claims validated
+2021-06-11 18:16:30.963 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:16:30.965 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:17:04.815 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:17:04.817 -06:00 [INF] Claims validated
+2021-06-11 18:17:04.818 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:17:06.354 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:17:06.357 -06:00 [INF] Claims validated
+2021-06-11 18:17:06.358 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:17:06.359 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:18:01.037 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:18:01.039 -06:00 [INF] Claims validated
+2021-06-11 18:18:01.040 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:18:02.415 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:18:02.416 -06:00 [INF] Claims validated
+2021-06-11 18:18:02.417 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:18:02.418 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:18:13.096 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:18:13.097 -06:00 [INF] Claims validated
+2021-06-11 18:18:13.098 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:18:14.538 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:18:14.544 -06:00 [INF] Claims validated
+2021-06-11 18:18:14.545 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:18:14.548 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:18:37.978 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:18:37.980 -06:00 [INF] Claims validated
+2021-06-11 18:18:37.981 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:18:39.327 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:18:39.328 -06:00 [INF] Claims validated
+2021-06-11 18:18:39.329 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:18:39.331 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:54:50.014 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:54:50.021 -06:00 [INF] Claims validated
+2021-06-11 18:54:50.022 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:54:50.023 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:54:53.707 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:54:53.710 -06:00 [INF] Claims validated
+2021-06-11 18:54:53.710 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:54:55.254 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:54:55.256 -06:00 [INF] Claims validated
+2021-06-11 18:54:55.256 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:54:55.257 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:56:54.865 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:56:54.867 -06:00 [INF] Claims validated
+2021-06-11 18:56:54.868 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:56:56.398 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:56:56.402 -06:00 [INF] Claims validated
+2021-06-11 18:56:56.403 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:56:56.404 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:57:05.240 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:57:05.243 -06:00 [INF] Claims validated
+2021-06-11 18:57:05.244 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:57:05.244 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:58:27.332 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:58:27.333 -06:00 [INF] Claims validated
+2021-06-11 18:58:27.333 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:58:28.715 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:58:28.717 -06:00 [INF] Claims validated
+2021-06-11 18:58:28.717 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:58:28.718 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:59:01.797 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:59:01.799 -06:00 [INF] Claims validated
+2021-06-11 18:59:01.800 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:59:01.802 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:59:34.988 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:59:34.990 -06:00 [INF] Claims validated
+2021-06-11 18:59:34.991 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:59:34.992 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 18:59:52.897 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:59:52.898 -06:00 [INF] Claims validated
+2021-06-11 18:59:52.899 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:59:54.318 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 18:59:54.321 -06:00 [INF] Claims validated
+2021-06-11 18:59:54.322 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 18:59:54.323 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:00:41.738 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:00:41.743 -06:00 [INF] Claims validated
+2021-06-11 19:00:41.744 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:00:41.746 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:00:54.453 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:00:54.456 -06:00 [INF] Claims validated
+2021-06-11 19:00:54.457 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:00:54.458 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:08:07.323 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:08:07.328 -06:00 [INF] Claims validated
+2021-06-11 19:08:07.328 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:08:08.720 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:08:08.722 -06:00 [INF] Claims validated
+2021-06-11 19:08:08.722 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:08:08.723 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:12:48.114 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:12:48.116 -06:00 [INF] Claims validated
+2021-06-11 19:12:48.117 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:12:48.119 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:20:19.476 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:20:19.477 -06:00 [INF] Claims validated
+2021-06-11 19:20:19.478 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:20:19.478 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:20:26.622 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:20:26.624 -06:00 [INF] Claims validated
+2021-06-11 19:20:26.625 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:20:26.628 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:20:28.658 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:20:28.663 -06:00 [INF] Claims validated
+2021-06-11 19:20:28.665 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:20:28.666 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:20:32.781 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:20:32.785 -06:00 [INF] Claims validated
+2021-06-11 19:20:32.786 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:20:32.787 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:20:36.056 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:20:36.059 -06:00 [INF] Claims validated
+2021-06-11 19:20:36.060 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:20:36.061 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:20:42.101 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:20:42.105 -06:00 [INF] Claims validated
+2021-06-11 19:20:42.105 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:20:43.601 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:20:43.602 -06:00 [INF] Claims validated
+2021-06-11 19:20:43.603 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:20:43.604 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:25:53.078 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:25:53.082 -06:00 [INF] Claims validated
+2021-06-11 19:25:53.083 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:25:54.579 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:25:54.580 -06:00 [INF] Claims validated
+2021-06-11 19:25:54.581 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:25:54.582 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:27:28.180 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:27:28.185 -06:00 [INF] Claims validated
+2021-06-11 19:27:28.187 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:27:29.721 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:27:29.726 -06:00 [INF] Claims validated
+2021-06-11 19:27:29.728 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:27:29.730 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:35:39.937 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:35:39.939 -06:00 [INF] Claims validated
+2021-06-11 19:35:39.939 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:35:41.435 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:35:41.436 -06:00 [INF] Claims validated
+2021-06-11 19:35:41.437 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:35:41.438 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:37:57.224 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:37:57.228 -06:00 [INF] Claims validated
+2021-06-11 19:37:57.230 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:37:58.737 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:37:58.742 -06:00 [INF] Claims validated
+2021-06-11 19:37:58.746 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:37:58.748 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:37:59.065 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:37:59.067 -06:00 [INF] Claims validated
+2021-06-11 19:37:59.069 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:37:59.073 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:38:08.422 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:38:08.427 -06:00 [INF] Claims validated
+2021-06-11 19:38:08.430 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:38:09.882 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:38:09.886 -06:00 [INF] Claims validated
+2021-06-11 19:38:09.887 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:38:09.888 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:38:10.005 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:38:10.008 -06:00 [INF] Claims validated
+2021-06-11 19:38:10.009 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:38:10.010 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:39:16.733 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:39:16.735 -06:00 [INF] Claims validated
+2021-06-11 19:39:16.736 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:39:18.168 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:39:18.170 -06:00 [INF] Claims validated
+2021-06-11 19:39:18.171 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:39:18.172 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:42:04.129 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:42:04.132 -06:00 [INF] Claims validated
+2021-06-11 19:42:04.132 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:42:05.640 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:42:05.642 -06:00 [INF] Claims validated
+2021-06-11 19:42:05.643 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:42:05.644 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:51:10.983 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:51:10.987 -06:00 [INF] Claims validated
+2021-06-11 19:51:10.988 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:51:12.678 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:51:12.681 -06:00 [INF] Claims validated
+2021-06-11 19:51:12.682 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:51:12.686 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:51:19.337 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:51:19.339 -06:00 [INF] Claims validated
+2021-06-11 19:51:19.340 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:51:20.724 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:51:20.725 -06:00 [INF] Claims validated
+2021-06-11 19:51:20.726 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:51:20.727 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:51:41.917 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:51:41.921 -06:00 [INF] Claims validated
+2021-06-11 19:51:41.921 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:51:43.304 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:51:43.306 -06:00 [INF] Claims validated
+2021-06-11 19:51:43.306 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:51:43.307 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:53:08.619 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:53:08.623 -06:00 [INF] Claims validated
+2021-06-11 19:53:08.623 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:53:10.011 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:53:10.013 -06:00 [INF] Claims validated
+2021-06-11 19:53:10.014 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:53:10.015 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:54:15.358 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:54:15.361 -06:00 [INF] Claims validated
+2021-06-11 19:54:15.362 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:54:16.730 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:54:16.732 -06:00 [INF] Claims validated
+2021-06-11 19:54:16.732 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:54:16.733 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:55:15.334 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:55:15.336 -06:00 [INF] Claims validated
+2021-06-11 19:55:15.336 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:55:16.681 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:55:16.683 -06:00 [INF] Claims validated
+2021-06-11 19:55:16.683 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:55:16.684 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:55:41.855 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:55:41.856 -06:00 [INF] Claims validated
+2021-06-11 19:55:41.857 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:55:43.218 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:55:43.219 -06:00 [INF] Claims validated
+2021-06-11 19:55:43.220 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:55:43.221 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:56:26.511 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:56:26.515 -06:00 [INF] Claims validated
+2021-06-11 19:56:26.515 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:56:27.893 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:56:27.895 -06:00 [INF] Claims validated
+2021-06-11 19:56:27.896 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:56:27.897 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 19:57:44.792 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:57:44.794 -06:00 [INF] Claims validated
+2021-06-11 19:57:44.795 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:59:07.590 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 19:59:07.592 -06:00 [INF] Claims validated
+2021-06-11 19:59:07.593 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 19:59:07.594 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 20:00:15.376 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 20:00:15.380 -06:00 [INF] Claims validated
+2021-06-11 20:00:15.381 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 20:00:16.720 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 20:00:16.721 -06:00 [INF] Claims validated
+2021-06-11 20:00:16.722 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 20:00:16.723 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 20:00:41.361 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 20:00:41.363 -06:00 [INF] Claims validated
+2021-06-11 20:00:41.363 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 20:00:42.617 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 20:00:42.618 -06:00 [INF] Claims validated
+2021-06-11 20:00:42.618 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 20:00:42.620 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 20:07:52.724 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 20:07:52.727 -06:00 [INF] Claims validated
+2021-06-11 20:07:52.727 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 20:07:54.184 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 20:07:54.187 -06:00 [INF] Claims validated
+2021-06-11 20:07:54.188 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 20:07:54.190 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 20:08:14.826 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 20:08:14.827 -06:00 [INF] Claims validated
+2021-06-11 20:08:14.827 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 20:08:16.227 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 20:08:16.228 -06:00 [INF] Claims validated
+2021-06-11 20:08:16.229 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-11 20:08:16.231 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-11 20:09:51.227 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-11 20:09:51.228 -06:00 [INF] Claims validated
+2021-06-11 20:09:51.229 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:11:57.521 -06:00 [INF] Configuring service (Server.API)...
+2021-06-12 18:11:58.027 -06:00 [INF] Starting service (Server.API)...
+2021-06-12 18:11:58.829 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-12 18:11:59.096 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-12 18:29:37.240 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:30:07.300 -06:00 [INF] Invalid identity claims
+2021-06-12 18:32:10.960 -06:00 [INF] Successfully logged in user [test@gmail.com]
+2021-06-12 18:32:11.132 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:32:11.132 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:32:11.136 -06:00 [INF] Claims validated
+2021-06-12 18:32:11.136 -06:00 [INF] Claims validated
+2021-06-12 18:32:11.139 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:32:11.139 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:33:04.777 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:33:04.796 -06:00 [INF] Claims validated
+2021-06-12 18:33:04.804 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:33:14.017 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:33:14.023 -06:00 [INF] Claims validated
+2021-06-12 18:33:14.024 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:33:24.759 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:33:24.779 -06:00 [INF] Claims validated
+2021-06-12 18:33:24.782 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:34:29.013 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:34:29.020 -06:00 [INF] Claims validated
+2021-06-12 18:34:29.022 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:34:30.361 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:34:30.366 -06:00 [INF] Claims validated
+2021-06-12 18:34:30.373 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:34:30.376 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 18:34:51.842 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:34:51.847 -06:00 [INF] Claims validated
+2021-06-12 18:34:51.849 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:34:53.191 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:34:53.207 -06:00 [INF] Claims validated
+2021-06-12 18:34:53.211 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:34:53.217 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 18:38:39.253 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:38:39.257 -06:00 [INF] Claims validated
+2021-06-12 18:38:39.258 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:38:40.577 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:38:40.580 -06:00 [INF] Claims validated
+2021-06-12 18:38:40.582 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:38:40.584 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 18:41:41.960 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:41:41.980 -06:00 [INF] Claims validated
+2021-06-12 18:41:41.985 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:41:43.532 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:41:43.538 -06:00 [INF] Claims validated
+2021-06-12 18:41:43.564 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:41:43.581 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 18:45:06.012 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:45:06.017 -06:00 [INF] Claims validated
+2021-06-12 18:45:06.021 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:45:09.069 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:45:09.073 -06:00 [INF] Claims validated
+2021-06-12 18:45:09.074 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:45:20.275 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:45:20.278 -06:00 [INF] Claims validated
+2021-06-12 18:45:20.279 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:45:23.654 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:45:23.658 -06:00 [INF] Claims validated
+2021-06-12 18:45:23.659 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:45:27.218 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:45:27.238 -06:00 [INF] Claims validated
+2021-06-12 18:45:27.240 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:47:35.351 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:47:35.364 -06:00 [INF] Claims validated
+2021-06-12 18:47:35.369 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:48:42.543 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:48:42.545 -06:00 [INF] Claims validated
+2021-06-12 18:48:42.547 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:50:06.328 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:50:06.331 -06:00 [INF] Claims validated
+2021-06-12 18:50:06.332 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:50:07.919 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 18:50:07.920 -06:00 [INF] Claims validated
+2021-06-12 18:50:07.921 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 18:50:07.922 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:01:03.198 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:01:03.203 -06:00 [INF] Claims validated
+2021-06-12 19:01:03.209 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:01:04.658 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:01:04.661 -06:00 [INF] Claims validated
+2021-06-12 19:01:04.663 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:01:04.664 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:03:06.756 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:03:06.758 -06:00 [INF] Claims validated
+2021-06-12 19:03:06.759 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:03:08.244 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:03:08.251 -06:00 [INF] Claims validated
+2021-06-12 19:03:08.257 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:03:08.260 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:03:53.849 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:03:53.862 -06:00 [INF] Claims validated
+2021-06-12 19:03:53.863 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:03:55.470 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:03:55.475 -06:00 [INF] Claims validated
+2021-06-12 19:03:55.477 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:03:55.478 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:05:12.538 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:05:12.540 -06:00 [INF] Claims validated
+2021-06-12 19:05:12.540 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:05:12.541 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:05:21.842 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:05:21.844 -06:00 [INF] Claims validated
+2021-06-12 19:05:21.845 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:05:23.455 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:05:23.456 -06:00 [INF] Claims validated
+2021-06-12 19:05:23.457 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:05:23.458 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:06:34.056 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:06:34.062 -06:00 [INF] Claims validated
+2021-06-12 19:06:34.063 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:06:35.643 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:06:35.645 -06:00 [INF] Claims validated
+2021-06-12 19:06:35.646 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:06:35.648 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:15:43.192 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:15:43.194 -06:00 [INF] Claims validated
+2021-06-12 19:15:43.194 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:15:44.875 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:15:44.877 -06:00 [INF] Claims validated
+2021-06-12 19:15:44.878 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:15:44.879 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:16:43.446 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:16:43.449 -06:00 [INF] Claims validated
+2021-06-12 19:16:43.450 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:16:44.977 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:16:44.981 -06:00 [INF] Claims validated
+2021-06-12 19:16:44.982 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:16:44.984 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:17:09.375 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:17:09.387 -06:00 [INF] Claims validated
+2021-06-12 19:17:09.387 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:17:10.886 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:17:10.888 -06:00 [INF] Claims validated
+2021-06-12 19:17:10.888 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:17:10.890 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:20:20.624 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:20:20.628 -06:00 [INF] Claims validated
+2021-06-12 19:20:20.629 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:20:22.288 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:20:22.290 -06:00 [INF] Claims validated
+2021-06-12 19:20:22.290 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:20:22.292 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:20:39.643 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:20:39.646 -06:00 [INF] Claims validated
+2021-06-12 19:20:39.647 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:20:41.219 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:20:41.222 -06:00 [INF] Claims validated
+2021-06-12 19:20:41.222 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:20:41.224 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:21:57.796 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:21:57.799 -06:00 [INF] Claims validated
+2021-06-12 19:21:57.799 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:21:59.321 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:21:59.323 -06:00 [INF] Claims validated
+2021-06-12 19:21:59.325 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:21:59.326 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:23:00.206 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:23:00.208 -06:00 [INF] Claims validated
+2021-06-12 19:23:00.209 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:23:01.687 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:23:01.692 -06:00 [INF] Claims validated
+2021-06-12 19:23:01.693 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:23:01.695 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:23:09.588 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:23:09.591 -06:00 [INF] Claims validated
+2021-06-12 19:23:09.592 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:23:11.047 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:23:11.049 -06:00 [INF] Claims validated
+2021-06-12 19:23:11.049 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:23:11.050 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:24:21.699 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:24:21.700 -06:00 [INF] Claims validated
+2021-06-12 19:24:21.701 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:24:23.142 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:24:23.145 -06:00 [INF] Claims validated
+2021-06-12 19:24:23.146 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:24:23.156 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:28:57.714 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:28:57.720 -06:00 [INF] Claims validated
+2021-06-12 19:28:57.721 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:28:59.186 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:28:59.187 -06:00 [INF] Claims validated
+2021-06-12 19:28:59.188 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:28:59.189 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:49:17.878 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:49:17.882 -06:00 [INF] Claims validated
+2021-06-12 19:49:17.883 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:49:17.885 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:51:24.113 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:51:24.118 -06:00 [INF] Claims validated
+2021-06-12 19:51:24.118 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:51:29.411 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:51:29.413 -06:00 [INF] Claims validated
+2021-06-12 19:51:29.414 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:57:57.384 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:57:57.388 -06:00 [INF] Claims validated
+2021-06-12 19:57:57.395 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:58:16.836 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:58:16.839 -06:00 [INF] Claims validated
+2021-06-12 19:58:16.839 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:58:18.342 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:58:18.344 -06:00 [INF] Claims validated
+2021-06-12 19:58:18.345 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:58:18.346 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:58:38.616 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:58:38.619 -06:00 [INF] Claims validated
+2021-06-12 19:58:38.624 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:58:38.629 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:58:45.381 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:58:45.383 -06:00 [INF] Claims validated
+2021-06-12 19:58:45.383 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:58:45.385 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:58:56.497 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:58:56.499 -06:00 [INF] Claims validated
+2021-06-12 19:58:56.500 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:58:56.501 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 19:58:58.237 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 19:58:58.239 -06:00 [INF] Claims validated
+2021-06-12 19:58:58.240 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 19:58:58.241 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:01:17.005 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:01:17.007 -06:00 [INF] Claims validated
+2021-06-12 20:01:17.008 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:01:17.010 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:01:21.433 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:01:21.440 -06:00 [INF] Claims validated
+2021-06-12 20:01:21.441 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:01:21.442 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:02:42.934 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:02:42.936 -06:00 [INF] Claims validated
+2021-06-12 20:02:42.937 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:02:42.938 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:03:49.011 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:03:49.013 -06:00 [INF] Claims validated
+2021-06-12 20:03:49.013 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:03:49.015 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:04:22.398 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:04:22.404 -06:00 [INF] Claims validated
+2021-06-12 20:04:22.408 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:04:22.412 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:06:45.184 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:06:45.190 -06:00 [INF] Claims validated
+2021-06-12 20:06:45.191 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:06:45.193 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:08:30.994 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:08:31.001 -06:00 [INF] Claims validated
+2021-06-12 20:08:31.003 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:08:31.009 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:09:59.354 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:09:59.357 -06:00 [INF] Claims validated
+2021-06-12 20:09:59.358 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:09:59.359 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:10:03.008 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:10:03.011 -06:00 [INF] Claims validated
+2021-06-12 20:10:03.012 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:10:03.013 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:10:12.026 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:10:12.029 -06:00 [INF] Claims validated
+2021-06-12 20:10:12.030 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:10:12.031 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:12:50.063 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:12:50.065 -06:00 [INF] Claims validated
+2021-06-12 20:12:50.066 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:12:50.067 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:13:09.508 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:13:09.511 -06:00 [INF] Claims validated
+2021-06-12 20:13:09.512 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:13:09.513 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:13:32.838 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:13:32.840 -06:00 [INF] Claims validated
+2021-06-12 20:13:32.841 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:13:32.842 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:13:51.891 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:13:51.894 -06:00 [INF] Claims validated
+2021-06-12 20:13:51.895 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:13:51.896 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:14:16.288 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:14:16.290 -06:00 [INF] Claims validated
+2021-06-12 20:14:16.291 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:14:16.293 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:16:07.474 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:16:07.476 -06:00 [INF] Claims validated
+2021-06-12 20:16:07.477 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:16:07.478 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:16:18.483 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:16:18.493 -06:00 [INF] Claims validated
+2021-06-12 20:16:18.494 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:16:20.010 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:16:20.012 -06:00 [INF] Claims validated
+2021-06-12 20:16:20.013 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:16:20.014 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:18:28.453 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:18:28.455 -06:00 [INF] Claims validated
+2021-06-12 20:18:28.456 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:18:28.459 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:18:35.140 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:18:35.142 -06:00 [INF] Claims validated
+2021-06-12 20:18:35.143 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:18:35.143 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:19:07.792 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:19:07.794 -06:00 [INF] Claims validated
+2021-06-12 20:19:07.794 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:19:07.795 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:22:38.953 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:22:38.956 -06:00 [INF] Claims validated
+2021-06-12 20:22:38.957 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:22:38.958 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:23:37.622 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:23:37.624 -06:00 [INF] Claims validated
+2021-06-12 20:23:37.624 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:23:37.625 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:25:01.595 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:25:01.599 -06:00 [INF] Claims validated
+2021-06-12 20:25:01.600 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:25:01.602 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:36:07.054 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:36:07.057 -06:00 [INF] Claims validated
+2021-06-12 20:36:07.058 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:36:42.956 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:36:42.957 -06:00 [INF] Claims validated
+2021-06-12 20:36:42.958 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:36:58.650 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:36:58.652 -06:00 [INF] Claims validated
+2021-06-12 20:36:58.653 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:37:00.263 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:37:00.266 -06:00 [INF] Claims validated
+2021-06-12 20:37:00.266 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:37:00.268 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:39:18.976 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:39:18.978 -06:00 [INF] Claims validated
+2021-06-12 20:39:18.979 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:39:18.981 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:39:46.534 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:39:46.538 -06:00 [INF] Claims validated
+2021-06-12 20:39:46.539 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:39:46.543 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-12 20:42:08.321 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:42:08.324 -06:00 [INF] Claims validated
+2021-06-12 20:42:08.325 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:42:09.839 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-12 20:42:09.841 -06:00 [INF] Claims validated
+2021-06-12 20:42:09.842 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-12 20:42:09.843 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:18:37.141 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 20:18:37.524 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 20:18:38.102 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 20:18:38.203 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 20:18:57.131 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:18:57.286 -06:00 [INF] Claims validated
+2021-06-13 20:18:57.291 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:18:58.624 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:18:58.633 -06:00 [INF] Claims validated
+2021-06-13 20:18:58.642 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:18:58.651 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:19:21.296 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:19:21.306 -06:00 [INF] Claims validated
+2021-06-13 20:19:21.308 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:19:22.488 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:19:22.505 -06:00 [INF] Claims validated
+2021-06-13 20:19:22.510 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:19:22.515 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:19:23.801 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:19:23.810 -06:00 [INF] Claims validated
+2021-06-13 20:19:23.811 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:19:24.955 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:19:24.970 -06:00 [INF] Claims validated
+2021-06-13 20:19:24.974 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:19:24.978 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:20:08.599 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:20:08.606 -06:00 [INF] Claims validated
+2021-06-13 20:20:08.610 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:20:08.635 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:20:08.780 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:20:08.787 -06:00 [INF] Claims validated
+2021-06-13 20:20:08.790 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:20:08.793 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:25:54.004 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:25:54.012 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:25:54.019 -06:00 [INF] Claims validated
+2021-06-13 20:25:54.021 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:25:54.026 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:25:54.033 -06:00 [INF] Claims validated
+2021-06-13 20:25:54.036 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:25:54.037 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:27:15.627 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:27:15.639 -06:00 [INF] Claims validated
+2021-06-13 20:27:15.640 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:27:15.681 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:27:15.686 -06:00 [INF] Claims validated
+2021-06-13 20:27:15.687 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:27:16.748 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:27:16.756 -06:00 [INF] Claims validated
+2021-06-13 20:27:16.764 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:27:16.806 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:27:17.221 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:27:17.225 -06:00 [INF] Claims validated
+2021-06-13 20:27:17.228 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:27:17.232 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:27:41.906 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:27:41.909 -06:00 [INF] Claims validated
+2021-06-13 20:27:41.910 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:27:41.939 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:27:41.941 -06:00 [INF] Claims validated
+2021-06-13 20:27:41.942 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:27:43.066 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:27:43.074 -06:00 [INF] Claims validated
+2021-06-13 20:27:43.078 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:27:43.084 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:27:43.338 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:27:43.351 -06:00 [INF] Claims validated
+2021-06-13 20:27:43.355 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:27:43.357 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:31:17.241 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:31:17.250 -06:00 [INF] Claims validated
+2021-06-13 20:31:17.259 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:31:17.264 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:31:17.293 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:31:17.301 -06:00 [INF] Claims validated
+2021-06-13 20:31:17.302 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:31:17.305 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:32:03.154 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:32:03.157 -06:00 [INF] Claims validated
+2021-06-13 20:32:03.159 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:32:03.160 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:32:03.264 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:32:03.278 -06:00 [INF] Claims validated
+2021-06-13 20:32:03.280 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:32:03.281 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:34:00.260 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:34:00.262 -06:00 [INF] Claims validated
+2021-06-13 20:34:00.263 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:34:00.264 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:34:00.309 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:34:00.312 -06:00 [INF] Claims validated
+2021-06-13 20:34:00.313 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:34:00.314 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:35:08.031 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:35:08.037 -06:00 [INF] Claims validated
+2021-06-13 20:35:08.039 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:35:08.041 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:35:08.090 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:35:08.097 -06:00 [INF] Claims validated
+2021-06-13 20:35:08.099 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:35:08.101 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:36:26.943 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:36:26.945 -06:00 [INF] Claims validated
+2021-06-13 20:36:26.946 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:36:26.954 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:36:27.041 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:36:27.043 -06:00 [INF] Claims validated
+2021-06-13 20:36:27.044 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:36:27.046 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:37:51.597 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:37:51.600 -06:00 [INF] Claims validated
+2021-06-13 20:37:51.600 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:37:51.602 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:37:51.606 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:37:51.616 -06:00 [INF] Claims validated
+2021-06-13 20:37:51.617 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:37:51.619 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:38:29.314 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:38:29.317 -06:00 [INF] Claims validated
+2021-06-13 20:38:29.323 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:38:29.324 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:38:29.380 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:38:29.382 -06:00 [INF] Claims validated
+2021-06-13 20:38:29.383 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:38:29.385 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:40:01.941 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:40:01.947 -06:00 [INF] Claims validated
+2021-06-13 20:40:01.950 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:40:01.952 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:40:02.325 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:40:02.326 -06:00 [INF] Claims validated
+2021-06-13 20:40:02.327 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:40:02.328 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:40:09.856 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:40:09.859 -06:00 [INF] Claims validated
+2021-06-13 20:40:09.860 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:40:09.862 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:40:10.335 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:40:10.336 -06:00 [INF] Claims validated
+2021-06-13 20:40:10.337 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:40:10.338 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:41:12.981 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:41:12.983 -06:00 [INF] Claims validated
+2021-06-13 20:41:12.984 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:41:12.985 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:41:13.049 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:41:13.051 -06:00 [INF] Claims validated
+2021-06-13 20:41:13.051 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:41:13.052 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:41:15.532 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:41:15.533 -06:00 [INF] Claims validated
+2021-06-13 20:41:15.535 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:41:15.536 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:41:15.610 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:41:15.612 -06:00 [INF] Claims validated
+2021-06-13 20:41:15.613 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:41:15.615 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:44:40.388 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:44:40.390 -06:00 [INF] Claims validated
+2021-06-13 20:44:40.391 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:44:40.392 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:44:40.396 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:44:40.398 -06:00 [INF] Claims validated
+2021-06-13 20:44:40.401 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:44:40.402 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:50:38.667 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:50:38.670 -06:00 [INF] Claims validated
+2021-06-13 20:50:38.671 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:50:38.674 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:50:38.688 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:50:38.690 -06:00 [INF] Claims validated
+2021-06-13 20:50:38.691 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:50:38.692 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:52:39.917 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:52:39.920 -06:00 [INF] Claims validated
+2021-06-13 20:52:39.920 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:52:40.040 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:52:40.045 -06:00 [INF] Claims validated
+2021-06-13 20:52:40.046 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:52:41.215 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:52:41.217 -06:00 [INF] Claims validated
+2021-06-13 20:52:41.218 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:52:41.219 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 20:52:41.356 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 20:52:41.359 -06:00 [INF] Claims validated
+2021-06-13 20:52:41.361 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 20:52:41.362 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:11:38.618 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:11:38.622 -06:00 [INF] Claims validated
+2021-06-13 21:11:38.624 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:11:38.625 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:11:38.667 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:11:38.670 -06:00 [INF] Claims validated
+2021-06-13 21:11:38.674 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:11:38.675 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:11:57.015 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:11:57.018 -06:00 [INF] Claims validated
+2021-06-13 21:11:57.019 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:11:57.021 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:11:57.038 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:11:57.040 -06:00 [INF] Claims validated
+2021-06-13 21:11:57.042 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:11:57.043 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:12:01.613 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:12:01.614 -06:00 [INF] Claims validated
+2021-06-13 21:12:01.615 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:12:01.616 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:12:01.687 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:12:01.689 -06:00 [INF] Claims validated
+2021-06-13 21:12:01.689 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:12:01.690 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:12:24.372 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:12:24.375 -06:00 [INF] Claims validated
+2021-06-13 21:12:24.376 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:12:24.378 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:12:24.405 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:12:24.408 -06:00 [INF] Claims validated
+2021-06-13 21:12:24.409 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:12:24.411 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:12:30.635 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:12:30.638 -06:00 [INF] Claims validated
+2021-06-13 21:12:30.639 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:12:30.641 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:12:30.670 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:12:30.676 -06:00 [INF] Claims validated
+2021-06-13 21:12:30.678 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:12:30.683 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:13:41.861 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:13:41.864 -06:00 [INF] Claims validated
+2021-06-13 21:13:41.864 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:13:41.865 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:13:41.954 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:13:41.956 -06:00 [INF] Claims validated
+2021-06-13 21:13:41.956 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:13:41.962 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:27:19.437 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:27:19.442 -06:00 [INF] Claims validated
+2021-06-13 21:27:19.443 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:27:19.444 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:27:19.608 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:27:19.611 -06:00 [INF] Claims validated
+2021-06-13 21:27:19.612 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:27:19.613 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:27:24.961 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:27:24.967 -06:00 [INF] Claims validated
+2021-06-13 21:27:24.968 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:27:24.979 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:27:25.217 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:27:25.219 -06:00 [INF] Claims validated
+2021-06-13 21:27:25.220 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:27:25.221 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 21:40:48.220 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:40:48.225 -06:00 [INF] Claims validated
+2021-06-13 21:40:48.225 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:40:49.491 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 21:40:49.493 -06:00 [INF] Claims validated
+2021-06-13 21:40:49.493 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 21:40:49.495 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:04:53.964 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:04:53.969 -06:00 [INF] Claims validated
+2021-06-13 22:04:53.969 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:04:55.781 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:04:55.785 -06:00 [INF] Claims validated
+2021-06-13 22:04:55.786 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:04:55.790 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:06:19.769 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:06:19.770 -06:00 [INF] Claims validated
+2021-06-13 22:06:19.771 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:06:21.424 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:06:21.427 -06:00 [INF] Claims validated
+2021-06-13 22:06:21.429 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:06:21.431 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:07:02.654 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:07:02.661 -06:00 [INF] Claims validated
+2021-06-13 22:07:02.663 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:07:03.844 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:07:03.845 -06:00 [INF] Claims validated
+2021-06-13 22:07:03.846 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:07:03.847 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:08:24.065 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:08:24.068 -06:00 [INF] Claims validated
+2021-06-13 22:08:24.068 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:08:24.389 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:08:24.400 -06:00 [INF] Claims validated
+2021-06-13 22:08:24.401 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:08:25.578 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:08:25.581 -06:00 [INF] Claims validated
+2021-06-13 22:08:25.583 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:08:25.584 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:08:25.782 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:08:25.784 -06:00 [INF] Claims validated
+2021-06-13 22:08:25.784 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:08:25.785 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:13:41.957 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:13:41.961 -06:00 [INF] Claims validated
+2021-06-13 22:13:41.962 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:13:43.147 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:13:43.151 -06:00 [INF] Claims validated
+2021-06-13 22:13:43.152 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:13:43.155 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:15:00.213 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:15:00.218 -06:00 [INF] Claims validated
+2021-06-13 22:15:00.219 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:15:01.386 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:15:01.388 -06:00 [INF] Claims validated
+2021-06-13 22:15:01.389 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:15:01.390 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:38:14.823 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:38:29.014 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:38:29.491 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:38:30.128 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:38:30.212 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:39:02.196 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:39:10.765 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:39:11.133 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:39:11.757 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:39:11.844 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:39:33.851 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:39:39.452 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:39:39.832 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:39:40.338 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:39:40.420 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:39:45.397 -06:00 [ERR] Connection id "0HM9ETPMGGI84", Request id "0HM9ETPMGGI84:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Unable to resolve service for type 'Server.API.Queries.ITemplateQueries' while attempting to activate 'Server.API.Controllers.TemplateController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-06-13 22:40:45.095 -06:00 [ERR] Connection id "0HM9ETPMGGI84", Request id "0HM9ETPMGGI84:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Unable to resolve service for type 'Server.API.Queries.ITemplateQueries' while attempting to activate 'Server.API.Controllers.TemplateController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2021-06-13 22:40:47.634 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:40:54.267 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:40:54.634 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:40:55.150 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:40:55.224 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:45:32.987 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:45:39.902 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:45:40.233 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:45:40.787 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:45:40.926 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:45:40.947 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:45:48.990 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:45:49.343 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:45:49.854 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:45:49.920 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:47:42.436 -06:00 [INF] Successfully logged in user [test@gmail.com]
+2021-06-13 22:50:26.284 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:50:33.395 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:50:33.845 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:50:34.400 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:50:34.484 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:50:37.987 -06:00 [INF] Successfully logged in user [test@gmail.com]
+2021-06-13 22:50:40.532 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:50:51.445 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:50:51.832 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:50:52.325 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:50:52.415 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:51:28.953 -06:00 [INF] Successfully logged in user [test@gmail.com]
+2021-06-13 22:51:49.272 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:51:49.277 -06:00 [INF] Claims validated
+2021-06-13 22:51:49.285 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:51:49.289 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:51:54.649 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:52:00.957 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:52:01.307 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:52:01.928 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:52:02.024 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:52:25.555 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:52:25.922 -06:00 [INF] Template:  successfully created
+2021-06-13 22:53:21.340 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:53:27.569 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:53:27.926 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:53:28.459 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:53:28.558 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:53:32.608 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:53:32.964 -06:00 [INF] Template: Test Template successfully created
+2021-06-13 22:53:40.928 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:53:40.932 -06:00 [INF] Retrieving all templates for [test@gmail.com]
+2021-06-13 22:53:52.253 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:53:52.284 -06:00 [INF] Claims validated
+2021-06-13 22:53:52.288 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:53:53.526 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:53:53.535 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:53:53.537 -06:00 [INF] Retrieving all templates for [test@gmail.com]
+2021-06-13 22:53:53.541 -06:00 [INF] Claims validated
+2021-06-13 22:53:53.546 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:53:53.548 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:54:14.955 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:54:20.595 -06:00 [INF] Configuring service (Server.API)...
+2021-06-13 22:54:20.925 -06:00 [INF] Starting service (Server.API)...
+2021-06-13 22:54:21.450 -06:00 [INF] Starting event bus connection (rabbitmq://127.0.0.1)
+2021-06-13 22:54:21.517 -06:00 [WRN] Overriding address(es) 'http://localhost:80, https://localhost:8080'. Binding to endpoints defined in UseKestrel() instead.
+2021-06-13 22:55:38.745 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:55:38.989 -06:00 [INF] Claims validated
+2021-06-13 22:55:38.995 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:55:40.271 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:55:40.277 -06:00 [INF] Claims validated
+2021-06-13 22:55:40.277 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:55:40.279 -06:00 [INF] Retrieving all templates for [test@gmail.com]
+2021-06-13 22:55:40.282 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:55:40.287 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:56:00.367 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:56:00.400 -06:00 [INF] Claims validated
+2021-06-13 22:56:00.418 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:56:00.810 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:56:00.845 -06:00 [INF] Claims validated
+2021-06-13 22:56:00.852 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:56:01.463 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:56:01.463 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:56:01.471 -06:00 [INF] Retrieving all templates for [test@gmail.com]
+2021-06-13 22:56:01.473 -06:00 [INF] Claims validated
+2021-06-13 22:56:01.478 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:56:01.480 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:56:02.096 -06:00 [INF] Validating identity claims [Identity: { email: test@gmail.com }, { id: 60beb94151f637336a27da02 }]
+2021-06-13 22:56:02.102 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:56:02.120 -06:00 [INF] Retrieving all templates for [test@gmail.com]
+2021-06-13 22:56:02.123 -06:00 [INF] Claims validated
+2021-06-13 22:56:02.127 -06:00 [INF] Querying user detials [test@gmail.com]
+2021-06-13 22:56:02.129 -06:00 [INF] Retrieving all solutions for [test@gmail.com]
+2021-06-13 22:56:42.867 -06:00 [INF] Stopping event bus connection (rabbitmq://127.0.0.1)

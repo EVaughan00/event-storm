@@ -16,6 +16,7 @@ import { Typography } from "./Typography";
 
 interface LargeHeaderProps {
   themeColor?: Areas;
+  scrolling?: boolean;
 }
 
 const EmptyHeader: FunctionComponent<StackHeaderProps> = (props) => <></>;
@@ -31,12 +32,23 @@ const AppHeader: FunctionComponent<StackHeaderProps> = (props) => {
 };
 
 const LargeHeader: FunctionComponent<LargeHeaderProps> = (props) => {
-  const [fadeScale, setFadeScale] = useState(1);
 
   const navigation = useNavigation();
 
+  const opacity = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.timing(opacity, {
+      toValue: props.scrolling ? 0.7 : 1,
+      duration: 300,
+      useNativeDriver: true,
+    }).start(() => {});
+  }, [props.scrolling]);
+
+
   const dynamicStyles = {
     container: {
+      opacity: opacity,
       backgroundColor: props.themeColor
         ? theme.areaColors[props.themeColor]
         : theme.colors.primary,

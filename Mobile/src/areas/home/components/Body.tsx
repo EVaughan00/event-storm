@@ -1,25 +1,69 @@
-import React, { FunctionComponent, useEffect, useRef } from "react";
-import { Animated, Dimensions, Easing, StyleSheet, View } from "react-native";
+import React, { FunctionComponent, useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
 import { AppStore } from "../../../AppStore";
-import { ScrollSheetSwitch } from "../../../components/ScrollSheetSwitch";
-import { Selections } from "./Header";
+import { CardSection } from "../../../components/CardSection";
+import { CardSectionSwitch } from "../../../components/CardSectionSwitch";
+import Solution from "../../../services/solution/models/Solution";
+import { SolutionDTO } from "../../../services/solution/models/SolutionDTO";
+import { SolutionService } from "../../../services/solution/SolutionService";
+import Template from "../../../services/template/models/Template";
+import { TemplateDTO } from "../../../services/template/models/TemplateDTO";
+import { TemplateService } from "../../../services/template/SolutionService";
 
-interface Props {}
+interface Props {
+}
 
 const HomeBody: FunctionComponent<Props> = (props) => {
 
   const [home, homeActions] = AppStore.home.use();
+  const [solutions, setSolutions] = useState<Array<Solution>>([])
+  const [templates, setTemplates] = useState<Array<Template>>([])
+
+  const [loadingSolutions, setLoadingSolutions] = useState(false)
+  const [loadingTemplates, setLoadingTemplates] = useState(false)
+
+
+  useEffect(() => {
+
+    resolveSolutions()
+    resolveTemplates()
+
+  }, [home.updatedCardSections])
+
+  const resolveSolutions = () => {
+    setLoadingSolutions(true)
+    var solutions = new Array<Solution>()
+    SolutionService.getSolutions()
+    .then(data => data.model.result.forEach(solution => {
+        solutions.push(new SolutionDTO().copy(solution).Map())
+    }))
+    .then(() => setSolutions(solutions))
+    .then(() => setLoadingSolutions(false))
+  }
+
+  const resolveTemplates = () => {
+    setLoadingTemplates(true)
+    var templates = new Array<Template>()
+    TemplateService.getTemplates()
+    .then(data => data.model.result.forEach(template => {
+        templates.push(new TemplateDTO().copy(template).Map())
+    }))
+    .then(() => setTemplates(templates))
+    .then(() => setLoadingTemplates(false))
+  }
 
   return (
     <View style={[style.container]}>
-      <ScrollSheetSwitch
-        scrollSheets={Selections}
-        currentSheet={home.currentList}
-        collapseOffset={120}
-        selectSheet={homeActions.selectList}
-        onScrollBegin={homeActions.updateBeginVerticalScroll}
+      <CardSectionSwitch
+        currentSection={home.currentCardSection}
+        collapseOffset={180}
+        selectSection={homeActions.selectCardSection}
         onScroll={homeActions.updateVerticalScroll}
-      />
+        onScrollBegin={homeActions.updateBeginVerticalScroll}
+      >
+        <CardSection index={0} name={"solutions"} data={solutions} loading={loadingSolutions}/>
+        <CardSection index={1} name={"templates"} data={templates} loading={loadingTemplates}/>
+      </CardSectionSwitch>
     </View>
   );
 };

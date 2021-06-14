@@ -50,6 +50,18 @@ namespace Server.Infrastructure
             return result;
         }
 
+        public async Task<List<Solution>> GetAllByContributorId(string id) {
+
+            List<Solution> list = new List<Solution>();
+
+            foreach (Solution solution in _solutions.FindAll()) 
+                if (solution.ContributorIds.Contains(new ObjectId(id)))
+                    list.Add(solution);
+
+            await Task.CompletedTask;
+            return list;
+        }
+
         public async Task Update(Solution solution)
         {
             var existing = _solutions.FindOne(u => u.Id == solution.Id);

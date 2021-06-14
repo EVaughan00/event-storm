@@ -22,8 +22,15 @@ export const API = {
         },
 
         solution: {
-            create: `${ENV.connections.api}/solutions/create`, // PUT
+            create: `${ENV.connections.api}/solution/create`, // PUT
+            list: `${ENV.connections.api}/solution/list`, // GET
         },
+
+        template: {
+            create: `${ENV.connections.api}/template/create`, // PUT
+            list: `${ENV.connections.api}/template/list`, // GET
+        },
+
 
         password: {
             update: `${ENV.connections.api}/password/update`, // POST

@@ -5,14 +5,14 @@ import { StatusBar, StyleSheet, View } from "react-native";
 import { Easing } from "react-native";
 import { AppStore } from "../../../AppStore";
 import { LargeHeader } from "../../../components/Header";
-import { SelectionSwitch } from "../../../components/SelectionSwitch";
 import { Typography } from "../../../components/Typography";
 import { SvgLightning } from "../../../icons/Lightning";
+import { CardSection } from "../../../components/CardSection";
 import theme from "../../../theme";
+import { TabSwitch } from "../../../components/SelectionSwitch";
 
-export const Selections: string[] = ["solutions", "templates"];
-
-interface HomeHeaderProps {}
+interface HomeHeaderProps {
+}
 
 interface MiddleRowContentProps {
   title: string;
@@ -33,8 +33,14 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = (props) => {
       <Animated.View style={[styles.interactables, dynamicStyles.interactables]}>
         <TopRowContent></TopRowContent>
       </Animated.View>
-      <LargeHeader> 
-      <MiddleRowContent
+      <LargeHeader
+        scrolling={
+            home.verticalScroll.contentOffset ? 
+            home.verticalScroll.contentOffset.y > 20 :
+            false
+          }
+      > 
+      <MiddleRowContent 
             title={"Event Storming For The"}
             subTitle={"modern.developer;"}
          ></MiddleRowContent>
@@ -48,14 +54,17 @@ const TopRowContent: FunctionComponent = () => {
 
   const [home, homeActions] = AppStore.home.use()
 
+  const tabs: string[] = ["Solutions", "Template"]
+
   return (
     <Animated.View style={[styles.topContainer]}>
-      <SelectionSwitch
-        selections={Selections}
+      <TabSwitch
+
+        tabs={tabs}
         justifyContent={"space-between"}
-        currentSelection={home.currentList}
-        setSelection={homeActions.selectList}
-      ></SelectionSwitch>
+        currentTab={home.currentCardSection}
+        setTab={homeActions.selectCardSection}
+      ></TabSwitch>
     </Animated.View>
   );
 };
@@ -78,7 +87,7 @@ const styles = StyleSheet.create({
     width: "100%",
     position: 'absolute',
     zIndex: 1,
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
   },
   topContainer: {
     flex: 1,

@@ -3,17 +3,19 @@ import {
   Dimensions,
   NativeScrollEvent,
   NativeSyntheticEvent,
-  StyleSheet,
+  StyleSheet
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import Solution from "../models/Solution";
-import { SearchableItem, SearchableScrollSheet } from "./ScrollSheet";
+import { CardableItem } from "../services/general/models/CardItem";
+import { SearchableScrollSheet } from "./ScrollSheet";
 
 interface Props {
-  scrollSheets: string[];
+  scrollSheets: CardSection[];
   currentSheet: number;
   selectSheet: (sheetIndex: number) => void;
   collapseOffset: number;
+  data: Array<CardableItem>;
+  loading: boolean;
   searchable?: boolean;
   onScroll?: (event: NativeScrollEvent) => void;
   onScrollBegin?: (event: NativeScrollEvent) => void;
@@ -30,12 +32,6 @@ const ScrollSheetSwitch: FunctionComponent<Props> = (props) => {
   props.scrollSheets.forEach((sheet, index) => {
     snapToScrollOffsets.push(index * Dimensions.get("window").width)
   });
-
-  const solutions: SearchableItem[] = [
-    new Solution("Solution 123"),
-    new Solution("Solution abc"),
-    new Solution("Solution xyz"),
-  ];
 
   useEffect(() => {
     if (scrollView.current !== null && !manualScroll) {
@@ -66,12 +62,12 @@ const ScrollSheetSwitch: FunctionComponent<Props> = (props) => {
   };
 
   const mapScrollSheets = (current: number) => {
-    return props.scrollSheets.map((selection: string, index: number) => (
+    return props.scrollSheets.map((section: CardSection, index: number) => (
       <SearchableScrollSheet
         key={index}
-        items={solutions}
-        searchLabel={"Search for " + selection + "..."}
-        emptySearchResult={"Oops.. couldn't find any"}
+        name={section.name}
+        items={props.data}
+        loading={props.loading}
         syncronizedCollapseOffset={syncronizedCollapseOffset}
         updateSynchronizedCollapseOffset={setSyncronizedCollapseOffset}
         active={index == current}
@@ -104,6 +100,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     width: 2 * Dimensions.get("window").width,
+    height: "100%",
+    backgroundColor: 'white'
   },
   listContainer: {},
   selector: {

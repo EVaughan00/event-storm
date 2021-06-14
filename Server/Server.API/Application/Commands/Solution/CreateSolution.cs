@@ -52,20 +52,17 @@ namespace Server.API.Commands
             var owner = await _users.GetById(command.User.Id);
 
             try {
+
                 solution.FromBlueprint(command.SolutionDTO.ToBlueprint());
                 solution.AddOwner(owner);
-            } catch(Exception e) {
-                throw e;
-            }
 
-            try {
-                _logger.LogInformation("HERE " + command.SolutionDTO.Contributors);
                 foreach (ContributorDTO contributor in command.SolutionDTO.Contributors)
                     await _mediator.Send(new AddContributorCommand() {Contributor = contributor});
 
             } catch (Exception e) {
                 throw e;
             }
+
             await _solutions.Create(solution);
 
             _logger.LogInformation("Solution: " + solution.Name + " successfully created");

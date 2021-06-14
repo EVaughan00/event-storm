@@ -1,79 +1,51 @@
+import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 import {
-  View,
-  StyleSheet,
+  Animated,
   Dimensions,
   NativeScrollEvent,
-  SafeAreaView,
   NativeSyntheticEvent,
+  StyleSheet,
+  View
 } from "react-native";
-import React, { FunctionComponent, useEffect, useRef, useState } from "react";
-import { MaterialInput } from "./Form/Material/MaterialInput";
-import Card from "./Card";
-import { Typography } from "./Typography";
 import { ScrollView } from "react-native-gesture-handler";
-import { AppStore } from "../AppStore";
-import { Animated } from "react-native";
+import { MaterialInput } from "./Form/Material/MaterialInput";
 
 interface Props {
   active: boolean;
+  name: string;
   syncronizedCollapseOffset: number;
   updateSynchronizedCollapseOffset: (value: number) => void;
-  onScroll?: (event: NativeScrollEvent) => void
-  onScrollBegin?: (event: NativeScrollEvent) => void
+  onScroll?: (event: NativeScrollEvent) => void;
+  onScrollBegin?: (event: NativeScrollEvent) => void;
   collapseOffset: number;
   children?: any;
 }
 
-interface SearchableItem {
-  name: string;
-  id?: string;
-}
-
 interface SearchableScrollSheetProps extends Props {
-  items: SearchableItem[];
-  searchLabel: string;
-  emptySearchResult: string;
+  searchFilter: string
+  setSearchFilter: (value: string) => void
 }
 
 const SearchableScrollSheet: FunctionComponent<SearchableScrollSheetProps> = (
   props
 ) => {
-  const [renderedItems, setRenderedItems] = useState(props.items);
-  const [searchFilter, setSearchFilter] = useState("");
-
-  useEffect(() => {
-    setRenderedItems(
-      props.items.filter((entity) =>
-        entity.name.includes(searchFilter ? searchFilter : "")
-      )
-    );
-    return () => {};
-  }, [searchFilter]);
 
   return (
     <ScrollSheet {...props}>
-      <MaterialInput
-        size={"small"}
-        style={styles.input}
-        value={searchFilter}
-        onUpdate={setSearchFilter}
-        label={props.searchLabel}
-      />
-      {renderedItems.length > 0 ? (
-        renderedItems.map((item: SearchableItem, index: number) => (
-          <Card key={index} onPress={() => {}} item={item}></Card>
-        ))
-      ) : (
-        <Typography.SubTitle level={2}>
-          {props.emptySearchResult}
-        </Typography.SubTitle>
-      )}
+        <MaterialInput
+          borderless
+          size={"small"}
+          style={styles.input}
+          value={props.searchFilter}
+          onUpdate={props.setSearchFilter}
+          label={"Search for your " + props.name + "..."}
+        />
+        {props.children}
     </ScrollSheet>
   );
 };
 
 const ScrollSheet: FunctionComponent<Props> = (props) => {
-
   const [scrollOffset, setScrollOffset] = useState(0);
 
   const scrollRef = useRef<ScrollView>(null);
@@ -92,16 +64,18 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
     }
   }, [props.syncronizedCollapseOffset]);
 
-  const handleBeginScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+  const handleBeginScroll = (
+    event: NativeSyntheticEvent<NativeScrollEvent>
+  ) => {
     if (props.onScrollBegin != undefined && props.active) {
-      props.onScrollBegin(event.nativeEvent)
-    } 
-  }
+      props.onScrollBegin(event.nativeEvent);
+    }
+  };
 
   const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
     if (props.onScroll != undefined && props.active) {
-      props.onScroll(event.nativeEvent)
-    } 
+      props.onScroll(event.nativeEvent);
+    }
     if (props.active) {
       props.updateSynchronizedCollapseOffset(event.nativeEvent.contentOffset.y);
     }
@@ -143,10 +117,10 @@ const styles = StyleSheet.create({
   sheet: {
     alignItems: "center",
     paddingVertical: 20,
-    backgroundColor: "#FFF",
+    backgroundColor: "#FAFAFA",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    minHeight: Dimensions.get('screen').height - 144
+    minHeight: Dimensions.get("screen").height - 144,
   },
   input: {
     width: 350,
@@ -156,4 +130,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { ScrollSheet, SearchableScrollSheet, SearchableItem };
+export { ScrollSheet, SearchableScrollSheet };

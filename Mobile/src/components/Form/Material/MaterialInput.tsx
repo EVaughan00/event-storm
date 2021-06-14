@@ -5,7 +5,8 @@ import theme from '../../../theme';
 
 interface Props extends ComponentProps<typeof TextInput>, FormItemProps<string> {
     size?: "small" | "default" | "large"
-    elevated?: number
+    elevated?: number,
+    borderless?: boolean
 }
 
 const MaterialInput: FunctionComponent<Props> = props => {
@@ -76,6 +77,7 @@ const MaterialInput: FunctionComponent<Props> = props => {
 
     const extraStyles = {
         borderColor: color,
+        borderWidth: props.borderless ? 0 : 1,
         padding: size == "small" ? theme.unit * 1.5 :
                 size == "large" ? theme.unit * 2.5 :
                 theme.unit * 2,

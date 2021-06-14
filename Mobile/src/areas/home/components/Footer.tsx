@@ -11,26 +11,32 @@ interface Props {}
 
 const HomeFooter: FunctionComponent<Props> = (props) => {
   const [creatingSolution, viewCreateSolutionForm] = useState(false);
-  const [home] = AppStore.home.use();
+  const [home, homeActions] = AppStore.home.use();
+
+
+  const handleClosePopup = () => {
+    viewCreateSolutionForm(false)
+    homeActions.updateCardSections(true)
+  }
 
   return (
     <View>
-        <Popup
-          title={`Create new solution`}
-          visible={creatingSolution}
-          onClose={() => viewCreateSolutionForm(false)}
-          scrollable
-        >
-            <CreateSolution onFinish={() => viewCreateSolutionForm(false)} />
-        </Popup>
-      
-          <FloatingAddButton
-            onPress={() => viewCreateSolutionForm(true)}
-            hide={home.currentList == HomeLists.TEMPLATES}
-            showOnUpdate={home.currentList}
-            beginScroll={home.beginVerticalScroll.contentOffset}
-            activeScroll={home.verticalScroll.contentOffset}
-          />
+      <Popup
+        title={`Create new solution`}
+        visible={creatingSolution}
+        onClose={() => viewCreateSolutionForm(false)}
+        scrollable
+      >
+        <CreateSolution onFinish={handleClosePopup} />
+      </Popup>
+
+      <FloatingAddButton
+        onPress={() => viewCreateSolutionForm(true)}
+        hide={home.currentCardSection != 0}
+        showOnUpdate={home.currentCardSection}
+        beginScroll={home.beginVerticalScroll.contentOffset}
+        activeScroll={home.verticalScroll.contentOffset}
+      />
     </View>
   );
 };
