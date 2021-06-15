@@ -9,8 +9,9 @@ interface Props extends ComponentProps<typeof TextInput>, FormItemProps<string> 
     borderless?: boolean
 }
 
-const MaterialInput: FunctionComponent<Props> = props => {
+const MaterialTextArea: FunctionComponent<Props> = props => {
     const size = props.size ?? "default";
+    var numberOfLines: number;
     const { label, errorText, helperText, style, onBlur, onFocus, ...rest } = props;
     const [ isFocused, setFocused ] = React.useState(false);
     const [ value, setValue ] = React.useState("");
@@ -46,9 +47,17 @@ const MaterialInput: FunctionComponent<Props> = props => {
         onFocus?.(event);
     }
 
+    const handleSize = () => {
+        if (size == "default")
+            return 4
+
+        props.size == "small" ? numberOfLines = 3 : numberOfLines = 5
+        return numberOfLines
+    }
+
     let offset = {
-        x: size == "small" ? 10 : size == "default" ? 10 : 10,
-        y: size == "small" ? 14 : size == "default" ? 18 : 20
+        x: 5,
+        y: 5
     }
 
     let transform = [
@@ -78,19 +87,20 @@ const MaterialInput: FunctionComponent<Props> = props => {
     const extraStyles = {
         borderColor: color,
         borderWidth: props.borderless ? 0 : 1,
-        padding: size == "small" ? theme.unit * 1.5 :
-                size == "large" ? theme.unit * 2.5 :
-                theme.unit * 2,
+        padding: 0,
         paddingLeft: 18,
     }
 
     return (
         <View style={[ styles.container, style ]}>
             <TextInput 
+                multiline
                 style={[ styles.input, extraStyles]}
                 ref={inputRef}
                 {...rest}
                 value={undefined}
+                textAlignVertical={"top"}
+                numberOfLines={handleSize()}
                 onChangeText={handleChangeText}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
@@ -116,7 +126,7 @@ const styles = StyleSheet.create({
         zIndex: 1,
     },
     input: {
-        padding: theme.unit * 3,
+        paddingTop: theme.unit * 3,
         borderWidth: 1,
         borderRadius: 4,
         // fontFamily: 'Avenir-Medium',
@@ -148,9 +158,9 @@ const styles = StyleSheet.create({
       },
 });
 
-MaterialInput.defaultProps = {
+MaterialTextArea.defaultProps = {
     _type: "FormItem"
 }
 
-export { MaterialInput }
+export { MaterialTextArea }
 

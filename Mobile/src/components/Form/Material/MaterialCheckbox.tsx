@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { FontAwesome } from "@expo/vector-icons";
 import { Typography } from '../../Typography';
@@ -10,11 +10,16 @@ const { Title } = Typography;
 
 interface Props extends FormItemProps<boolean> {
     color?: Colors
+    checked?: boolean
 }
 
 const MaterialCheckbox: FunctionComponent<Props> = props => {
     const [ isChecked, setChecked ] = React.useState(props.value ?? false);
     let { label, errorText, labelPlacement, helperText } = props;
+
+    useEffect(() => {
+        handleChange(!!props.checked)
+    }, [props.checked])
 
     if (!labelPlacement)
         labelPlacement = "right";
@@ -72,7 +77,7 @@ const MaterialCheckbox: FunctionComponent<Props> = props => {
 const styles = StyleSheet.create({
     container: {
         position: "relative",
-        marginBottom: theme.unit  * 3,
+        // marginBottom: theme.unit  * 3,
         zIndex: 1,
     },
     label: {

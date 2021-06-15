@@ -54,14 +54,16 @@ namespace Server.API.Commands
 
             Template template = TemplateUtility.CreateFromSolution(solution);
             
-            template.SetName(command.TemplateDTO.Name);
+            if (!String.IsNullOrEmpty(command.TemplateDTO.Name))
+                template.SetName(command.TemplateDTO.Name);
 
             if (!String.IsNullOrEmpty(command.TemplateDTO.Description))
                 template.DefineFrom(new SolutionDefinition() {
                     Description = command.TemplateDTO.Description,
                     CodeBase = command.TemplateDTO.CodeBase
                 });
-            
+
+            template.RememberTools(null);
             template.AddOwner(owner);
 
             await _templates.Create(template);

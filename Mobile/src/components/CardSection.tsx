@@ -20,11 +20,13 @@ export interface CardSectionProps {
 export const CardSection: FunctionComponent<CardSectionProps> = (props) => {
   const [cards, setCards] = useState<Array<ReactElement>>();
   const [searchFilter, setSearchFilter] = useState("");
+  const [dataFetched, setDataFetched] = useState(false);
 
   useEffect(() => {
     if (props.data.length > 0) {
       setCards(MapCards(searchFilter));
     }
+    setDataFetched(true)
   }, [props.data, searchFilter]);
 
   function MapCards(filter: string): ReactElement[] {
@@ -56,12 +58,10 @@ export const CardSection: FunctionComponent<CardSectionProps> = (props) => {
             searchFilter={searchFilter}
             setSearchFilter={setSearchFilter}
           >
-            {props.loading && 
-              <Typography.SubTitle level={3}>Loading...</Typography.SubTitle>
-            }
-            {!props.loading && props.data.length == 0 ? (
-              <Typography.SubTitle level={3}>New {props.name}s will show up here!</Typography.SubTitle>
-            ) : 
+            {props.loading ?
+              <Typography.SubTitle level={3}>Loading...</Typography.SubTitle> :
+              dataFetched && props.data.length == 0 ?
+              <Typography.SubTitle level={3}>New {props.name}s will show up here!</Typography.SubTitle> :
               cards
             }
           </SearchableScrollSheet>

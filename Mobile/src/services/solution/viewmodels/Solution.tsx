@@ -71,18 +71,12 @@ export default class Solution implements CardableItem{
             <Typography.Title level={2}>{this.name}</Typography.Title>
             <Chip style={styles.chip}>STATUS</Chip>
             </View>
-            {/* <View style={styles.containerTop}>
-            <Typography.Title level={3}>{this.name}</Typography.Title>
-            </View> */}
         </View>
-
       }
       image={
           <View>
-
           </View>
       }
-
       onPress={
           () => console.log("Selected solution: " + this.name)
       }

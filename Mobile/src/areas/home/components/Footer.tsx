@@ -13,16 +13,15 @@ const HomeFooter: FunctionComponent<Props> = (props) => {
   const [creatingSolution, viewCreateSolutionForm] = useState(false);
   const [home, homeActions] = AppStore.home.use();
 
-
   const handleClosePopup = () => {
     viewCreateSolutionForm(false)
-    homeActions.updateCardSections(true)
+    homeActions.updateSolutionCards(true)
   }
 
   return (
     <View>
       <Popup
-        title={`Create new solution`}
+        title={`New Solution`}
         visible={creatingSolution}
         onClose={() => viewCreateSolutionForm(false)}
         scrollable

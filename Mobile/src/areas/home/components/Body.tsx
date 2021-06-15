@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { Dimensions, SafeAreaView, StyleSheet, View } from "react-native";
 import { AppStore } from "../../../AppStore";
 import { CardSection } from "../../../components/CardSection";
 import { CardSectionSwitch } from "../../../components/CardSectionSwitch";
-import Solution from "../../../services/solution/models/Solution";
+import Solution from "../../../services/solution/viewmodels/Solution";
 import { SolutionDTO } from "../../../services/solution/models/SolutionDTO";
 import { SolutionService } from "../../../services/solution/SolutionService";
 import Template from "../../../services/template/models/Template";
@@ -24,13 +24,6 @@ const HomeBody: FunctionComponent<Props> = (props) => {
 
 
   useEffect(() => {
-
-    resolveSolutions()
-    resolveTemplates()
-
-  }, [home.updatedCardSections])
-
-  const resolveSolutions = () => {
     setLoadingSolutions(true)
     var solutions = new Array<Solution>()
     SolutionService.getSolutions()
@@ -39,9 +32,11 @@ const HomeBody: FunctionComponent<Props> = (props) => {
     }))
     .then(() => setSolutions(solutions))
     .then(() => setLoadingSolutions(false))
-  }
+    return homeActions.updateSolutionCards(false)
+  }, [home.updatedSolutionCards])
 
-  const resolveTemplates = () => {
+
+  useEffect(() => {
     setLoadingTemplates(true)
     var templates = new Array<Template>()
     TemplateService.getTemplates()
@@ -50,20 +45,24 @@ const HomeBody: FunctionComponent<Props> = (props) => {
     }))
     .then(() => setTemplates(templates))
     .then(() => setLoadingTemplates(false))
-  }
+    return homeActions.updateTemplateCards(false)
+  }, [home.updatedTemplateCards])
+
 
   return (
     <View style={[style.container]}>
+      <SafeAreaView>
       <CardSectionSwitch
         currentSection={home.currentCardSection}
-        collapseOffset={180}
+        collapseOffset={Dimensions.get('window').height * 0.2}
         selectSection={homeActions.selectCardSection}
         onScroll={homeActions.updateVerticalScroll}
         onScrollBegin={homeActions.updateBeginVerticalScroll}
       >
-        <CardSection index={0} name={"solutions"} data={solutions} loading={loadingSolutions}/>
-        <CardSection index={1} name={"templates"} data={templates} loading={loadingTemplates}/>
+        <CardSection index={0} name={"solution"} data={solutions} loading={loadingSolutions}/>
+        <CardSection index={1} name={"template"} data={templates} loading={loadingTemplates}/>
       </CardSectionSwitch>
+      </SafeAreaView>
     </View>
   );
 };

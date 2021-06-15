@@ -4,6 +4,10 @@ import { Link } from '../components/CustomButton';
 import { Paper } from './Surfaces';
 import { Typography } from '../components/Typography';
 import { ScrollView } from 'react-native-gesture-handler';
+import { Header } from 'react-native/Libraries/NewAppScreen';
+import { color } from 'react-native-reanimated';
+import { Divider } from 'react-native-paper';
+import theme from '../theme';
 
 const { Title, Paragraph } = Typography;
 
@@ -24,10 +28,13 @@ const Popup: FC<PopupProps> = props => {
                     scrollEnabled={props.scrollable}
                 >
                 <Paper style={styles.surface}>
-                    <View style={styles.closeButton}>
-                        <Link color="strong" style={styles.closeText} onClick={props.onClose}>X</Link>
+                    <View style={styles.header}>
+                        <Title style={styles.title} level={2}>{props.title}</Title>
+                        <View>
+                            <Link size="default" color="error" onClick={props.onClose}>CANCEL</Link>
+                        </View>
                     </View>
-                    <Title level={2} align="left" style={styles.title}>{props.title}</Title>
+                    <Divider style={styles.divider} />
                     { props.children }
                 </Paper>
                 </ScrollView>
@@ -39,22 +46,22 @@ const Popup: FC<PopupProps> = props => {
 
 const styles = StyleSheet.create({ 
     surface: {
-        paddingTop: 32, 
+        paddingTop: 2 * theme.unit, 
         position: "relative"
     },
-    closeButton: {
-        width: 50, 
-        top: 0, 
-        left: 6, 
-        zIndex: 2, 
-        position: "absolute"
-    },
-    closeText: {
-        fontSize: 22
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        height: 65
     },
     title: {
-        marginTop: 64,
-        marginBottom: 16
+        marginTop: 4,
+        fontWeight: 'bold'
+    },
+    divider: {
+        borderWidth: 1,
+        opacity: 0.2,
+        marginBottom: 4*theme.unit
     }
 });
 

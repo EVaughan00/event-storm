@@ -1,5 +1,5 @@
 export type Colors = "primary" | "error" | "warning" | "default" | "strong";
-export type Areas = "events" | "taskstack" | "models";
+export type Areas = "eventStorm" | "taskStack" | "modelRepository";
 
 const colors: Record<Colors, string> = {
     primary: "rgb(98, 0, 238)",
@@ -10,9 +10,9 @@ const colors: Record<Colors, string> = {
 }
 
 const areaColors: Record<Areas, string> = {
-    events: "#EB5A5A",
-    taskstack: "#007CEE",
-    models: "#01A299",
+    eventStorm: "#EB5A5A",
+    taskStack: "#007CEE",
+    modelRepository: "#01A299",
 }
 
 export default {

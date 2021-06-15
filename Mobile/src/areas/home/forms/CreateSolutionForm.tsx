@@ -7,6 +7,7 @@ import { Typography } from '../../../components/Typography';
 import { SolutionDTO } from '../../../services/solution/models/SolutionDTO';
 import { SolutionService } from '../../../services/solution/SolutionService';
 import theme from '../../../theme';
+import { ToolCheckbox } from './ToolCheckbox';
 
 interface Props {
     onFinish:() => void
@@ -33,20 +34,17 @@ const CreateSolution: FunctionComponent<Props> = props => {
                     <Form.Input size="small" autoCapitalize="none" label="Name" />
                 </Form.Item>
                 <Form.Item field="description">
-                    <Form.Input size="small" label="Description" />
-                </Form.Item>
-                <Form.Item field="codeBase">
-                    <Form.Input size="small" label="Code Base" />
+                    <Form.TextArea size="large" label="Description" />
                 </Form.Item>
                 <Typography.Title level={2}>Developer Toolbox</Typography.Title>
                 <Form.Item field="useEventStorm">
-                    <Form.Checkbox label="Event Storm" color={"primary"} labelPlacement="right" />
+                    <ToolCheckbox area="event-storm" />
                 </Form.Item>
                 <Form.Item field="useModelRepository">
-                    <Form.Checkbox label="Model Repository" color={"primary"} labelPlacement="right" />
+                    <ToolCheckbox area="model-repository" />
                 </Form.Item>
                 <Form.Item field="useTaskStack">
-                    <Form.Checkbox label="Task Stack" color={"primary"} labelPlacement="right" />
+                    <ToolCheckbox area="task-stack" />
                 </Form.Item>
                 <Form.Item field="submit">
                     <CustomButton ripple size="small" >Submit</CustomButton>

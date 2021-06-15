@@ -64,23 +64,22 @@ const CardSectionSwitch: FunctionComponent<Props> = (props) => {
     }
   }, [props.currentSection]);
 
-  const handleManualScroll = (
-    event: NativeSyntheticEvent<NativeScrollEvent>
-  ) => {
+  const handleScrollSnap = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+
     if (manualScroll) {
-      var index = Math.min(Math.max(
-        Math.floor(
-          event.nativeEvent.contentOffset.x /
-            (Dimensions.get("window").width / 2 + props.currentSection)
-        ),
-        0
-      ), props.children.length - 1);
-      if (index != props.currentSection) {
-        props.selectSection(index);
+      var nextIndex = Math.max(Math.min(Math.floor(
+        event.nativeEvent.contentOffset.x /
+          (Dimensions.get("window").width / 2)
+      ), props.children.length - 1), 0)
+  
+      if (nextIndex != props.currentSection) {
+        props.selectSection(nextIndex);
         setManualScroll(false);
       }
+  
+      setManualScroll(false)
     }
-  };
+  }
 
   var dynamicStyles = {
     container: {
@@ -98,8 +97,7 @@ const CardSectionSwitch: FunctionComponent<Props> = (props) => {
       ref={scrollView}
       decelerationRate="fast"
       onScrollBeginDrag={() => setManualScroll(true)}
-      onMomentumScrollEnd={() => setManualScroll(false)}
-      onScroll={handleManualScroll}
+      onMomentumScrollEnd={handleScrollSnap}
     >
       <Synchronized.Provider value={syncronizer}>
         {props.children}

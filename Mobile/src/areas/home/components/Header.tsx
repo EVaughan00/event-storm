@@ -54,12 +54,11 @@ const TopRowContent: FunctionComponent = () => {
 
   const [home, homeActions] = AppStore.home.use()
 
-  const tabs: string[] = ["Solutions", "Template"]
+  const tabs: string[] = ["Solutions", "Templates"]
 
   return (
     <Animated.View style={[styles.topContainer]}>
       <TabSwitch
-
         tabs={tabs}
         justifyContent={"space-between"}
         currentTab={home.currentCardSection}

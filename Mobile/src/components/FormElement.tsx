@@ -8,6 +8,7 @@ import { MaterialSwitch } from './Form/Material/MaterialSwitch';
 import { FormError, FormErrors, FormModel } from '../utils/FormModel';
 import { ErrorResponse } from '../utils/Response';
 import theme from '../theme'; 
+import { MaterialTextArea } from './Form/Material/MaterialTextArea';
 
 type FormContextState = { 
     model: FormModel, 
@@ -147,6 +148,7 @@ const FormItem: FunctionComponent<ItemProps> = props => {
 
 export class Form extends Component<FormProps> {
     public static Input = MaterialInput;
+    public static TextArea = MaterialTextArea;
     public static Select = MaterialSelect;
     public static RadioGroup = MaterialRadioGroup;
     public static Radio = MaterialRadio;
@@ -158,7 +160,7 @@ export class Form extends Component<FormProps> {
 
 const styles = StyleSheet.create({
     form: {
-        paddingTop: theme.unit * 2,
+        paddingTop: 0,
         position: "relative"
     }
 });

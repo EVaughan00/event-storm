@@ -1,7 +1,7 @@
 import { FormModel } from "../../../utils/FormModel";
 import Validation from "../../../utils/Validation";
 import { ContributorDTO } from "./ContributorDTO";
-import Solution from "./Solution";
+import Solution from "../viewmodels/Solution";
 
 export class SolutionDTO extends FormModel {
     @Validation.Rule({ required: true, message: "Please provide a solution name"})

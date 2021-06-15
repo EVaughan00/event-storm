@@ -8,14 +8,16 @@ export interface HomeState {
     currentCardSection: number
     verticalScroll: NativeScrollEvent
     beginVerticalScroll: NativeScrollEvent
-    updatedCardSections: boolean
+    updatedSolutionCards: boolean
+    updatedTemplateCards: boolean
 }
 
 export interface HomeActions {
     selectCardSection: (section: number) => void
     updateVerticalScroll: (event: NativeScrollEvent) => void
     updateBeginVerticalScroll: (event: NativeScrollEvent) => void
-    updateCardSections: (updated: boolean) => void
+    updateSolutionCards: (updated: boolean) => void
+    updateTemplateCards: (updated: boolean) => void
 }
 
 export class HomeStore 
@@ -27,7 +29,8 @@ export class HomeStore
         currentCardSection: 0,
         verticalScroll: {} as NativeScrollEvent,
         beginVerticalScroll: {} as NativeScrollEvent,
-        updatedCardSections: false
+        updatedSolutionCards: false,
+        updatedTemplateCards: false
     }
 
     constructor() {
@@ -56,10 +59,17 @@ export class HomeStore
         })
     }
 
-    public updateCardSections(updated: boolean) {
+    public updateSolutionCards(updated: boolean) {
         this.setState({
             ...this.state,
-            updatedCardSections: updated,
+            updatedSolutionCards: updated,
+        })
+    }
+
+    public updateTemplateCards(updated: boolean) {
+        this.setState({
+            ...this.state,
+            updatedTemplateCards: updated,
         })
     }
 }

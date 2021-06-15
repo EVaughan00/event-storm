@@ -12,6 +12,7 @@ namespace Server.Domain
         public ObjectId OwnerId { get; private set; }
         public SolutionDefinition Definition { get; private set; }
         public ObjectId SolutionId { get; private set; }
+        public Tool EventStorm { get; private set; }
         public Template() {
             Definition = new SolutionDefinition();
         }
@@ -29,6 +30,10 @@ namespace Server.Domain
 
             if (String.IsNullOrEmpty(Definition.Description))
                 Definition.SetDescription(Name);
+        }
+
+        public void RememberTools(ISelectableTools tools) {
+
         }
     }
 }
