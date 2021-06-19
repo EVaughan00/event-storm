@@ -33,7 +33,7 @@ const ToolCheckbox: React.FunctionComponent<Props> = (props) => {
   }, []);
 
   React.useEffect(() => {
-    console.log(props.valueOnUpdate)
+    // console.log(props.valueOnUpdate)
     handleChecked(props.valueOnUpdate)
 }, [props.valueOnUpdate])
 

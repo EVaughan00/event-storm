@@ -1,15 +1,20 @@
-import React, { FunctionComponent, ReactElement } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import ImageDetail from "./ImageDetail";
+import React, { FunctionComponent } from "react";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { Chip } from "react-native-paper";
+import { Typography } from "./Typography";
 
+export interface CardableItem {
+  name: string
+  id: string;
+  image?: string;
+}
 
 interface Props {
-  titleElements: ReactElement
-  image: ReactElement
+  item: CardableItem
   onPress: () => void;
 }
 
-export const CardWrapper: FunctionComponent<Props> = props => {
+export const Card: FunctionComponent<Props> = props => {
 
   return (
     <TouchableOpacity
@@ -18,10 +23,11 @@ export const CardWrapper: FunctionComponent<Props> = props => {
     >
       <View style={styles.container}>
           <View style={styles.containerTop}>
-            {props.titleElements}
-          </View>
+            <Typography.Title level={2}>{props.item.name}</Typography.Title>
+            <Chip style={styles.chip}>STATUS</Chip>
+        </View>
           <View style={styles.containerBottom}>
-            {props.image}
+            {props.item.image}
           </View>
       </View>
     </TouchableOpacity>
@@ -47,11 +53,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
-  containerTop: {
-    width: "100%",
-    flex: 1,
-    paddingHorizontal: 5,
-  },
   containerBottom: {
     width: "100%",
     flex: 3,
@@ -59,5 +60,23 @@ const styles = StyleSheet.create({
     backgroundColor: "#AAA",
     borderBottomLeftRadius: 4,
     borderBottomRightRadius: 4,
+  },
+  chip: {
+    backgroundColor: "#00B3A6",
+    alignItems: "center",
+  },
+  titleContainer: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  containerTop: {
+    width: "100%",
+    flex: 1,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 20,
+    alignItems: "center",
   },
 });

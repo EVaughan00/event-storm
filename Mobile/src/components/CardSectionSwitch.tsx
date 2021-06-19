@@ -97,7 +97,7 @@ const CardSectionSwitch: FunctionComponent<Props> = (props) => {
       onMomentumScrollEnd={handleScrollSnap}
     >
       <Synchronized.Provider value={syncronizer}>
-        {props.children}
+        { props.children }
       </Synchronized.Provider>
     </ScrollView>
   );

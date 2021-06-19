@@ -37,11 +37,11 @@ namespace Server.API.Controllers
             _templateQueries = templateQueries;
         }
 
-        [AllowAnonymous]
+        [AuthorizeIdentity]
         [HttpPut("create")]
         [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         [ProducesResponseType((int) HttpStatusCode.OK)]
-        public async Task<IActionResult> Create(TemplateDTO template)
+        public async Task<IActionResult> Create(TemplateRequirements requirements)
         {
             return await this.ApiAction(async () => {    
 
@@ -50,7 +50,7 @@ namespace Server.API.Controllers
 
                 await _mediator.Send(new CreateTemplateCommand() {
                     User = user,
-                    TemplateDTO = template
+                    Requirements = requirements
                 });
 
                 return Ok();
@@ -58,7 +58,7 @@ namespace Server.API.Controllers
         }
 
         [HttpGet("list")]
-        [AllowAnonymous]
+        [AuthorizeIdentity]
         [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(List<TemplateDTO>), (int) HttpStatusCode.OK)]
         public async Task<IActionResult> List()

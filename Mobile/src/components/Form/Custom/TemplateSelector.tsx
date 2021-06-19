@@ -38,7 +38,7 @@ const TemplateSelector: React.FunctionComponent<Props> = (props) => {
 
   const dynamicStyles = {
     container: {
-      backgroundColor: props.selected ? "#EDEDED" : "#CCCCCC"
+      backgroundColor: props.selected ? "white" : "#CCCCCC"
     }
   }
 

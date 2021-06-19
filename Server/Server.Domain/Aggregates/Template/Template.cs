@@ -10,30 +10,30 @@ namespace Server.Domain
     {
         public string Name { get; private set; }
         public ObjectId OwnerId { get; private set; }
-        public SolutionDefinition Definition { get; private set; }
         public ObjectId SolutionId { get; private set; }
-        public Tool EventStorm { get; private set; }
+        public TemplateDefinition Definition { get; private set; }
+        public TemplatedTools Tools { get; private set; }
+
         public Template() {
-            Definition = new SolutionDefinition();
+            Definition = new TemplateDefinition();
         }
         public void SetName(string name) {
             Name = name;
         }
-        public void AddOwner(User user) {
+        public void SetOwner(User user) {
             if (OwnerId != new ObjectId())
-                throw new ServerDomainException("Solution owner already exists");
+                throw new ServerDomainException("Template owner already exists");
 
             OwnerId = user.Id;
         }
-        public void DefineFrom(ISolutionDefinition definition) {
+        public void DefineFrom(SolutionDefinition definition) {
             Definition.From(definition);
 
             if (String.IsNullOrEmpty(Definition.Description))
                 Definition.SetDescription(Name);
         }
-
-        public void RememberTools(ISelectableTools tools) {
-
+        public void RememberTools(SelectableTools tools) {
+            Tools.SelectFrom(tools);
         }
     }
 }

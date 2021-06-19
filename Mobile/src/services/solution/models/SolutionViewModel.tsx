@@ -1,11 +1,5 @@
-import React, { Component, FunctionComponent } from "react";
-import { View, StyleSheet } from "react-native";
-import { Chip } from "react-native-paper";
-import { CardWrapper } from "../../../components/Card";
-import { Typography } from "../../../components/Typography";
-import { CardableItem } from "../../general/models/CardItem";
 
-export default class SolutionViewModel implements CardableItem{
+export default class SolutionViewModel {
 
   private _id: string
   private _name: string;
@@ -67,48 +61,4 @@ export default class SolutionViewModel implements CardableItem{
   public set useTaskStack(choice: boolean) {
     this._useTaskStack = choice;
   }
-
-  public renderCard = (index: number) => {
-    return (
-    <CardWrapper
-      key={index}
-      titleElements={
-        <View style={styles.titleContainer}>
-            <View style={styles.containerTop}>
-            <Typography.Title level={2}>{this.name}</Typography.Title>
-            <Chip style={styles.chip}>STATUS</Chip>
-            </View>
-        </View>
-      }
-      image={
-          <View>
-          </View>
-      }
-      onPress={
-          () => console.log("Selected solution: " + this.name)
-      }
-    />
-    )
-  };
 }
-
-const styles = StyleSheet.create({
-  chip: {
-    backgroundColor: "#00B3A6",
-    alignItems: "center",
-  },
-  titleContainer: {
-    flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  containerTop: {
-    width: "100%",
-    flex: 1,
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    paddingHorizontal: 20,
-    alignItems: "center",
-  },
-});

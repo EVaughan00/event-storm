@@ -3,16 +3,12 @@ using System.Threading.Tasks;
 using System;
 using BuildingBlocks.Events;
 using Server.Domain;
-using Server.Infrastructure;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.SignalR;
-using MassTransit;
+
 
 namespace Server.API.Commands
 {
     using Models;
-    using Notifications;
-    using Server.API.Services;
 
     public class CreateSolutionCommand : Command<bool>
     {
@@ -34,7 +30,6 @@ namespace Server.API.Commands
             ISolutionRepository solutions,
             ITemplateRepository templates,
             IUserRepository users
-
             )
         {
             _logger = logger;
@@ -54,7 +49,7 @@ namespace Server.API.Commands
             try {
 
                 solution.FromBlueprint(command.SolutionDTO.ToBlueprint());
-                solution.AddOwner(owner);
+                solution.SetOwner(owner);
 
                 foreach (ContributorDTO contributor in command.SolutionDTO.Contributors)
                     await _mediator.Send(new AddContributorCommand() {Contributor = contributor});

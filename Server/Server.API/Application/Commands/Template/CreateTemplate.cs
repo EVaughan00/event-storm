@@ -18,7 +18,7 @@ namespace Server.API.Commands
     public class CreateTemplateCommand : Command<bool>
     {
         public UserDetails User;
-        public TemplateDTO TemplateDTO;
+        public TemplateRequirements Requirements;
     }
 
     public class CreateTemplateCommandHandler : CommandHandler<CreateTemplateCommand, bool>
@@ -50,21 +50,11 @@ namespace Server.API.Commands
             await Task.CompletedTask;
 
             var owner = await _users.GetById(command.User.Id);
-            var solution = await _solutions.GetById(command.TemplateDTO.SolutionId);
+            var solution = await _solutions.GetById(command.Requirements.SolutionId);
 
             Template template = TemplateUtility.CreateFromSolution(solution);
             
-            if (!String.IsNullOrEmpty(command.TemplateDTO.Name))
-                template.SetName(command.TemplateDTO.Name);
-
-            if (!String.IsNullOrEmpty(command.TemplateDTO.Description))
-                template.DefineFrom(new SolutionDefinition() {
-                    Description = command.TemplateDTO.Description,
-                    CodeBase = command.TemplateDTO.CodeBase
-                });
-
-            template.RememberTools(null);
-            template.AddOwner(owner);
+            template.SetOwner(owner);
 
             await _templates.Create(template);
 

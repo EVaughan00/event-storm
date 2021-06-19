@@ -39,7 +39,6 @@ const Popup: FC<PopupProps> = props => {
                 </Paper>
                 </ScrollView>
             </SafeAreaView>
-
         </Modal>
     )
 }

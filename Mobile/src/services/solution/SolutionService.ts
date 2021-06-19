@@ -1,6 +1,5 @@
 import { AxiosRequestConfig } from "axios";
 import { API } from "../../api";
-import Solution from "../../models/Solution";
 import { ApiClient } from "../../utils/ApiClient";
 import { SolutionDTO } from "./models/SolutionDTO";
 

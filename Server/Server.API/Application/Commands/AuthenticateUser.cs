@@ -52,7 +52,7 @@ namespace Server.API.Commands
             }
 
             jwtToken = TryCreateToken(command.User, command.Authenticated);
-            System.Console.WriteLine(jwtToken);
+            // System.Console.WriteLine(jwtToken);
             try {
                await _sessions.Start(command.User, command.Remember);
             } catch {

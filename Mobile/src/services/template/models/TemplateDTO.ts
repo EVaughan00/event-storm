@@ -10,6 +10,9 @@ export class TemplateDTO extends FormModel {
     public name: string = "";
     public description: string = "";
     public codeBase: string = "";
+    public useEventStorm: boolean = false;
+    public useModelRepository: boolean = false;
+    public useTaskStack: boolean = false;
 
     public Map(): TemplateViewModel {
         var template = new TemplateViewModel()
@@ -18,8 +21,10 @@ export class TemplateDTO extends FormModel {
         template.name = this.name
         template.description = this.description
         template.codeBase = this.codeBase
+        template.useEventStorm = this.useEventStorm;
+        template.useModelRepository = this.useModelRepository;
+        template.useTaskStack = this.useTaskStack;
 
         return template
-
     }
 }

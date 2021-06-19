@@ -10,6 +10,8 @@ namespace Server.Infrastructure.Utilities
 
             var template = new Template();
             
+            template.RememberTools(solution.Tools);
+
             return template;
         }
     }

@@ -23,19 +23,17 @@ namespace Server.API.Models
 
         public SolutionBlueprint ToBlueprint() {
             var blueprint = new SolutionBlueprint();
-
+            
             blueprint.Definition = new SolutionDefinition();
             blueprint.SelectedTools = new SelectableTools();
 
             blueprint.Name = Name;
             blueprint.TemplateId = TemplateId;
-
             blueprint.Definition.Description = Description;
             blueprint.Definition.CodeBase = CodeBase;
-
-            blueprint.SelectedTools.UseEventStorm = UseEventStorm;
-            blueprint.SelectedTools.UseModelRepository = UseModelRepository;
-            blueprint.SelectedTools.UseTaskStack = UseTaskStack;
+            blueprint.SelectedTools.EventStorm = UseEventStorm;
+            blueprint.SelectedTools.ModelRepository = UseModelRepository;
+            blueprint.SelectedTools.TaskStack = UseTaskStack;
 
             return blueprint;
         }
@@ -46,10 +44,10 @@ namespace Server.API.Models
                 Name = solution.Name,
                 Description = solution.Definition.Description,
                 CodeBase = solution.Definition.CodeBase,
-                TemplateId = solution.FromTemplateId.ToString(),
-                UseEventStorm = solution.EventStorm.Active,
-                UseModelRepository = solution.ModelRepository.Active,
-                UseTaskStack = solution.TaskStack.Active
+                TemplateId = solution.TemplateId.ToString(),
+                UseEventStorm = solution.Tools.EventStorm.Active,
+                UseModelRepository = solution.Tools.ModelRepository.Active,
+                UseTaskStack = solution.Tools.TaskStack.Active
             };
         }
     }

@@ -17,18 +17,13 @@ namespace Server.Domain
         public string Name { get; private set; }
         public ObjectId OwnerId { get; private set; }
         public SolutionDefinition Definition { get; private set; }
-        public Tool EventStorm { get; private set; }
-        public Tool TaskStack { get; private set; }
-        public Tool ModelRepository { get; private set; }
-        public ObjectId FromTemplateId { get; private set; }
+        public SelectableTools Tools { get; private set; }
+        public ObjectId TemplateId { get; private set; }
         public List<ObjectId> ContributorIds { get; private set; }
         public Solution() {
             ContributorIds = new List<ObjectId>();
             Definition = new SolutionDefinition();
-
-            EventStorm = new Tool();
-            TaskStack = new Tool();
-            ModelRepository = new Tool();
+            Tools = new SelectableTools();
         }
         public void FromBlueprint(SolutionBlueprint blueprint) {
             Name = blueprint.Name;
@@ -37,14 +32,15 @@ namespace Server.Domain
             UseTools(blueprint.SelectedTools);
             
             if (!String.IsNullOrEmpty(blueprint.TemplateId))
-                FromTemplateId = new ObjectId(blueprint.TemplateId);
+                TemplateId = new ObjectId(blueprint.TemplateId);
         }
-        public void UseTools(ISelectableTools selection) {
-            EventStorm.SetActive(selection.UseEventStorm);
-            ModelRepository.SetActive(selection.UseModelRepository);
-            TaskStack.SetActive(selection.UseTaskStack);
+        public void UseTools(ISelectableTools tools) {
+            Tools.SelectFrom(tools);
+
+            if (Tools.AreInactive())
+                throw new ServerDomainException("Must use at least one tool");
         }
-        public void AddOwner(User user) {
+        public void SetOwner(User user) {
             if (OwnerId != new ObjectId())
                 throw new ServerDomainException("Solution owner already exists");
 

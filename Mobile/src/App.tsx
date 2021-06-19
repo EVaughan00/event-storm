@@ -6,6 +6,7 @@ import { AuthenticatedScreen } from "./areas/account/screens/AuthenticatedScreen
 import { RegisterScreen } from "./areas/account/screens/RegisterScreen";
 import { HomeHeader } from "./areas/home/components/Header";
 import HomeScreen from "./areas/home/screens/HomeScreen";
+import SolutionScreen from "./areas/solution/screens/SolutionScreen";
 import { EmptyHeader } from "./components/Header";
 import { ENV } from "./env";
 import { AuthenticationProvider } from "./providers/AuthenticationProvider";
@@ -38,6 +39,11 @@ const App: FunctionComponent = (props) => {
             <AppStack.Screen
               name="Home"
               component={HomeScreen}
+            />
+
+            <AppStack.Screen
+              name="Solution"
+              component={SolutionScreen}
             />
 
             <AppStack.Screen name="Register" component={RegisterScreen} />
