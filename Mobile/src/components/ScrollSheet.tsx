@@ -46,17 +46,21 @@ const SearchableScrollSheet: FunctionComponent<SearchableScrollSheetProps> = (
 };
 
 const ScrollSheet: FunctionComponent<Props> = (props) => {
+
   const [scrollOffset, setScrollOffset] = useState(0);
+  const [topReached, setTopReached] = useState(false);
 
   const scrollRef = useRef<ScrollView>(null);
+
   var offset: number;
 
   useEffect(() => {
     if (scrollRef.current != null && !props.active) {
-      offset =
-        props.syncronizedCollapseOffset > props.collapseOffset
-          ? Math.max(props.collapseOffset, scrollOffset)
-          : props.syncronizedCollapseOffset;
+      if (props.syncronizedCollapseOffset > props.collapseOffset) {
+        offset = Math.max(props.collapseOffset, scrollOffset)
+      } else {
+        offset = props.syncronizedCollapseOffset
+      }
       scrollRef.current.scrollTo({
         y: offset,
         animated: false,
@@ -73,23 +77,21 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
   };
 
   const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    if (props.onScroll != undefined && props.active) {
+    if (props.onScroll != undefined && props.active)
       props.onScroll(event.nativeEvent);
-    }
-    if (props.active) {
-      props.updateSynchronizedCollapseOffset(event.nativeEvent.contentOffset.y);
-    }
+    if (props.active)
+      props.updateSynchronizedCollapseOffset(event.nativeEvent.contentOffset.y);      
     setScrollOffset(event.nativeEvent.contentOffset.y);
   };
 
   const dynamicStyle = {
     scrollView: {
       paddingTop: props.collapseOffset ? props.collapseOffset : 0,
-    },
+    }
   };
 
   return (
-    <View style={styles.container}>
+    <Animated.View style={styles.container}>
       <Animated.ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={dynamicStyle.scrollView}
@@ -102,15 +104,15 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
       >
         <View style={styles.sheet}>{props.children}</View>
       </Animated.ScrollView>
-    </View>
+    </Animated.View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     overflow: "hidden",
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
     width: Dimensions.get("window").width - 6,
     marginHorizontal: 3,
   },

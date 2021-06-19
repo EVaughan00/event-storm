@@ -1,10 +1,8 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
-import { NativeScrollPoint, View } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import React, { FunctionComponent, useState } from "react";
+import { View } from "react-native";
 import { AppStore } from "../../../AppStore";
 import { FloatingAddButton } from "../../../components/FloatingAddButton";
 import { Popup } from "../../../components/Popup";
-import { HomeLists } from "../../../helpers/consts";
 import { CreateSolution } from "../forms/CreateSolutionForm";
 
 interface Props {}

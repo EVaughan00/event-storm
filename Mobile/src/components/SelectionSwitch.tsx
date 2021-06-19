@@ -2,6 +2,7 @@ import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 import { Animated, Dimensions, StyleSheet, View } from "react-native";
 import { AppStore } from "../AppStore";
 import { SelectionDivivder } from "../icons/Divider";
+import theme from "../theme";
 import { CardSection } from "./CardSection";
 import { Typography } from "./Typography";
 
@@ -103,8 +104,6 @@ const styles = StyleSheet.create({
   },
   animatedContainer: {
     position: "absolute",
-
-
   },
   selector: {
     color: "white",

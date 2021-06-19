@@ -1,23 +1,25 @@
 
 import { FormModel } from "../../../utils/FormModel";
 import Validation from "../../../utils/Validation";
-import Template from "./Template";
-import Solution from "./Template";
+import TemplateViewModel from "./TemplateViewModel";
+import Solution from "./TemplateViewModel";
 
 export class TemplateDTO extends FormModel {
-    @Validation.Rule({ required: true, message: "Please provide a solution name"})
+    public id: string = "";
+    @Validation.Rule({ required: true, message: "Please provide a template name"})
     public name: string = "";
     public description: string = "";
     public codeBase: string = "";
 
-    public Map(): Template {
-        var solution = new Template()
+    public Map(): TemplateViewModel {
+        var template = new TemplateViewModel()
 
-        solution.name = this.name
-        solution.description = this.description
-        solution.codeBase = this.codeBase
+        template.id = this.id
+        template.name = this.name
+        template.description = this.description
+        template.codeBase = this.codeBase
 
-        return solution
+        return template
 
     }
 }

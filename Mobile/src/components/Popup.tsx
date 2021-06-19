@@ -14,7 +14,7 @@ const { Title, Paragraph } = Typography;
 export interface PopupProps {
     visible: boolean,
     title: string,
-    scrollable: boolean,
+    scrollable?: boolean,
     onClose: () => void
 }
 
@@ -29,7 +29,7 @@ const Popup: FC<PopupProps> = props => {
                 >
                 <Paper style={styles.surface}>
                     <View style={styles.header}>
-                        <Title style={styles.title} level={2}>{props.title}</Title>
+                        <Title style={styles.title} level={1}>{props.title}</Title>
                         <View>
                             <Link size="default" color="error" onClick={props.onClose}>CANCEL</Link>
                         </View>
@@ -55,13 +55,12 @@ const styles = StyleSheet.create({
         height: 65
     },
     title: {
-        marginTop: 4,
         fontWeight: 'bold'
     },
     divider: {
         borderWidth: 1,
         opacity: 0.2,
-        marginBottom: 4*theme.unit
+        marginBottom: theme.unit * 2
     }
 });
 

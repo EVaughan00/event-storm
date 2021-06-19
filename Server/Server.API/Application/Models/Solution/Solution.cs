@@ -7,6 +7,7 @@ namespace Server.API.Models
 {
     public class SolutionDTO
     {
+        public string Id { get; set; }
         [Required(ErrorMessage = "Solution name is required")]
         public string Name { get; set; }
         public string TemplateId { get; set; }
@@ -41,6 +42,7 @@ namespace Server.API.Models
 
         public static SolutionDTO Map(Solution solution) {
             return new SolutionDTO() {
+                Id = solution.Id.ToString(),
                 Name = solution.Name,
                 Description = solution.Definition.Description,
                 CodeBase = solution.Definition.CodeBase,

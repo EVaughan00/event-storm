@@ -18,27 +18,23 @@ export interface CardSectionProps {
 }
 
 export const CardSection: FunctionComponent<CardSectionProps> = (props) => {
-  const [cards, setCards] = useState<Array<ReactElement>>();
+  const [cards, setCards] = useState<JSX.Element[]>([]);
   const [searchFilter, setSearchFilter] = useState("");
   const [dataFetched, setDataFetched] = useState(false);
 
   useEffect(() => {
     if (props.data.length > 0) {
-      setCards(MapCards(searchFilter));
+      MapCards(searchFilter)
     }
     setDataFetched(true)
   }, [props.data, searchFilter]);
 
-  function MapCards(filter: string): ReactElement[] {
-    var cards: ReactElement[] = [];
+  const MapCards = (filter: string) => {
+    var filtered = props.data
+        .filter((item: CardableItem) => item.name.toLowerCase().includes(filter.toLowerCase()))
+        .map((card, index) =>card.renderCard(index))
 
-    props.data
-      .filter((item: CardableItem) => item.name.includes(filter))
-      .map((card, index) => {
-        cards.push(card.renderCard(index));
-      });
-
-    return cards;
+    setCards(filtered)
   }
 
   return (

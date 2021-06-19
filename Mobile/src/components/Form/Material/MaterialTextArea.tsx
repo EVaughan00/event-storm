@@ -24,6 +24,10 @@ const MaterialTextArea: FunctionComponent<Props> = props => {
     }, [props.defaultValue])
 
     React.useEffect(() => {
+        handleChangeText(props.valueOnUpdate ?? "")
+    }, [props.valueOnUpdate])
+
+    React.useEffect(() => {
         Animated.timing(focusAnimation, {
             toValue: isFocused || !!value ? 1 : 0,
             duration: 300,
@@ -122,11 +126,11 @@ const MaterialTextArea: FunctionComponent<Props> = props => {
 const styles = StyleSheet.create({
     container: {
         position: "relative",
-        marginBottom: theme.unit  * 3,
+        marginBottom: theme.unit  * 2,
         zIndex: 1,
     },
     input: {
-        paddingTop: theme.unit * 3,
+        paddingTop: theme.unit * 2,
         borderWidth: 1,
         borderRadius: 4,
         // fontFamily: 'Avenir-Medium',

@@ -40,7 +40,7 @@ const WelcomeScreen: NavigatedFC<AppNavigation, "Welcome"> = props => {
             <CustomButton size="large" ripple onPress={() => viewLoginForm(true)}>Get Started</CustomButton>
             <Link align="center" style={styles.link} onClick={toRegistration}>Register for a new account</Link>
             
-            <Popup title={`Sign in to ${ENV.appName}`} 
+            <Popup title={`Sign in`}
                 visible={loggingIn} 
                 onClose={() => viewLoginForm(false)}>
                 <LoginForm onFinish={() => viewLoginForm(false)} />

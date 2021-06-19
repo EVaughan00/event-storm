@@ -7,6 +7,7 @@ namespace Server.API.Models
 {
     public class TemplateDTO
     {
+        public string Id { get; set; }
         [Required(ErrorMessage = "Solution name is required")]
         public string Name { get; set; }
         [Required]
@@ -18,6 +19,7 @@ namespace Server.API.Models
 
         public static TemplateDTO Map(Template template) {
             return new TemplateDTO() {
+                Id = template.Id.ToString(),
                 Name = template.Name,
                 Description = template.Definition.Description,
                 CodeBase = template.Definition.CodeBase,

@@ -10,7 +10,6 @@ const { Title } = Typography;
 
 interface Props extends FormItemProps<boolean> {
     color?: Colors
-    checked?: boolean
 }
 
 const MaterialCheckbox: FunctionComponent<Props> = props => {
@@ -18,8 +17,8 @@ const MaterialCheckbox: FunctionComponent<Props> = props => {
     let { label, errorText, labelPlacement, helperText } = props;
 
     useEffect(() => {
-        handleChange(!!props.checked)
-    }, [props.checked])
+        handleChange(!!props.value)
+    }, [props.value])
 
     if (!labelPlacement)
         labelPlacement = "right";

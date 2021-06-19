@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
   selectorContainer: {
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   selector: {
     fontSize: 18,

@@ -23,6 +23,10 @@ const MaterialInput: FunctionComponent<Props> = props => {
     }, [props.defaultValue])
 
     React.useEffect(() => {
+        handleChangeText(props.valueOnUpdate ?? "")
+    }, [props.valueOnUpdate])
+
+    React.useEffect(() => {
         Animated.timing(focusAnimation, {
             toValue: isFocused || !!value ? 1 : 0,
             duration: 300,
@@ -100,7 +104,6 @@ const MaterialInput: FunctionComponent<Props> = props => {
                     <Text style={[ styles.label, { color }]}>
                         { label }{ errorText ? "*" : "" }
                     </Text>
-                    
                 </Animated.View>
             </TouchableWithoutFeedback>
             {!!errorText && <Text style={styles.error}>{errorText}</Text>}
@@ -112,7 +115,7 @@ const MaterialInput: FunctionComponent<Props> = props => {
 const styles = StyleSheet.create({
     container: {
         position: "relative",
-        marginBottom: theme.unit  * 3,
+        marginBottom: theme.unit  * 2,
         zIndex: 1,
     },
     input: {

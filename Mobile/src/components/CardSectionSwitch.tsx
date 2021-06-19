@@ -1,14 +1,11 @@
-import React, { createContext, Dispatch, FunctionComponent, ReactElement, ReactNode, useEffect, useRef, useState } from "react";
+import React, { Dispatch, FunctionComponent, ReactElement, useEffect, useRef, useState } from "react";
 import {
   Dimensions,
   NativeScrollEvent,
   NativeSyntheticEvent,
-  StyleSheet,
-  View
+  StyleSheet
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import { CardSection, CardSectionProps } from "./CardSection";
-import { CardableItem } from "../services/general/models/CardItem";
 
 interface Props {
   currentSection: number;

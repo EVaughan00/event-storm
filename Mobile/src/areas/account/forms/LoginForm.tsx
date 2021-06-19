@@ -21,20 +21,20 @@ const LoginForm: FunctionComponent<Props> = props => {
 
     return (
         <KeyboardAvoidingView behavior="height">
-            <Form model={loginForm} onSubmit={handleSubmit}>
-                <Form.Item field="email">
-                    <Form.Input size="large" autoCapitalize="none" label="Email" />
-                </Form.Item>
-                <Form.Item field="password">
-                    <Form.Input size="large" label="Password" clearTextOnFocus={false} secureTextEntry />
-                </Form.Item>
-                <Form.Item field="remember">
-                    <Form.Checkbox label="Remember me" labelPlacement="right" />
-                </Form.Item>
-                <Link style={styles.link}>Forgot your password?</Link>
-                <Form.Item field="submit">
-                    <CustomButton ripple size="large">Submit</CustomButton>
-                </Form.Item>
+            <Form  model={loginForm} onSubmit={handleSubmit}>
+                    <Form.Item field="email">
+                        <Form.Input size="large" autoCapitalize="none" label="Email" />
+                    </Form.Item>
+                    <Form.Item field="password">
+                        <Form.Input size="large" label="Password" clearTextOnFocus={false} secureTextEntry />
+                    </Form.Item>
+                    <Form.Item field="remember">
+                        <Form.Checkbox label="Remember me" labelPlacement="right" />
+                    </Form.Item>
+                    <Link style={styles.link}>Forgot your password?</Link>
+                    <Form.Item field="submit">
+                        <CustomButton ripple size="default">Submit</CustomButton>
+                    </Form.Item>
             </Form>
         </KeyboardAvoidingView>
     );
@@ -49,12 +49,6 @@ const styles = StyleSheet.create({
         top: -theme.unit * 2,
         marginBottom: theme.unit * 2
     },
-    form: {
-        display: "flex",
-        height: "100%",
-        flexDirection: "column",
-        justifyContent: "space-between"
-    }
 });
 
 export { LoginForm };

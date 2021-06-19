@@ -2,12 +2,13 @@ import React, { FunctionComponent } from 'react';
 import { KeyboardAvoidingView, StyleSheet } from 'react-native';
 import { AppStore } from '../../../AppStore';
 import { CustomButton } from '../../../components/CustomButton';
+import { TemplateSelector } from '../../../components/Form/Custom/TemplateSelector';
 import { Form } from '../../../components/FormElement';
 import { Typography } from '../../../components/Typography';
 import { SolutionDTO } from '../../../services/solution/models/SolutionDTO';
 import { SolutionService } from '../../../services/solution/SolutionService';
+import TemplateViewModel from '../../../services/template/models/TemplateViewModel';
 import theme from '../../../theme';
-import { ToolCheckbox } from './ToolCheckbox';
 
 interface Props {
     onFinish:() => void
@@ -16,38 +17,40 @@ interface Props {
 const CreateSolution: FunctionComponent<Props> = props => {
 
     const [ solution ]  = React.useState(new SolutionDTO());
+    const [selectedTemplate, setSelectedTemplate] = React.useState<TemplateViewModel>()
 
-    const [ account ] = AppStore.account.use();
-
-    const handleSubmit = () => {          
-
-        var userId = account.user ? account.user.id : ""
-        
+    const handleSubmit = () => {  
         return SolutionService.createSolution(solution)
             .then(() => props.onFinish());
     }
 
+    const handleSelectedTemplate = template => {
+        solution.templateId = template.id
+        setSelectedTemplate(template)
+    }   
+
     return (
         <KeyboardAvoidingView behavior="height">
+            <TemplateSelector selected={selectedTemplate} onSelect={handleSelectedTemplate}/>
             <Form model={solution} onSubmit={handleSubmit}>
                 <Form.Item field="name">
-                    <Form.Input size="small" autoCapitalize="none" label="Name" />
+                    <Form.Input valueOnUpdate={selectedTemplate?.name} size="small" autoCapitalize="none" label="Name" />
                 </Form.Item>
                 <Form.Item field="description">
-                    <Form.TextArea size="large" label="Description" />
+                    <Form.TextArea valueOnUpdate={selectedTemplate?.description} size="large" label="Description" />
                 </Form.Item>
-                <Typography.Title level={2}>Developer Toolbox</Typography.Title>
+                <Typography.SubTitle style={styles.developerToolbox} level={2}>Developer Toolbox</Typography.SubTitle>
                 <Form.Item field="useEventStorm">
-                    <ToolCheckbox area="event-storm" />
+                    <Form.ToolCheckbox area="event-storm" />
                 </Form.Item>
                 <Form.Item field="useModelRepository">
-                    <ToolCheckbox area="model-repository" />
+                    <Form.ToolCheckbox area="model-repository" />
                 </Form.Item>
                 <Form.Item field="useTaskStack">
-                    <ToolCheckbox area="task-stack" />
+                    <Form.ToolCheckbox area="task-stack" />
                 </Form.Item>
                 <Form.Item field="submit">
-                    <CustomButton ripple size="small" >Submit</CustomButton>
+                    <CustomButton ripple size="default" >Submit</CustomButton>
                 </Form.Item>
             </Form>
         </KeyboardAvoidingView>
@@ -68,6 +71,10 @@ const styles = StyleSheet.create({
         height: "100%",
         flexDirection: "column",
         justifyContent: "space-between"
+    },
+    developerToolbox: {
+        marginBottom: theme.unit * 1,
+        fontWeight: 'bold'
     }
 });
 

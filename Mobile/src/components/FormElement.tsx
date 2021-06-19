@@ -9,6 +9,7 @@ import { FormError, FormErrors, FormModel } from '../utils/FormModel';
 import { ErrorResponse } from '../utils/Response';
 import theme from '../theme'; 
 import { MaterialTextArea } from './Form/Material/MaterialTextArea';
+import { ToolCheckbox } from './Form/Custom/ToolCheckbox';
 
 type FormContextState = { 
     model: FormModel, 
@@ -38,6 +39,7 @@ export interface FormItemProps<T> {
     _type?: "FormItem",
     _controlled?: boolean,
     value?: T,
+    valueOnUpdate?: T,
     defaultValue?: T,
     errorText?: string,
     helperText?: string,
@@ -123,7 +125,7 @@ const FormItem: FunctionComponent<ItemProps> = props => {
                 value: value,
                 defaultValue: defaultValue,
                 errorText: model.validation.validate(props.field).last,
-                onUpdate: (value) => {            
+                onUpdate: (value) => {     
                     model[props.field] = value;       
                     delete model.validation.serverErrors[props.field];              
                     setValue(value);                    
@@ -154,6 +156,7 @@ export class Form extends Component<FormProps> {
     public static Radio = MaterialRadio;
     public static Switch = MaterialSwitch;
     public static Checkbox = MaterialCheckbox;
+    public static ToolCheckbox = ToolCheckbox;
     public static Item = FormItem;
     public render = () => <FormRender {...this.props} />;
 }
