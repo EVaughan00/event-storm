@@ -1,52 +1,41 @@
-import React, { FunctionComponent, useEffect, useState } from "react";
-import { Dimensions, SafeAreaView, StyleSheet, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import React, { FunctionComponent, useCallback, useState } from "react";
+import { Dimensions, StyleSheet, View } from "react-native";
 import { AppStore } from "../../../AppStore";
 import { CardSection } from "../../../components/CardSection";
 import { CardSectionSwitch } from "../../../components/CardSectionSwitch";
-import SolutionViewModel from "../../../services/solution/models/SolutionViewModel";
-import { SolutionDTO } from "../../../services/solution/models/SolutionDTO";
-import { SolutionService } from "../../../services/solution/SolutionService";
-import TemplateViewModel from "../../../services/template/models/TemplateViewModel";
-import { TemplateDTO } from "../../../services/template/models/TemplateDTO";
-import { TemplateService } from "../../../services/template/SolutionService";
-import { useNavigation } from "@react-navigation/native";
-import { AppStack } from "../../../AppNavigation";
+import { useSolutionMapper, useTemplateMapper } from "../../../helpers/hooks";
 
 interface Props {}
 
 const HomeBody: FunctionComponent<Props> = (props) => {
   const [home, homeActions] = AppStore.home.use();
-  const [solutions, setSolutions] = useState<Array<SolutionViewModel>>([]);
-  const [templates, setTemplates] = useState<Array<TemplateViewModel>>([]);
 
   const [loadingSolutions, setLoadingSolutions] = useState(false);
   const [loadingTemplates, setLoadingTemplates] = useState(false);
 
   const navigation = useNavigation();
 
-  useEffect(() => {
-    setLoadingSolutions(true);
-    SolutionService.getSolutions()
-      .then((data) =>
-        setSolutions(
-          data.model.result.map((dto) => new SolutionDTO().copy(dto).Map())
-        )
-      )
-      .then(() => setLoadingSolutions(false));
-    return homeActions.updateSolutionCards(false);
-  }, [home.updatedSolutionCards]);
+  const solutions = useSolutionMapper(() => { 
+      homeActions.updateSolutionCards(false)
+      setLoadingSolutions(false)
+    },[home.updatedSolutionCards])
 
-  useEffect(() => {
-    setLoadingTemplates(true);
-    TemplateService.getTemplates()
-      .then((data) =>
-        setTemplates(
-          data.model.result.map((dto) => new TemplateDTO().copy(dto).Map())
-        )
-      )
-      .then(() => setLoadingTemplates(false));
-    return homeActions.updateTemplateCards(false);
-  }, [home.updatedTemplateCards]);
+  const templates = useTemplateMapper(() => {
+        homeActions.updateTemplateCards(false)
+        setLoadingTemplates(false)
+      },[home.updatedTemplateCards])
+
+  const onRefreshSolutions = useCallback(() => {
+        setLoadingSolutions(true)
+        homeActions.updateSolutionCards(true)
+      },[],
+  )
+  const onRefreshTemplates = useCallback(() => {
+      setLoadingTemplates(true)
+      homeActions.updateTemplateCards(true)
+    },[],
+  )
 
   const handleSolutionCardSelection = (solution) => {
     navigation.navigate("Solution", { solution: solution });
@@ -69,6 +58,7 @@ const HomeBody: FunctionComponent<Props> = (props) => {
           name={"solution"}
           data={solutions}
           loading={loadingSolutions}
+          onRefresh={onRefreshSolutions}
         />
         <CardSection
           onSelectCard={handleTemplateCardSelection}
@@ -76,6 +66,7 @@ const HomeBody: FunctionComponent<Props> = (props) => {
           name={"template"}
           data={templates}
           loading={loadingTemplates}
+          onRefresh={onRefreshTemplates}
         />
       </CardSectionSwitch>
     </View>

@@ -15,6 +15,7 @@ export interface CardSectionProps {
   index: number;
   data: CardableItem[];
   loading: boolean;
+  onRefresh: () => void
   onSelectCard: (item: CardableItem) => void;
 }
 
@@ -60,10 +61,10 @@ export const CardSection: FunctionComponent<CardSectionProps> = (props) => {
             onScrollBegin={value.onScrollBegin}
             searchFilter={searchFilter}
             setSearchFilter={setSearchFilter}
+            onRefresh={props.onRefresh}
+            refreshing={props.loading}
           >
-            {props.loading ? (
-              <Typography.SubTitle level={3}>Loading...</Typography.SubTitle>
-            ) : dataFetched && props.data.length == 0 ? (
+            { dataFetched && props.data.length == 0 ? (
               <Typography.SubTitle level={3}>
                 New {props.name}s will show up here!
               </Typography.SubTitle>

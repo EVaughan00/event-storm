@@ -1,10 +1,10 @@
 
+import { Mappable } from "../../../helpers/hooks";
 import { FormModel } from "../../../utils/FormModel";
 import Validation from "../../../utils/Validation";
 import TemplateViewModel from "./TemplateViewModel";
-import Solution from "./TemplateViewModel";
 
-export class TemplateDTO extends FormModel {
+export class TemplateDTO extends FormModel implements Mappable {
     public id: string = "";
     @Validation.Rule({ required: true, message: "Please provide a template name"})
     public name: string = "";

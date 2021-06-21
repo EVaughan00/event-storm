@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyleProp, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native";
-import { Svg, Line } from "react-native-svg";
+import { Svg, Line, Circle } from "react-native-svg";
 
 interface BackArrowStyleProps {
   color?: string;
@@ -28,32 +28,56 @@ function SvgBackArrow(props: BackArrowProps) {
         <Line
           x1="2"
           y1={parseInt(props.height) / 2}
-          x2={props.width}
+          x2={parseInt(props.width) - 2.5}
           y2={parseInt(props.height) / 2}
           stroke={
             props.style?.color ? props.style.color : "black"
           }
           strokeWidth="3"
         />
+        <Circle 
+          cx={parseInt(props.width) - 2.5}
+          cy={parseInt(props.height) / 2}
+          r="1.5"
+          fill={
+            props.style?.color ? props.style.color : "black"
+          }      
+          />
         <Line
           x1="0"
           y1={parseInt(props.height) / 2 + 1}
           x2={parseInt(props.width) / 2}
-          y2="0"
+          y2="2"
           stroke={
             props.style?.color ? props.style.color : "black"
           }
           strokeWidth="3"
         />
+        <Circle 
+          cx={parseInt(props.width) / 2}
+          cy="2"
+          r="1.5"
+          fill={
+            props.style?.color ? props.style.color : "black"
+          }      
+          />
         <Line
           x1="0"
           y1={parseInt(props.height) / 2 - 1}
           x2={parseInt(props.width) / 2}
-          y2={parseInt(props.height)}
+          y2={parseInt(props.height) - 2}
           stroke={
             props.style?.color ? props.style.color : "black"
           }
           strokeWidth="3"
+        />
+        <Circle 
+          cx={parseInt(props.width) / 2}
+          cy={parseInt(props.height) - 2}
+          r="1.5"
+          fill={
+            props.style?.color ? props.style.color : "black"
+          }      
         />
       </Svg>
     </TouchableOpacity>

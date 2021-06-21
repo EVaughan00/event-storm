@@ -13,20 +13,14 @@ const FloatingPopup: FunctionComponent<Props> = props => {
     }
 
     return (
-        <View>
-            <Modal visible={props.visible} transparent={true}>                
+            <Modal animationType="fade" visible={props.visible} transparent>                
                 <TouchableWithoutFeedback onPress={handleDismiss}>
                     <View style={styles.overlay} />
                 </TouchableWithoutFeedback>
                 <View style={styles.container}>
-                    <View style={styles.content}>
-                        <ScrollView>
-                            { props.children }
-                        </ScrollView>
-                    </View>
+                    { props.children }
                 </View>
             </Modal>
-        </View>
     );
 }
 

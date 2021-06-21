@@ -19,7 +19,7 @@ export default function Dots(props: DotsProps) {
   const dynamicStyle = StyleSheet;
 
   return (
-    <TouchableOpacity onPress={() => {}}>
+    <TouchableOpacity onPress={props.onPress}>
       <Svg
         height={props.height}
         width={props.width}

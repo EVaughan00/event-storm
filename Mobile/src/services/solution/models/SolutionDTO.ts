@@ -1,9 +1,10 @@
+import { Mappable } from "../../../helpers/hooks";
 import { FormModel } from "../../../utils/FormModel";
 import Validation from "../../../utils/Validation";
 import { ContributorDTO } from "./ContributorDTO";
 import SolutionViewModel from "./SolutionViewModel";
 
-export class SolutionDTO extends FormModel {
+export class SolutionDTO extends FormModel implements Mappable {
     public id: string = "";
 
     @Validation.Rule({ required: true, message: "Please provide a solution name"})

@@ -1,6 +1,4 @@
-import { NativeEventEmitter, NativeScrollEvent, NativeSyntheticEvent, NativeTouchEvent } from "react-native";
-import { HomeLists } from "../../helpers/consts";
-import { CardSection } from "../../components/CardSection";
+import { NativeScrollEvent } from "react-native";
 import { BaseStore } from "../../utils/BaseStore";
 
 

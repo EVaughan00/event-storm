@@ -1,10 +1,24 @@
 import React, { FunctionComponent } from 'react';
-import { View, ViewStyle, StyleSheet, StyleProp } from 'react-native';
+import { View, ViewStyle, StyleSheet, StyleProp, ScrollViewProps } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 interface SurfaceProps {
     style?: StyleProp<ViewStyle>,
     align?: "top" | "center"
 }
+
+interface ScrollSurfaceProps extends SurfaceProps, ScrollViewProps {}
+
+const ScrollPaper: FunctionComponent<ScrollSurfaceProps> = props => {
+
+    return (  
+        <ScrollView {...props}>
+            <Paper {...props}>
+                {props.children}
+            </Paper>
+        </ScrollView>      
+    );
+} 
 
 const Paper: FunctionComponent<SurfaceProps> = props => {
     const dynamicStyles: any = {        
@@ -34,5 +48,5 @@ const styles = StyleSheet.create({
     },
 });
 
-export { Paper }
+export { Paper, ScrollPaper }
 
