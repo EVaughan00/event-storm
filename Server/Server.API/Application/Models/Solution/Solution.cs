@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Server.Domain;
+using Server.Infrastructure.Utilities;
 
 namespace Server.API.Models
 {

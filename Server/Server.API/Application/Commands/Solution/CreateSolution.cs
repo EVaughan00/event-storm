@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 namespace Server.API.Commands
 {
     using Models;
+    using Server.Infrastructure.Utilities;
 
     public class CreateSolutionCommand : Command<bool>
     {
@@ -43,14 +44,11 @@ namespace Server.API.Commands
         {
             await Task.CompletedTask;
 
-            Solution solution = new Solution();
             var owner = await _users.GetById(command.User.Id);
-
+            var solution = SolutionUtility.SolutionFromBlueprint(command.SolutionDTO.ToBlueprint());
+            solution.SetOwner(owner);
+            
             try {
-
-                solution.FromBlueprint(command.SolutionDTO.ToBlueprint());
-                solution.SetOwner(owner);
-
                 foreach (ContributorDTO contributor in command.SolutionDTO.Contributors)
                     await _mediator.Send(new AddContributorCommand() {Contributor = contributor});
 

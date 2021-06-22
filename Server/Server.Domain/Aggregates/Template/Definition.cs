@@ -3,12 +3,16 @@ using BuildingBlocks.SeedWork;
 
 namespace Server.Domain
 {
+    public interface ITemplateDefinition {
+        string Description { get; set; }
+        string CodeBase { get; set; }
+    }
     public class TemplateDefinition : ValueObject
     {
         public string Description { get; private set; }
         public string CodeBase { get; private set; }
         public TemplateDefinition() {}
-        public void From(SolutionDefinition definition) {
+        public void From(ITemplateDefinition definition) {
             Description = definition.Description;
             CodeBase = definition.CodeBase;
         }

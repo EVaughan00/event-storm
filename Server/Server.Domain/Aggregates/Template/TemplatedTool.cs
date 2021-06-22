@@ -3,6 +3,13 @@ using BuildingBlocks.SeedWork;
 
 namespace Server.Domain
 { 
+    public interface ITemplatableTools
+    {
+        bool EventStorm { get; set; }
+        bool ModelRepository { get; set; }
+        bool TaskStack { get; set; }
+    }
+
     public class TemplatedTool : Entity
     {
         public bool Active { get; private set; }
@@ -24,10 +31,10 @@ namespace Server.Domain
             ModelRepository = new TemplatedTool();
         }
 
-        public void SelectFrom(SelectableTools tools) {
-            EventStorm.SetActive(tools.EventStorm.Active);
-            ModelRepository.SetActive(tools.ModelRepository.Active);
-            TaskStack.SetActive(tools.TaskStack.Active);
+        public void TemplateFrom(ITemplatableTools tools) {
+            EventStorm.SetActive(tools.EventStorm);
+            ModelRepository.SetActive(tools.ModelRepository);
+            TaskStack.SetActive(tools.TaskStack);
         }
 
         protected override IEnumerable<object> GetAtomicValues()

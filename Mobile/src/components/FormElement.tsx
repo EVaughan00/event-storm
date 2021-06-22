@@ -95,7 +95,7 @@ const FormItem: FunctionComponent<ItemProps> = props => {
 
     React.useEffect(() => {
         const initialValue = modelContext?.model?.[props.field];
-        
+
         if (defaultValue == undefined && initialValue != undefined){
             setValue(initialValue);
             setDefaultValue(initialValue);
@@ -123,9 +123,9 @@ const FormItem: FunctionComponent<ItemProps> = props => {
                 ...child.props,
                 _controlled: true,
                 value: value,
-                defaultValue: defaultValue,
+                defaultValue: child.props.defaultValue,
                 errorText: model.validation.validate(props.field).last,
-                onUpdate: (value) => {     
+                onUpdate: (value) => {   
                     model[props.field] = value;       
                     delete model.validation.serverErrors[props.field];              
                     setValue(value);                    

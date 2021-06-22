@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleProp, StyleSheet } from "react-native";
+import { StyleProp, StyleSheet, View } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { Svg, Line, Circle } from "react-native-svg";
 
@@ -18,7 +18,8 @@ function SvgBackArrow(props: BackArrowProps) {
   const viewBox = `-1 0 ${props.width} ${props.height}`;
 
   return (
-    <TouchableOpacity onPress={() => props.onPress()}>
+    <TouchableOpacity style={styles.button} onPress={() => props.onPress()}>
+      <View>
       <Svg
         height={props.height}
         width={props.width}
@@ -80,6 +81,7 @@ function SvgBackArrow(props: BackArrowProps) {
           }      
         />
       </Svg>
+      </View>
     </TouchableOpacity>
   );
 }
@@ -88,5 +90,11 @@ export default SvgBackArrow;
 
 const styles = StyleSheet.create({
   backArrow: {
+    
   },
+  button: {
+    // padding: 10,
+    justifyContent: 'center',
+    alignContent: 'center'
+  }
 });

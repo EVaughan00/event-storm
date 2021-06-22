@@ -18,13 +18,13 @@ const MaterialInput: FunctionComponent<Props> = props => {
     const focusAnimation = React.useRef(new Animated.Value(0)).current;    
     
     React.useEffect(() => {
-        setValue(props.defaultValue ?? "");
+        handleChangeText(props.defaultValue ?? "")
         setFocused(!!props.defaultValue);
     }, [props.defaultValue])
 
-    React.useEffect(() => {
-        handleChangeText(props.valueOnUpdate ?? "")
-    }, [props.valueOnUpdate])
+    // React.useEffect(() => {
+    //     handleChangeText(props.valueOnUpdate ?? "")
+    // }, [props.valueOnUpdate])
 
     React.useEffect(() => {
         Animated.timing(focusAnimation, {
@@ -36,7 +36,7 @@ const MaterialInput: FunctionComponent<Props> = props => {
     }, [focusAnimation, isFocused, value]);
 
     const handleChangeText = text => {
-        props.onUpdate?.(text);
+        props.onUpdate?.(text)
         setValue(text);
     }
 

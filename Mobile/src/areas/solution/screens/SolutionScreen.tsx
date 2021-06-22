@@ -1,19 +1,14 @@
 
-import React, { FC, useEffect, useState } from 'react';
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, View } from 'react-native';
+import React, { FC, useEffect } from 'react';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import { Divider } from 'react-native-paper';
 import { AppNavigation } from '../../../AppNavigation';
 import { AppStore } from '../../../AppStore';
-import { FloatingAddButton } from '../../../components/FloatingAddButton';
-import { Paper, ScrollPaper } from '../../../components/Surfaces';
-import { Typography } from '../../../components/Typography';
+import { ScrollPaper } from '../../../components/Surfaces';
 import { NavigationProps } from '../../../helpers/NavigationProps';
-import SvgBackArrow from '../../../icons/BackArrow';
-import Dots from '../../../icons/Dots';
 import { AuthenticationContext } from '../../../providers/AuthenticationProvider';
 import SolutionViewModel from '../../../services/solution/models/SolutionViewModel';
 import theme from '../../../theme';
-import AreaStack from '../components/AreaStack';
 import { SolutionBody } from '../components/Body';
 import { SolutionHeader } from '../components/Header';
 
@@ -26,7 +21,11 @@ const SolutionScreen: FC<NavigationProps<AppNavigation, "Solution">> = props => 
 
   const { navigate } = props.navigation;
   const authContext = React.useContext(AuthenticationContext);
-  const { solution } = props.route.params
+  const [store, storeActions] = AppStore.solution.use()
+
+  useEffect(() => {
+    storeActions.setCurrentSolution(props.route.params.solution)
+}, [props.route.params.solution])
 
   useEffect(() => {
       if (!authContext.authenticated)
@@ -40,7 +39,7 @@ const SolutionScreen: FC<NavigationProps<AppNavigation, "Solution">> = props => 
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.scrollView}
         >
-          <SolutionHeader title={solution.name} />
+          <SolutionHeader />
           <Divider style={styles.divider} />
           <SolutionBody />
         </ScrollPaper>

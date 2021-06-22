@@ -3,9 +3,8 @@ import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Title } from "react-native-paper";
 import { TemplateDTO } from "../../../services/template/models/TemplateDTO";
 import TemplateViewModel from "../../../services/template/models/TemplateViewModel";
-import { TemplateService } from "../../../services/template/SolutionService";
+import { TemplateService } from "../../../services/template/TemplateService";
 import theme from "../../../theme";
-import { FormItemProps } from "../../FormElement";
 import { List } from "../../List";
 import { Popup } from "../../Popup";
 import { Typography } from "../../Typography";
@@ -38,9 +37,9 @@ const TemplateSelector: React.FunctionComponent<Props> = (props) => {
 
   const dynamicStyles = {
     container: {
-      backgroundColor: props.selected ? "white" : "#CCCCCC"
-    }
-  }
+      backgroundColor: props.selected ? "white" : "#CCCCCC",
+    },
+  };
 
   return (
     <View>
@@ -61,50 +60,49 @@ const TemplateSelector: React.FunctionComponent<Props> = (props) => {
         style={[styles.container, dynamicStyles.container]}
         onPress={() => setSelectingTemplate(true)}
       >
-        { props.selected ? 
-          <Selected template={props.selected}/>
-          :
+        {props.selected ? (
+          <Selected template={props.selected} />
+        ) : (
           <Unselected />
-        }
+        )}
       </TouchableOpacity>
     </View>
   );
 };
 
-interface SelectedProps { template: TemplateViewModel }
-
-const Selected: React.FunctionComponent<SelectedProps> = props => {
-
-    return (
-      <>
-        <View style={styles.containerLeft}></View>
-        <View style={styles.containerRight}>
-          <Typography.Title style={styles.title} level={2}>
-            {props.template.name}
-          </Typography.Title>
-        </View>
-      </>
-    )
+interface SelectedProps {
+  template: TemplateViewModel;
 }
 
+const Selected: React.FunctionComponent<SelectedProps> = (props) => {
+  return (
+    <>
+      <View style={styles.containerLeft}></View>
+      <View style={styles.containerRight}>
+        <Typography.Title style={styles.title} level={2}>
+          {props.template.name}
+        </Typography.Title>
+      </View>
+    </>
+  );
+};
 
 interface Unselected {}
 
-const Unselected: React.FunctionComponent<Unselected> = props => {
-
-    return (
-      <>
-          <View style={styles.containerLeft}>
-            <Title style={styles.plus}>+</Title>
-          </View>
-          <View style={styles.containerRight}>
-            <Typography.Title style={styles.title} level={2}>
-              Select a Template
-            </Typography.Title>
-          </View>
-      </>
-    )
-}
+const Unselected: React.FunctionComponent<Unselected> = (props) => {
+  return (
+    <>
+      <View style={styles.containerLeft}>
+        <Title style={styles.plus}>+</Title>
+      </View>
+      <View style={styles.containerRight}>
+        <Typography.Title style={styles.title} level={2}>
+          Select a Template
+        </Typography.Title>
+      </View>
+    </>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -113,7 +111,6 @@ const styles = StyleSheet.create({
     borderColor: "#DBDBDB",
     width: "100%",
     height: 100,
-    padding: 5,
     elevation: 5,
     flexDirection: "row",
     justifyContent: "flex-start",

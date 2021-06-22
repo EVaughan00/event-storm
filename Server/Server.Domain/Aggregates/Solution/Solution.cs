@@ -6,12 +6,6 @@ using System.Collections.Generic;
 
 namespace Server.Domain
 {
-    public class SolutionBlueprint {
-        public string Name { get; set; }        
-        public string TemplateId { get; set; }
-        public ISolutionDefinition Definition { get; set; }
-        public ISelectableTools SelectedTools { get; set; }
-    }
     public class Solution : Entity, IAggregateRoot
     {
         public string Name { get; private set; }
@@ -25,20 +19,14 @@ namespace Server.Domain
             Definition = new SolutionDefinition();
             Tools = new SelectableTools();
         }
-        public void FromBlueprint(SolutionBlueprint blueprint) {
-            Name = blueprint.Name;
-
-            Define(blueprint.Definition);
-            UseTools(blueprint.SelectedTools);
-            
-            if (!String.IsNullOrEmpty(blueprint.TemplateId))
-                TemplateId = new ObjectId(blueprint.TemplateId);
-        }
         public void UseTools(ISelectableTools tools) {
             Tools.SelectFrom(tools);
 
             if (Tools.AreInactive())
                 throw new ServerDomainException("Must use at least one tool");
+        }
+        public void SetName(String name) {
+            Name = name;
         }
         public void SetOwner(User user) {
             if (OwnerId != new ObjectId())
@@ -54,6 +42,9 @@ namespace Server.Domain
             if (String.IsNullOrEmpty(definition.Description)) {
                 Definition.SetDescription(Name);
             }
+        }
+        public void SetTemplateReference(ObjectId templateId) {
+            TemplateId = templateId;
         }
 
         public void AddContributor(User contributor) {

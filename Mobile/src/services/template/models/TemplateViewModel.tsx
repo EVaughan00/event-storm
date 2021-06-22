@@ -5,6 +5,7 @@ export default class TemplateViewModel{
   private _name: string;
   private _image: string;
   private _description: string;
+  private _solutionId: string;
   private _codeBase: string;
   private _useEventStorm: boolean;
   private _useModelRepository: boolean;
@@ -25,6 +26,9 @@ export default class TemplateViewModel{
   public get description(): string {
     return this._description;
   }
+  public get solutionId(): string {
+    return this._solutionId;
+  }
   public get codeBase(): string {
     return this._codeBase;
   }
@@ -43,11 +47,14 @@ export default class TemplateViewModel{
   public set name(name: string) {
     this._name = name;
   }
-  public set description(name: string) {
-    this._description = name;
+  public set description(desciption: string) {
+    this._description = desciption;
   }
-  public set codeBase(name: string) {
-    this._codeBase = name;
+  public set solutionId(solutionId: string) {
+    this._solutionId = solutionId;
+  }
+  public set codeBase(codeBase: string) {
+    this._codeBase = codeBase;
   }
   public set useEventStorm(choice: boolean) {
     this._useEventStorm = choice;

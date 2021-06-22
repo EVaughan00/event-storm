@@ -19,13 +19,13 @@ const MaterialTextArea: FunctionComponent<Props> = props => {
     const focusAnimation = React.useRef(new Animated.Value(0)).current;    
     
     React.useEffect(() => {
-        setValue(props.defaultValue ?? "");
+        handleChangeText(props.defaultValue ?? "")
         setFocused(!!props.defaultValue);
     }, [props.defaultValue])
 
-    React.useEffect(() => {
-        handleChangeText(props.valueOnUpdate ?? "")
-    }, [props.valueOnUpdate])
+    // React.useEffect(() => {
+    //     handleChangeText(props.valueOnUpdate ?? "")
+    // }, [props.valueOnUpdate])
 
     React.useEffect(() => {
         Animated.timing(focusAnimation, {
@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
     },
     input: {
         paddingTop: theme.unit * 2,
+        paddingRight: theme.unit * 2,
         borderWidth: 1,
         borderRadius: 4,
         // fontFamily: 'Avenir-Medium',

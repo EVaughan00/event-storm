@@ -41,7 +41,7 @@ namespace Server.API.Controllers
         [HttpPut("create")]
         [ProducesResponseType((int) HttpStatusCode.BadRequest)]
         [ProducesResponseType((int) HttpStatusCode.OK)]
-        public async Task<IActionResult> Create(TemplateRequirements requirements)
+        public async Task<IActionResult> Create(TemplateDTO templateDTO)
         {
             return await this.ApiAction(async () => {    
 
@@ -50,7 +50,7 @@ namespace Server.API.Controllers
 
                 await _mediator.Send(new CreateTemplateCommand() {
                     User = user,
-                    Requirements = requirements
+                    TemplateDTO = templateDTO
                 });
 
                 return Ok();

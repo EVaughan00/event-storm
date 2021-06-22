@@ -4,7 +4,7 @@ import SolutionViewModel from "../services/solution/models/SolutionViewModel";
 import { SolutionService } from "../services/solution/SolutionService";
 import { TemplateDTO } from "../services/template/models/TemplateDTO";
 import TemplateViewModel from "../services/template/models/TemplateViewModel";
-import { TemplateService } from "../services/template/SolutionService";
+import { TemplateService } from "../services/template/TemplateService";
 import { FormModel } from "../utils/FormModel";
 
 export interface Mappable extends FormModel {

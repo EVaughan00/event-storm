@@ -14,6 +14,7 @@ const ToolCheckbox: React.FunctionComponent<Props> = (props) => {
   const [checked, setChecked] = React.useState(false);
   const [color, setColor] = React.useState(theme.colors.default);
   const [title, setTitle] = React.useState("");
+  const { value } = props
 
   React.useEffect(() => {
     switch (props.area) {
@@ -33,13 +34,12 @@ const ToolCheckbox: React.FunctionComponent<Props> = (props) => {
   }, []);
 
   React.useEffect(() => {
-    // console.log(props.valueOnUpdate)
-    handleChecked(props.valueOnUpdate)
-}, [props.valueOnUpdate])
+    handleChecked(props.defaultValue)
+}, [props.defaultValue])
 
   const handleChecked = (checked) => {
-    setChecked(checked);
     props.onUpdate?.(checked);
+    setChecked(checked);
   };
 
   return (

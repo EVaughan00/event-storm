@@ -16,6 +16,7 @@ namespace Server.Domain
 
         public Template() {
             Definition = new TemplateDefinition();
+            Tools = new TemplatedTools();
         }
         public void SetName(string name) {
             Name = name;
@@ -26,14 +27,17 @@ namespace Server.Domain
 
             OwnerId = user.Id;
         }
-        public void DefineFrom(SolutionDefinition definition) {
+        public void SetSolutionReference(ObjectId solutionId) {
+            SolutionId = solutionId;
+        }
+        public void Define(ITemplateDefinition definition) {
             Definition.From(definition);
 
             if (String.IsNullOrEmpty(Definition.Description))
                 Definition.SetDescription(Name);
         }
-        public void RememberTools(SelectableTools tools) {
-            Tools.SelectFrom(tools);
+        public void TemplateTools(ITemplatableTools tools) {
+            Tools.TemplateFrom(tools);
         }
     }
 }
