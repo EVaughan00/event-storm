@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, KeyboardAvoidingView, StyleSheet, View } from 'react-native';
 import assets from '../../assets';
 import { AppNavigation } from '../AppNavigation';
 import { LoginForm } from '../areas/account/forms/LoginForm';
@@ -31,20 +31,20 @@ const WelcomeScreen: NavigatedFC<AppNavigation, "Welcome"> = props => {
     const toRegistration = () => navigation.navigate("Register", {});
     
     return (
+
         <Paper align="center">
-            <View style={ styles.container }>
-                <Image style={styles.image} source={assets.welcome} />
-                <Title level={1} align="center">{ ENV.appName }</Title>
-                <Paragraph align="center">{ StringUtils.lorem(200) }</Paragraph>
-            </View>
-            <CustomButton size="large" ripple onPress={() => viewLoginForm(true)}>Get Started</CustomButton>
-            <Link align="center" style={styles.link} onClick={toRegistration}>Register for a new account</Link>
-            
             <Popup title={`Sign in`}
                 visible={loggingIn} 
                 onClose={() => viewLoginForm(false)}>
                 <LoginForm onFinish={() => viewLoginForm(false)} />
             </Popup>
+                <View style={ styles.container }>
+                    <Image style={styles.image} source={assets.welcome} />
+                    <Title level={1} align="center">{ ENV.appName }</Title>
+                    <Paragraph align="center">{ StringUtils.lorem(200) }</Paragraph>
+                </View>
+                <CustomButton size="large" ripple onPress={() => viewLoginForm(true)}>Get Started</CustomButton>
+                <Link align="center" style={styles.link} onClick={toRegistration}>Register for a new account</Link>
         </Paper>
     )
 }

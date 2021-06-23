@@ -8,6 +8,7 @@ using System.Linq;
 namespace Server.API.Queries
 {
     using Models;
+    using MongoDB.Bson;
 
     public class SolutionQueries : ISolutionQueries
     {
@@ -39,6 +40,25 @@ namespace Server.API.Queries
             return list;   
         }  
 
-  
+        public async Task<SolutionDTO> GetOneById(UserDetails user, string id) 
+        {
+            _logger.LogInformation($"Retrieving solution with id [{id}] for use [{user.Email}]");
+
+            var solution = await _solutions.GetById(id.ToString());
+
+            if (!solution.ContributorIds.Contains(new ObjectId(user.Id)))
+                throw new ServerDomainException("User is not a contributor on this solution");
+
+            return SolutionDTO.Map(solution);   
+        }  
+
+        public async Task<SolutionDTO> GetOneByName(UserDetails user, string name) 
+        {
+            _logger.LogInformation($"Retrieving solution with name [{name}] for user [{user.Email}]");
+
+            var solution = await _solutions.GetByNameAndOwnerId(name, user.Id.ToString());
+
+            return SolutionDTO.Map(solution);   
+        }  
     }
 }

@@ -1,9 +1,9 @@
 import * as React from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Title } from "react-native-paper";
-import { TemplateDTO } from "../../../services/template/models/TemplateDTO";
+import { useTemplateMapper } from "../../../helpers/hooks";
+import { limitStringToSize } from "../../../helpers/nameShortner";
 import TemplateViewModel from "../../../services/template/models/TemplateViewModel";
-import { TemplateService } from "../../../services/template/TemplateService";
 import theme from "../../../theme";
 import { List } from "../../List";
 import { Popup } from "../../Popup";
@@ -16,7 +16,7 @@ interface Props {
 
 const TemplateSelector: React.FunctionComponent<Props> = (props) => {
   const [selectingTemplate, setSelectingTemplate] = React.useState(false);
-  const [templates, setTemplates] = React.useState<TemplateViewModel[]>([]);
+  const templates = useTemplateMapper(() => {}, [selectingTemplate])
 
   const handleSelectTemplate = (id) => {
     props.onSelect(templates.find((template) => template.id == id)!);
@@ -27,14 +27,6 @@ const TemplateSelector: React.FunctionComponent<Props> = (props) => {
     setSelectingTemplate(false);
   };
 
-  React.useEffect(() => {
-    TemplateService.getTemplates().then((data) => {
-      setTemplates(
-        data.model.result.map((dto) => new TemplateDTO().copy(dto).Map())
-      );
-    });
-  }, [selectingTemplate]);
-
   const dynamicStyles = {
     container: {
       backgroundColor: props.selected ? "white" : "#CCCCCC",
@@ -44,7 +36,7 @@ const TemplateSelector: React.FunctionComponent<Props> = (props) => {
   return (
     <View>
       <Popup
-        title={`New Solution`}
+        title={`Select Template`}
         visible={selectingTemplate}
         onClose={() => handleClosePopup()}
         scrollable
@@ -55,7 +47,6 @@ const TemplateSelector: React.FunctionComponent<Props> = (props) => {
           searchLabel="Find a template..."
         />
       </Popup>
-
       <TouchableOpacity
         style={[styles.container, dynamicStyles.container]}
         onPress={() => setSelectingTemplate(true)}
@@ -79,8 +70,11 @@ const Selected: React.FunctionComponent<SelectedProps> = (props) => {
     <>
       <View style={styles.containerLeft}></View>
       <View style={styles.containerRight}>
-        <Typography.Title style={styles.title} level={2}>
-          {props.template.name}
+      <Typography.Title style={styles.title} level={4}>
+          Selected Template
+        </Typography.Title>
+        <Typography.Title style={styles.title} level={3}>
+          { limitStringToSize(props.template.name, 24)}
         </Typography.Title>
       </View>
     </>
@@ -127,14 +121,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   containerRight: {
-    alignItems: "center",
+    alignItems: "flex-start",
     justifyContent: "center",
     marginLeft: 20,
   },
   plus: {
     fontSize: 40,
     color: "#AAAAAA",
-    lineHeight: 40,
+    lineHeight: 45,
   },
   title: {
     marginBottom: 0,

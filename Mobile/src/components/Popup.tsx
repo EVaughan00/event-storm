@@ -1,13 +1,11 @@
 import React, { FC } from 'react';
 import { Modal, SafeAreaView, StyleSheet, View } from 'react-native';
-import { Link } from '../components/CustomButton';
-import { Paper } from './Surfaces';
-import { Typography } from '../components/Typography';
 import { ScrollView } from 'react-native-gesture-handler';
-import { Header } from 'react-native/Libraries/NewAppScreen';
-import { color } from 'react-native-reanimated';
 import { Divider } from 'react-native-paper';
+import { Link } from '../components/CustomButton';
+import { Typography } from '../components/Typography';
 import theme from '../theme';
+import { Paper } from './Surfaces';
 
 const { Title, Paragraph } = Typography;
 

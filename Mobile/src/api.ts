@@ -24,11 +24,14 @@ export const API = {
         solution: {
             create: `${ENV.connections.api}/solution/create`, // PUT
             list: `${ENV.connections.api}/solution/list`, // GET
+            getOneById: `${ENV.connections.api}/solution/%id`, // GET
+            getOneByName: `${ENV.connections.api}/solution/%name`, // GET
         },
 
         template: {
             create: `${ENV.connections.api}/template/create`, // PUT
             list: `${ENV.connections.api}/template/list`, // GET
+            getOne: `${ENV.connections.api}/template/%id`, // GET
         },
 
 

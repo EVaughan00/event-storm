@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { StyleProp, StyleSheet, Text, TextStyle, View } from "react-native";
-import { SelectionDivivder } from "../icons/Divider";
+import { SelectionDivivder } from "../icons/SectionDivider";
 import theme from "../theme";
 
 type TextAlign = "left" | "right" | "center";

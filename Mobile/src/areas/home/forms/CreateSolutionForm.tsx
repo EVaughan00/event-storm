@@ -6,12 +6,13 @@ import { TemplateSelector } from '../../../components/Form/Custom/TemplateSelect
 import { Form } from '../../../components/FormElement';
 import { Typography } from '../../../components/Typography';
 import { SolutionDTO } from '../../../services/solution/models/SolutionDTO';
+import SolutionViewModel from '../../../services/solution/models/SolutionViewModel';
 import { SolutionService } from '../../../services/solution/SolutionService';
 import TemplateViewModel from '../../../services/template/models/TemplateViewModel';
 import theme from '../../../theme';
 
 interface Props {
-    onFinish:() => void
+    onFinish: (solutionId: string) => void
 }
 
 const CreateSolution: FunctionComponent<Props> = props => {
@@ -21,7 +22,7 @@ const CreateSolution: FunctionComponent<Props> = props => {
 
     const handleSubmit = () => {  
         return SolutionService.createSolution(solution)
-            .then(() => props.onFinish());
+            .then(() => props.onFinish(solution.name));
     }
 
     const handleSelectedTemplate = template => {
@@ -34,20 +35,20 @@ const CreateSolution: FunctionComponent<Props> = props => {
             <TemplateSelector selected={selectedTemplate} onSelect={handleSelectedTemplate}/>
             <Form model={solution} onSubmit={handleSubmit}>
                 <Form.Item field="name">
-                    <Form.Input valueOnUpdate={selectedTemplate?.name} size="small" autoCapitalize="none" label="Name" />
+                    <Form.Input defaultValue={selectedTemplate?.name} size="small" autoCapitalize="none" label="Name" />
                 </Form.Item>
                 <Form.Item field="description">
-                    <Form.TextArea valueOnUpdate={selectedTemplate?.description} size="large" label="Description" />
+                    <Form.TextArea defaultValue={selectedTemplate?.description} size="large" label="Description" />
                 </Form.Item>
                 <Typography.SubTitle style={styles.developerToolbox} level={2}>Developer Toolbox</Typography.SubTitle>
                 <Form.Item field="useEventStorm">
-                    <Form.ToolCheckbox area="event-storm" />
+                    <Form.ToolCheckbox defaultValue={selectedTemplate?.useEventStorm} area="event-storm" />
                 </Form.Item>
                 <Form.Item field="useModelRepository">
-                    <Form.ToolCheckbox area="model-repository" />
+                    <Form.ToolCheckbox defaultValue={selectedTemplate?.useTaskStack} area="model-repository" />
                 </Form.Item>
                 <Form.Item field="useTaskStack">
-                    <Form.ToolCheckbox area="task-stack" />
+                    <Form.ToolCheckbox defaultValue={selectedTemplate?.useModelRepository} area="task-stack" />
                 </Form.Item>
                 <Form.Item field="submit">
                     <CustomButton ripple size="default" >Submit</CustomButton>

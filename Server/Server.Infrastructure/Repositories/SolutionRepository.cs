@@ -21,21 +21,24 @@ namespace Server.Infrastructure
         }
 
        public async Task Create(Solution solution)
-        {
-           var existing = _solutions.FindOne(u => u.Name.Equals(solution.Name));
-
-            if (existing != null) 
-                throw new ServerInfrastructureException($"A solution with name: \"{solution.Name}\" already exists");
+        {           
+            foreach (Solution sol in _solutions.FindAll())
+                if (sol.Name == solution.Name && sol.OwnerId == solution.OwnerId)
+                    throw new ServerInfrastructureException($"A solution with name: \"{solution.Name}\" already exists for this user");                
 
             await Task.CompletedTask;
             _solutions.InsertOne(solution);
         }
-        public async Task<Solution> GetByName(string name) 
+        public async Task<Solution> GetByNameAndOwnerId(string name, string userId) 
         {
-            var result = _solutions.FindOne(u => u.Name.Equals(name));
+            Solution result = null;
+
+            foreach (Solution solution in _solutions.FindAll()) 
+                if (solution.OwnerId == new ObjectId(userId) && solution.Name == name)
+                    result = solution;
 
             if (result == null) 
-                throw new ServerInfrastructureException($"No solution with name: \"{name}\" exists");
+                throw new ServerInfrastructureException($"No solution with name: \"{name}\" exists for this user");
 
             await Task.CompletedTask;
             return result;

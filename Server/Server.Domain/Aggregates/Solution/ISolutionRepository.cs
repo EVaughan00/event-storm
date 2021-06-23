@@ -9,6 +9,7 @@ namespace Server.Domain
     {
         Task Create(Solution solution);
         Task<Solution> GetById(string id);
+        Task<Solution> GetByNameAndOwnerId(string name, string ownerId);
         Task<List<Solution>> GetAllByContributorId(string id);
         Task Update(Solution solution);
         Task Delete(Solution solution);

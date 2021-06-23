@@ -1,24 +1,33 @@
 import * as React from "react";
-import {StyleProp, ViewStyle} from 'react-native';
+import { FunctionComponent } from "react";
+import {StyleProp, View, ViewStyle} from 'react-native';
 import { Svg, Line }  from "react-native-svg";
 
-export interface DividerProps {
+interface DividerProps {
+  vertical?: boolean
+  color?: string
+  width?: number
+  opacity?: number
   style?: StyleProp<ViewStyle>
 }
 
-function SelectionDivivder(props: DividerProps) {
+const Divider: FunctionComponent<DividerProps> = props => {
+
+  const height = props.width ? props.width.toString() : "1"
 
   return (
-    <Svg height={"10"} width={"100%"} style={props.style}>
-      <Line 
-        x1="0" y1="5" x2="100%" y2="5"
-        stroke="white"
-        strokeWidth="3"
-        opacity="1.0"
-        strokeLinecap="round"
-      />
-    </Svg>
+    <View {...props.style}>
+      <Svg height={height} width={"100%"}>
+        <Line 
+          x1="0" y1={parseInt(height) / 2} x2="100%" y2={parseInt(height) / 2}
+          stroke={props.color ? props.color : "black"}
+          strokeWidth={parseInt(height)}
+          opacity={props.opacity ? props.opacity : "1"}
+          strokeLinecap="round"
+        />
+      </Svg>
+    </View>
   );
 }
 
-export { SelectionDivivder };
+export { Divider };

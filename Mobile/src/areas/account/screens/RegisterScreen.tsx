@@ -19,7 +19,7 @@ const RegisterScreen: NavigatedFC<AppNavigation, "Register"> = props => {
     
 
     const handleSubmit = () => {        
-        console.log(registrationForm.formData);         
+        // console.log(registrationForm.formData);         
 
         return AccountService.registerUser(registrationForm);
     }

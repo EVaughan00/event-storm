@@ -2,31 +2,51 @@ import { useNavigation } from "@react-navigation/native";
 import * as React from "react";
 import { FunctionComponent, useState } from "react";
 import { StyleSheet, View } from "react-native";
-import { AppStack } from "../../../AppNavigation";
 import { AppStore } from "../../../AppStore";
 import { FloatingPopup } from "../../../components/FloatingPopup";
 import { Typography } from "../../../components/Typography";
+import { sleep } from "../../../helpers/sleep";
 import SvgBackArrow from "../../../icons/BackArrow";
 import Dots from "../../../icons/Dots";
 import theme from "../../../theme";
+import { ConfirmDeletePopup } from "./ConfirmDeletePopup";
 import { EditMenu } from "./EditMenu";
 
 interface Props {}
 
 export const SolutionHeader: FunctionComponent<Props> = (props) => {
   const [showEditMenu, setShowEditMenu] = useState(false);
+  const [showConfirmDelete, setShowConfirmDelete] = useState(false);
   const [store, storeActions] = AppStore.solution.use();
 
   const navigation = useNavigation();
 
-  const handleCloseEditMenu = () => {
-    setShowEditMenu(false);
+  const handleConfirmDelete = () => {
+    setShowConfirmDelete(true)
   };
+
+  const handleDeleteSolution = () => {
+    setShowConfirmDelete(false)
+    setShowEditMenu(false)
+  }
 
   return (
     <View>
-      <FloatingPopup visible={showEditMenu} onDismiss={handleCloseEditMenu}>
-        <EditMenu />
+      <FloatingPopup 
+        visible={showEditMenu} 
+        onDismiss={() => setShowEditMenu(false)}>
+        <EditMenu 
+          onEdit={() => {}}
+          onTemplate={() => {}}
+          onDelete={handleConfirmDelete}
+        />
+      </FloatingPopup>
+      <FloatingPopup 
+        visible={showConfirmDelete} 
+        onDismiss={() => setShowConfirmDelete(false)}>
+        <ConfirmDeletePopup 
+          onConfirm={handleDeleteSolution}
+        />
       </FloatingPopup>
       <View style={styles.container}>
         <SvgBackArrow

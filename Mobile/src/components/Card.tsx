@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Chip } from "react-native-paper";
+import { limitStringToSize } from "../helpers/nameShortner";
 import { Typography } from "./Typography";
 
 export interface CardableItem {
@@ -23,7 +24,7 @@ export const Card: FunctionComponent<Props> = props => {
     >
       <View style={styles.container}>
           <View style={styles.containerTop}>
-            <Typography.Title level={2}>{props.item.name}</Typography.Title>
+            <Typography.Title level={2}>{limitStringToSize(props.item.name, 17)}</Typography.Title>
             <Chip style={styles.chip}>STATUS</Chip>
         </View>
           <View style={styles.containerBottom}>

@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect, useRef, useState } from "react";
 import { Animated, Dimensions, StyleSheet, View } from "react-native";
 import { AppStore } from "../AppStore";
-import { SelectionDivivder } from "../icons/Divider";
+import { SelectionDivivder } from "../icons/SectionDivider";
 import theme from "../theme";
 import { CardSection } from "./CardSection";
 import { Typography } from "./Typography";

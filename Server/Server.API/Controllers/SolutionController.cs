@@ -73,5 +73,39 @@ namespace Server.API.Controllers
                 return Ok(solutions);
             });
         }
+
+        [HttpGet("{name}")]
+        [AuthorizeIdentity]
+        [ProducesResponseType((int) HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(SolutionDTO), (int) HttpStatusCode.OK)]
+        public async Task<IActionResult> GetOne(string name)
+        {
+            return await this.ApiAction(async () => {
+
+                var claim = Request.GetIdentityClaims();
+                var user = await _userQueries.GetDetails(claim);
+
+                var solution = _solutionQueries.GetOneByName(user, name);
+
+                return Ok(solution);
+            });
+        }
+
+        [HttpGet("{id}")]
+        [AuthorizeIdentity]
+        [ProducesResponseType((int) HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(SolutionDTO), (int) HttpStatusCode.OK)]
+        public async Task<IActionResult> GetOneById(string id)
+        {
+            return await this.ApiAction(async () => {
+
+                var claim = Request.GetIdentityClaims();
+                var user = await _userQueries.GetDetails(claim);
+
+                var solution = _solutionQueries.GetOneById(user, id);
+
+                return Ok(solution);
+            });
+        }
     }
 }

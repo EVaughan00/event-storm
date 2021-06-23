@@ -23,4 +23,23 @@ export class SolutionService {
 
        return ApiClient.request(requestConfig)
     }
+
+    public static getSolution(id: string) {
+        console.log("ID: " +  id)
+        const requestConfig: AxiosRequestConfig = {
+            method: "GET",
+            url: API.server.solution.getOneById.replace('%id', id)
+        };
+
+       return ApiClient.request(requestConfig)
+    }
+
+    public static getSolutionByName(name: string) {
+        const requestConfig: AxiosRequestConfig = {
+            method: "GET",
+            url: API.server.solution.getOneByName.replace('%name', name)
+        };
+
+       return ApiClient.request(requestConfig)
+    }
 }
