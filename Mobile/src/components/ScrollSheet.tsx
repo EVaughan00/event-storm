@@ -58,7 +58,6 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
   const [scrollOffset, setScrollOffset] = useState(0);
   const scrollRef = useRef<ScrollView>(null);
 
-  const refreshOffset = 35;
   var offset: number;
 
   useEffect(() => {
@@ -119,7 +118,7 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
           <RefreshControl 
             refreshing={props.refreshing!}
             onRefresh={props.onRefresh}
-            progressViewOffset={props.collapseOffset + refreshOffset}
+            progressViewOffset={props.collapseOffset/2}
             colors={[theme.colors.primary]}
           />
         }
@@ -140,11 +139,11 @@ const styles = StyleSheet.create({
   },
   sheet: {
     alignItems: "center",
-    paddingVertical: 20,
+    paddingVertical: 25,
     backgroundColor: "#FAFAFA",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    minHeight: Dimensions.get("screen").height - 144,
+    minHeight: Dimensions.get("screen").height - 150,
   },
   input: {
     width: 350,

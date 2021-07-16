@@ -1,3 +1,4 @@
+import { G } from "react-native-svg";
 import { ValidationRule } from "./FormModel";
 
 export default class Validation {
@@ -6,6 +7,7 @@ export default class Validation {
     public static Rule = ValidationRule;
     public static Alpha : RegExp = /^[A-Za-z]+$/;
     public static AlphaNumeric : RegExp = /^[A-Za-z0-9]+$/i;
+    public static AlphaNumericSpaces : RegExp = /^[A-Za-z0-9\s]+$/i;
     public static Numeric : RegExp = /^-?[0-9]+$/;
     public static Decimal : RegExp  = /^\s*(\+|-)?((\d+(\.\d+)?)|(\.\d+))\s*$/;
     public static Currency : RegExp = /^\s*(\+|-)?((\d+(\.\d\d)?)|(\.\d\d))\s*$/;
@@ -91,7 +93,7 @@ export default class Validation {
 
     private max(value: any, length: any) {
         if (value.length > length) 
-            this.errors.push('Must be at least ' + length + ' characters long.');
+            this.errors.push('Must be at most ' + length + ' characters long.');
     }
 
     private integer(value: any) {

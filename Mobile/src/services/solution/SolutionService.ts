@@ -15,6 +15,15 @@ export class SolutionService {
         return ApiClient.request(requestConfig)
     }
 
+    public static deleteSolution(id: string) {
+        const requestConfig: AxiosRequestConfig = {
+            method: "DELETE",
+            url: API.server.solution.delete.replace("%id", id),
+        };
+
+        return ApiClient.request(requestConfig)
+    }
+
     public static getSolutions() {
         const requestConfig: AxiosRequestConfig = {
             method: "GET",

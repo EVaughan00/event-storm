@@ -8,6 +8,8 @@ export class SolutionDTO extends FormModel implements Mappable {
     public id: string = "";
 
     @Validation.Rule({ required: true, message: "Please provide a solution name"})
+    @Validation.Rule({ pattern: Validation.AlphaNumericSpaces, message: "Please enter letters, numbers, and spaces only"})
+    @Validation.Rule({ max: 20, message: "Cannot exceed 20 characters long" })
     public name: string = "";
 
     public templateId: string = "";

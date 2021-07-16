@@ -26,6 +26,12 @@ export const API = {
             list: `${ENV.connections.api}/solution/list`, // GET
             getOneById: `${ENV.connections.api}/solution/%id`, // GET
             getOneByName: `${ENV.connections.api}/solution/%name`, // GET
+            delete: `${ENV.connections.api}/solution/%id`
+        },
+
+        eventStorm: {
+            createBlock: `${ENV.connections.api}/event-storm/block/create`, // PUT
+            getBySolution: `${ENV.connections.api}/event-storm/%solution`, // GET
         },
 
         template: {

@@ -10,8 +10,8 @@ import { ScrollView } from "react-native-gesture-handler";
 interface Props {
   currentSection: number;
   children: ReactElement[];
-  selectSection: (sectionIndex: number) => void;
   collapseOffset: number;
+  selectSection: (sectionIndex: number) => void;
   onScroll?: (event: NativeScrollEvent) => void;
   onScrollBegin?: (event: NativeScrollEvent) => void;
 }
@@ -20,9 +20,9 @@ export interface CardSectionSyncronizer {
   currentSection: number;
   collapseOffset: number;
   currentSynchronizedCollapseOffset: number;
-  updateCurrentSynchronizedCollapseOffset: Dispatch<React.SetStateAction<number>>;
   onScroll?: (event: NativeScrollEvent) => void;
   onScrollBegin?: (event: NativeScrollEvent) => void;
+  updateCurrentSynchronizedCollapseOffset: Dispatch<React.SetStateAction<number>>;
 }
 
 export const Synchronized = React.createContext<CardSectionSyncronizer>({} as CardSectionSyncronizer)

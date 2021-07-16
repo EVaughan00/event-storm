@@ -3,6 +3,7 @@ import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { Title } from "react-native-paper";
 import { useTemplateMapper } from "../../../helpers/hooks";
 import { limitStringToSize } from "../../../helpers/nameShortner";
+import { TemplateDTO } from "../../../services/template/models/TemplateDTO";
 import TemplateViewModel from "../../../services/template/models/TemplateViewModel";
 import theme from "../../../theme";
 import { List } from "../../List";
@@ -16,6 +17,7 @@ interface Props {
 
 const TemplateSelector: React.FunctionComponent<Props> = (props) => {
   const [selectingTemplate, setSelectingTemplate] = React.useState(false);
+
   const templates = useTemplateMapper(() => {}, [selectingTemplate])
 
   const handleSelectTemplate = (id) => {

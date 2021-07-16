@@ -8,6 +8,7 @@ import { Typography } from "../../../components/Typography";
 import { sleep } from "../../../helpers/sleep";
 import SvgBackArrow from "../../../icons/BackArrow";
 import Dots from "../../../icons/Dots";
+import { SolutionService } from "../../../services/solution/SolutionService";
 import theme from "../../../theme";
 import { ConfirmDeletePopup } from "./ConfirmDeletePopup";
 import { EditMenu } from "./EditMenu";
@@ -18,6 +19,7 @@ export const SolutionHeader: FunctionComponent<Props> = (props) => {
   const [showEditMenu, setShowEditMenu] = useState(false);
   const [showConfirmDelete, setShowConfirmDelete] = useState(false);
   const [store, storeActions] = AppStore.solution.use();
+  const [home, homeActions] = AppStore.home.use();
 
   const navigation = useNavigation();
 
@@ -28,6 +30,10 @@ export const SolutionHeader: FunctionComponent<Props> = (props) => {
   const handleDeleteSolution = () => {
     setShowConfirmDelete(false)
     setShowEditMenu(false)
+
+    SolutionService.deleteSolution(store.currentSolution.id)
+      .then(() => homeActions.updateSolutionCards(true))
+      .then(() => navigation.goBack())
   }
 
   return (

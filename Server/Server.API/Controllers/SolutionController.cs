@@ -15,6 +15,7 @@ namespace Server.API.Controllers
     using Commands;
     using Notifications;
     using System.Collections.Generic;
+    using MongoDB.Bson;
 
     [Route("solution")]
     [ApiController]
@@ -74,23 +75,6 @@ namespace Server.API.Controllers
             });
         }
 
-        [HttpGet("{name}")]
-        [AuthorizeIdentity]
-        [ProducesResponseType((int) HttpStatusCode.BadRequest)]
-        [ProducesResponseType(typeof(SolutionDTO), (int) HttpStatusCode.OK)]
-        public async Task<IActionResult> GetOne(string name)
-        {
-            return await this.ApiAction(async () => {
-
-                var claim = Request.GetIdentityClaims();
-                var user = await _userQueries.GetDetails(claim);
-
-                var solution = _solutionQueries.GetOneByName(user, name);
-
-                return Ok(solution);
-            });
-        }
-
         [HttpGet("{id}")]
         [AuthorizeIdentity]
         [ProducesResponseType((int) HttpStatusCode.BadRequest)]
@@ -102,9 +86,35 @@ namespace Server.API.Controllers
                 var claim = Request.GetIdentityClaims();
                 var user = await _userQueries.GetDetails(claim);
 
-                var solution = _solutionQueries.GetOneById(user, id);
+                Task<SolutionDTO> solution = null;
+
+                if (ObjectId.TryParse(id, out _)) {
+                    solution = _solutionQueries.GetOneById(user, id);
+                } else {
+                    solution = _solutionQueries.GetOneByName(user, id);
+                }
 
                 return Ok(solution);
+            });
+        }
+
+        [HttpDelete("{id}")]
+        [AuthorizeIdentity]
+        [ProducesResponseType((int) HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int) HttpStatusCode.OK)]
+        public async Task<IActionResult> Delete(string id)
+        {
+            return await this.ApiAction(async () => {
+
+               var claim = Request.GetIdentityClaims();
+                var user = await _userQueries.GetDetails(claim);
+
+                await _mediator.Send(new DeleteSolutionCommand {
+                    User = user,
+                    SolutionId = id
+                });
+
+                return Ok();
             });
         }
     }

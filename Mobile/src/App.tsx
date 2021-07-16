@@ -4,6 +4,7 @@ import { Header } from "react-native/Libraries/NewAppScreen";
 import { AppStack } from "./AppNavigation";
 import { AuthenticatedScreen } from "./areas/account/screens/AuthenticatedScreen";
 import { RegisterScreen } from "./areas/account/screens/RegisterScreen";
+import EventStormScreen from "./areas/event-storm/screens/EventStormScreen";
 import { HomeHeader } from "./areas/home/components/Header";
 import HomeScreen from "./areas/home/screens/HomeScreen";
 import SolutionScreen from "./areas/solution/screens/SolutionScreen";
@@ -44,6 +45,11 @@ const App: FunctionComponent = (props) => {
             <AppStack.Screen
               name="Solution"
               component={SolutionScreen}
+            />
+
+            <AppStack.Screen
+              name="EventStorm"
+              component={EventStormScreen}
             />
 
             <AppStack.Screen name="Register" component={RegisterScreen} />
