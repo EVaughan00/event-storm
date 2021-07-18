@@ -1,7 +1,7 @@
 import { NativeScrollEvent } from "react-native";
 import SolutionViewModel from "../../services/solution/models/SolutionViewModel";
 import { BaseStore } from "../../utils/BaseStore";
-import GridNode from "./components/GridNode";
+import { GridNode } from "./components/Grid/Node";
 
 
 export interface EventStormState {
@@ -10,13 +10,16 @@ export interface EventStormState {
     updatedGrid: boolean
     zoomed: boolean
     panning: boolean
+    showNavigationArrows: boolean
 }
 
 export interface EventStormActions {
     setCurrentEventStorm: (solution: SolutionViewModel) => void
+    setSelectedNode: (node: GridNode) => void
     updateGrid: (updated: boolean) => void
     setZoomed: (zoomed: boolean) => void
     setPanning: (panning: boolean) => void
+    setShowNavigationArrows: (showArrows: boolean) => void
 }
 
 export class EventStormStore 
@@ -29,7 +32,8 @@ export class EventStormStore
         selectedNode: {} as GridNode,
         updatedGrid: false,
         zoomed: false,
-        panning: false
+        panning: false,
+        showNavigationArrows: false
     }
 
     constructor() {
@@ -40,6 +44,13 @@ export class EventStormStore
         this.setState({
             ...this.state,
             currentSolution: solution,
+        })
+    }
+
+    public setSelectedNode(node: GridNode) {
+        this.setState({
+            ...this.state,
+            selectedNode: node,
         })
     }
 
@@ -61,6 +72,13 @@ export class EventStormStore
         this.setState({
             ...this.state,
             panning: panning
+        })
+    }
+
+    public setShowNavigationArrows(showArrows: boolean) {
+        this.setState({
+            ...this.state,
+            showNavigationArrows: showArrows
         })
     }
 }

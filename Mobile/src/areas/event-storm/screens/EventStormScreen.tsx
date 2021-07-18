@@ -48,10 +48,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 0,
   },
   gridContainer: {
-    borderWidth: 1,
-    borderColor: "black",
-    backgroundColor: "grey",
-    overflow: "hidden",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   scrollView: {
     backgroundColor: "#fff",

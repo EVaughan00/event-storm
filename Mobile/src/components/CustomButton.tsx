@@ -28,7 +28,7 @@ const CustomButton: FunctionComponent<ButtonProps> = props => {
     }
 
     const Button = () => (        
-        <TouchableOpacity style={[styles.button, extraStyles ]} onPress={props.onPress}>
+        <TouchableOpacity style={[styles.button, extraStyles]} onPress={props.onPress}>
             <Text style={[styles.buttonText, { fontSize: size == "large" ? 18 : 14}]}>{ props.children }</Text>
         </TouchableOpacity>
     )

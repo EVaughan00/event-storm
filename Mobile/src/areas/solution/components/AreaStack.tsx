@@ -2,6 +2,7 @@ import * as React from "react";
 import { StyleSheet, View } from "react-native";
 import { useTheme } from "react-native-paper";
 import { ToolCheckbox } from "../../../components/Form/Custom/ToolCheckbox";
+import { ToolSelect } from "./ToolSelect";
 
 interface AreaSelectStackProps {
   type: "creation" | "select";
@@ -22,9 +23,9 @@ export default function AreaSelectStack(props: AreaSelectStackProps) {
 
   return (
     <View>
-        <ToolCheckbox area="event-storm" />
-        <ToolCheckbox area="model-repository" />
-        <ToolCheckbox area="task-stack" />
+        <ToolSelect area="event-storm" />
+        <ToolSelect area="model-repository" />
+        <ToolSelect area="task-stack" />
     </View>
   );
 }
