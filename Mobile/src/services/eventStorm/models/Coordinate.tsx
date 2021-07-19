@@ -32,4 +32,8 @@ export default class Coordinate implements ICoordinate {
         const cartesian = this.cartesian(gridSize)
         return { x: scale * cartesian.x, y: scale * cartesian.y}
     }
+
+    equals(coordinate: ICoordinate) {
+        return coordinate.x == this._x && coordinate.y == this._y
+    }
 }

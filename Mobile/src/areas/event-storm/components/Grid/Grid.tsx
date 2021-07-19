@@ -2,13 +2,17 @@ import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import Svg from "react-native-svg";
 import Coordinate from "../../../../services/eventStorm/models/Coordinate";
+import EventStormViewModel from "../../../../services/eventStorm/models/EventStormViewModel";
+import { INodeActions, NodeActions } from "../../helpers/GridActions";
+import { GridBuilder } from "../../helpers/GridBuilder";
 import PanWrapper from "../../helpers/PanWrapper";
 import { ArrowNavigation, Direction } from "./ArrowNavigation";
-import { GridNode } from "./Node";
-import { GridSettings } from "./Settings";
+import { GridNode } from "./GridNode";
+import { GridSettings } from "./GridSettings";
 
 interface Props {
-  onSelectGridNode: (node: GridNode) => void;
+  eventStorm: EventStormViewModel | undefined;
+  onSelectNode: (node: GridNode | undefined) => void;
 }
 
 interface State {
@@ -20,90 +24,77 @@ interface State {
 
 export class Grid extends Component<Props, State> {
 
-  state: State = {
-    currentGridNode: {} as GridNode,
-    zoomed: false,
-    panning: false,
-    showArrows: false,
-  };
+  private _nodeActions: INodeActions;
+  private _eventStorm: EventStormViewModel | undefined;
+  private _nodes: JSX.Element[];
 
   constructor(props: Props) {
     super(props);
+
+    this._nodeActions = {
+      onNodePress: this.handleGridNodeSelection,
+      onNodeDoublePress: this.handleNodeDoublePress,
+    };
+
+    this.state = {
+      currentGridNode: {} as GridNode,
+      zoomed: false,
+      panning: false,
+      showArrows: false,
+    };
+
+    this._eventStorm = props.eventStorm;
+    this._nodes = GridBuilder.buildNodes(this._eventStorm?.blocks);
   }
 
+  handleNodeDoublePress = (node: GridNode) => {};
 
- handleGridNodeSelection = (node: GridNode) => {
-  let zoom = false;
+  handleGridNodeSelection = (node: GridNode) => {
+    let zoom = false;
 
-  if (this.state.currentGridNode != node) {
-    zoom = true;
-    this.state.currentGridNode.isSelected = false;
-  } else if (this.state.currentGridNode == node && !this.state.zoomed) {
-    zoom = true;
-  }
+    if (this.state.currentGridNode != node) {
+      zoom = true;
+      this.state.currentGridNode.isSelected = false;
+    } else if (this.state.currentGridNode == node && !this.state.zoomed) {
+      zoom = true;
+    }
 
-  this.setState({
-    ...this.state,
-    zoomed: zoom,
-    currentGridNode: node,
-    showArrows: node.isSelected,
-  });
+    this.setState({
+      ...this.state,
+      zoomed: zoom,
+      currentGridNode: node,
+      showArrows: node.isSelected,
+    });
 
-  this.props.onSelectGridNode(node);
-};
+    this.props.onSelectNode(node.isSelected ? node : undefined);
+  };
 
   handleArrowNavigation = (direction: Direction) => {
-
-    if (!this.handleAvailableDirection(direction))
-      return
-
-    
-  }
+    console.log(direction);
+    if (!this.handleAvailableDirection(direction)) return;
+  };
 
   handleAvailableDirection = (direction: Direction) => {
-
     switch (direction) {
       case Direction.right:
-        return this.state.currentGridNode.coordinate.x < GridSettings.size - GridSettings.nodePixelOffset
-      case Direction.left:
-        return this.state.currentGridNode.coordinate.x > GridSettings.nodePixelOffset;
-      case Direction.up:
-        return this.state.currentGridNode.coordinate.y > GridSettings.nodePixelOffset;
-      default:
-        return this.state.currentGridNode.coordinate.y < GridSettings.size - GridSettings.nodePixelOffset
-    }
-  };
-
-  mappedPoints = () => {
-    var points: JSX.Element[] = [];
-    var index = 0;
-
-    for (var row = 0; row < GridSettings.rows; row++) {
-      for (var col = 0; col < GridSettings.columns; col++) {
-        points.push(
-          <GridNode
-            onPress={this.handleGridNodeSelection}
-            onDoublePress={() => {}}
-            key={index}
-            coordinate={
-              new Coordinate(
-                row * GridSettings.nodePixelOffset + GridSettings.nodePixelOffset / 2,
-                col * GridSettings.nodePixelOffset + GridSettings.nodePixelOffset / 2,
-              )
-            }
-          />
+        return (
+          this.state.currentGridNode.coordinate.x <
+          GridSettings.size - GridSettings.nodePixelOffset
         );
-        index++;
-      }
+      case Direction.left:
+        return (
+          this.state.currentGridNode.coordinate.x > GridSettings.nodePixelOffset
+        );
+      case Direction.up:
+        return (
+          this.state.currentGridNode.coordinate.y > GridSettings.nodePixelOffset
+        );
+      default:
+        return (
+          this.state.currentGridNode.coordinate.y <
+          GridSettings.size - GridSettings.nodePixelOffset
+        );
     }
-    return points;
-  };
-
-  dynamicStyles = {
-    grid: {
-      width: GridSettings.size,
-      height: GridSettings.size,
-    },
   };
 
   render() {
@@ -122,14 +113,16 @@ export class Grid extends Component<Props, State> {
             coordinate={
               new Coordinate(
                 this.state.currentGridNode.coordinate.x,
-                this.state.currentGridNode.coordinate.y,
+                this.state.currentGridNode.coordinate.y
               )
             }
           />
         )}
-        <View style={[styles.grid, this.dynamicStyles.grid]}>
-          <Svg>{this.mappedPoints()}</Svg>
-        </View>
+        <NodeActions.Provider value={this._nodeActions}>
+          <View style={styles.grid}>
+            <Svg>{this._nodes}</Svg>
+          </View>
+        </NodeActions.Provider>
       </PanWrapper>
     );
   }
@@ -138,5 +131,7 @@ export class Grid extends Component<Props, State> {
 const styles = StyleSheet.create({
   grid: {
     zIndex: -1,
+    width: GridSettings.size,
+    height: GridSettings.size,
   },
 });

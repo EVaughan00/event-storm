@@ -1,25 +1,17 @@
 import { NativeScrollEvent } from "react-native";
 import SolutionViewModel from "../../services/solution/models/SolutionViewModel";
 import { BaseStore } from "../../utils/BaseStore";
-import { GridNode } from "./components/Grid/Node";
+import { GridNode } from "./components/Grid/GridNode";
 
 
 export interface EventStormState {
     currentSolution: SolutionViewModel
-    selectedNode: GridNode
-    updatedGrid: boolean
-    zoomed: boolean
-    panning: boolean
-    showNavigationArrows: boolean
+    updatedEventStorm: boolean
 }
 
 export interface EventStormActions {
-    setCurrentEventStorm: (solution: SolutionViewModel) => void
-    setSelectedNode: (node: GridNode) => void
-    updateGrid: (updated: boolean) => void
-    setZoomed: (zoomed: boolean) => void
-    setPanning: (panning: boolean) => void
-    setShowNavigationArrows: (showArrows: boolean) => void
+    setCurrentSolution: (solution: SolutionViewModel) => void
+    updateEventStorm: (updated: boolean) => void
 }
 
 export class EventStormStore 
@@ -29,56 +21,24 @@ export class EventStormStore
     protected prototype = EventStormStore.prototype;
     protected initialState = {
         currentSolution: {} as SolutionViewModel,
-        selectedNode: {} as GridNode,
-        updatedGrid: false,
-        zoomed: false,
-        panning: false,
-        showNavigationArrows: false
+        updatedEventStorm: false
     }
 
     constructor() {
         super();                
     }
 
-    public setCurrentEventStorm(solution: SolutionViewModel) {
+    public setCurrentSolution(solution: SolutionViewModel) {
         this.setState({
             ...this.state,
             currentSolution: solution,
         })
     }
 
-    public setSelectedNode(node: GridNode) {
+    public updateEventStorm(updated: boolean) {
         this.setState({
             ...this.state,
-            selectedNode: node,
-        })
-    }
-
-    public updateGrid(updated: boolean) {
-        this.setState({
-            ...this.state,
-            updatedGrid: updated
-        })
-    }
-
-    public setZoomed(zoomed: boolean) {
-        this.setState({
-            ...this.state,
-            zoomed: zoomed
-        })
-    }
-
-    public setPanning(panning: boolean) {
-        this.setState({
-            ...this.state,
-            panning: panning
-        })
-    }
-
-    public setShowNavigationArrows(showArrows: boolean) {
-        this.setState({
-            ...this.state,
-            showNavigationArrows: showArrows
+            updatedEventStorm: updated,
         })
     }
 }

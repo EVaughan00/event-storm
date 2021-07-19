@@ -11,7 +11,7 @@ import Coordinate, { ICoordinate } from "../../../services/eventStorm/models/Coo
 
 interface Props {
   size: number
-  panToCoordinate: Coordinate;
+  panToCoordinate: Coordinate | undefined;
   zoomScale: number;
   zoomed: boolean;
 }
@@ -23,32 +23,6 @@ const PanWrapper: FunctionComponent<Props> = (props) => {
 
   const [currentPosition, setCurrentPosition] = useState<ICoordinate>(new Coordinate(0, 0));
 
-  // const transform = (coordinate: Coordinate) => {
-  //   return scaleTransform(
-  //           panTransform(
-  //             coordinate))
-  // }
-
-  // Transform offset when scale is applied
-  // const scaleTransform = (coordinate: Coordinate) => {
-  //   const transformed: Coordinate = {x: 0, y: 0};
-
-  //   transformed.x = props.zoomScale * coordinate.x;
-  //   transformed.y = props.zoomScale * coordinate.y;
-
-  //   return transformed;
-  // };
-
-  // // Transform pixel coordinates to cartesian
-  // const panTransform = (coordinate: Coordinate) => {
-  //   const transformed: Coordinate = { x: 0, y: 0 };
-
-  //   transformed.x = coordinate.x * -1 + props.size / 2;
-  //   transformed.y = coordinate.y * -1 + props.size / 2;
-
-  //   return transformed;
-  // };
-
   useEffect(() => {
     Animated.timing(scale, {
       toValue: props.zoomed ? props.zoomScale : 1,
@@ -58,7 +32,7 @@ const PanWrapper: FunctionComponent<Props> = (props) => {
   }, [props.zoomed]);
 
   useEffect(() => {
-    if (props.panToCoordinate != undefined) {
+    if (props.panToCoordinate) {
       Animated.timing(pan, {
         toValue: props.zoomed
           ? props.panToCoordinate
@@ -69,11 +43,11 @@ const PanWrapper: FunctionComponent<Props> = (props) => {
         useNativeDriver: false,
       }).start(() => {
         setCurrentPosition(
-          props.panToCoordinate
+          props.panToCoordinate!
             .cartesian(props.size))
       });
     }
-  }, [props.panToCoordinate]);
+  }, [props.panToCoordinate, props.zoomed]);
 
   const handleDragBoundaries = (x: number, y: number) => {
 
