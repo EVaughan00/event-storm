@@ -5,6 +5,7 @@ using Server.Domain;
 namespace Server.API.Infrastructure
 {
     using Queries;
+    using Server.Infrastructure.Utilities;
 
     public class RepositoryModule : Autofac.Module 
     {
@@ -13,7 +14,6 @@ namespace Server.API.Infrastructure
         protected override void Load(ContainerBuilder builder)
         {
             // Register query engines
-            // ex:
             builder.RegisterType<UserQueries>()
                 .As<IUserQueries>()
                 .InstancePerLifetimeScope();
@@ -22,12 +22,15 @@ namespace Server.API.Infrastructure
                 .As<ISolutionQueries>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<EventStormQueries>()
+                .As<IEventStormQueries>()
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<TemplateQueries>()
                 .As<ITemplateQueries>()
                 .InstancePerLifetimeScope();
 
             // Register data repositories
-            // ex:
             builder.RegisterType<UserRepository>()
                 .As<IUserRepository>()
                 .InstancePerLifetimeScope();
@@ -52,6 +55,10 @@ namespace Server.API.Infrastructure
                 .As<IEventBlockRepository>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<EventEdgeRepository>()
+                .As<IEventEdgeRepository>()
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<ModelRepository>()
                 .As<IModelRepository>()
                 .InstancePerLifetimeScope();
@@ -62,6 +69,11 @@ namespace Server.API.Infrastructure
 
             builder.RegisterType<PasswordResetRepository>()
                 .As<IPasswordResetRepository>()
+                .InstancePerLifetimeScope();
+
+            // Register utilities
+            builder.RegisterType<EventStormUtility>()
+                .As<IEventStormUtility>()
                 .InstancePerLifetimeScope();
         }
     }

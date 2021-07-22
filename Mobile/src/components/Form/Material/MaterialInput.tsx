@@ -22,10 +22,6 @@ const MaterialInput: FunctionComponent<Props> = props => {
         setFocused(!!props.defaultValue);
     }, [props.defaultValue])
 
-    // React.useEffect(() => {
-    //     handleChangeText(props.valueOnUpdate ?? "")
-    // }, [props.valueOnUpdate])
-
     React.useEffect(() => {
         Animated.timing(focusAnimation, {
             toValue: isFocused || !!value ? 1 : 0,

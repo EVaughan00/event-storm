@@ -13,25 +13,22 @@ import theme from "../theme";
 import { MaterialInput } from "./Form/Material/MaterialInput";
 
 interface Props {
-  active: boolean;
   name: string;
-  syncronizedCollapseOffset: number;
-  collapseOffset: number;
+  active: boolean;
   children?: any;
   refreshing?: boolean
+  collapseOffset: number;
+  syncronizedCollapseOffset: Animated.Value;
+  onRefresh?: () => void;
+  onScroll?: (value: number) => void
+  onScrollEnd?: (value: number) => void
+  onScrollBegin?: (value: number) => void
   updateSynchronizedCollapseOffset: (value: number) => void;
-  onScroll?: (event: NativeScrollEvent) => void;
-  onScrollBegin?: (event: NativeScrollEvent) => void;
-  onRefresh?: () => void
 }
 
 interface SearchableScrollSheetProps extends Props {
   searchFilter: string
   setSearchFilter: (value: string) => void
-}
-
-const wait = (timeout) => {
-  return new Promise(resolve => setTimeout(resolve, timeout));
 }
 
 const SearchableScrollSheet: FunctionComponent<SearchableScrollSheetProps> = (
@@ -55,47 +52,40 @@ const SearchableScrollSheet: FunctionComponent<SearchableScrollSheetProps> = (
 
 const ScrollSheet: FunctionComponent<Props> = (props) => {
 
-  const [scrollOffset, setScrollOffset] = useState(0);
+  const [scrollOffset,] = useState(new Animated.Value(0));
+  const [surpassedDelta, setSurpassedDelta] = useState(false);
+
   const scrollRef = useRef<ScrollView>(null);
 
-  var offset: number;
-
   useEffect(() => {
+    var offset: number;
     if (scrollRef.current != null && !props.active) {
-      if (props.syncronizedCollapseOffset > props.collapseOffset) {
-        offset = Math.max(props.collapseOffset, scrollOffset)
+      if ((props.syncronizedCollapseOffset as any)._value > props.collapseOffset) {
+        offset = Math.max(props.collapseOffset, (scrollOffset as any)._value)
       } else {
-        offset = props.syncronizedCollapseOffset
+        offset = (props.syncronizedCollapseOffset as any)._value
       }
       scrollRef.current.scrollTo({
         y: offset,
         animated: false,
       });
     }
-  }, [props.syncronizedCollapseOffset]);
-
-  const handleBeginScroll = (
-    event: NativeSyntheticEvent<NativeScrollEvent>
-  ) => {
-    if (props.onScrollBegin != undefined && props.active) {
-      props.onScrollBegin(event.nativeEvent);
-    }
-  };
+  }, [(props.syncronizedCollapseOffset as any)._value]);
 
   const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-    if (props.onScroll != undefined && props.active)
-      props.onScroll(event.nativeEvent);
+    props.onScroll?.(event.nativeEvent.contentOffset.y)
+  }
+
+  const handleScrollEnd = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
     if (props.active)
-      props.updateSynchronizedCollapseOffset(event.nativeEvent.contentOffset.y);      
-    setScrollOffset(event.nativeEvent.contentOffset.y);
-  };
+      props.updateSynchronizedCollapseOffset(event.nativeEvent.contentOffset.y); 
 
-  const [refreshing, setRefreshing] = React.useState(false);
+      props.onScrollEnd?.(event.nativeEvent.contentOffset.y)
+  }
 
-  const onRefresh = React.useCallback(() => {
-    setRefreshing(true);
-    wait(2000).then(() => setRefreshing(false));
-  }, []);
+  const handleScrollBegin = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    props.onScrollBegin?.(event.nativeEvent.contentOffset.y)
+  }
 
   const dynamicStyles = {
     scrollView: {
@@ -106,22 +96,31 @@ const ScrollSheet: FunctionComponent<Props> = (props) => {
   return (
     <Animated.View style={styles.container}>
       <Animated.ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={dynamicStyles.scrollView}
+        ref={scrollRef}
         bouncesZoom={false}
         overScrollMode={"never"}
-        ref={scrollRef}
-        onScroll={handleScroll}
-        onScrollBeginDrag={handleBeginScroll}
         scrollEventThrottle={16}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={dynamicStyles.scrollView}
+        onMomentumScrollEnd={handleScrollEnd}
+        onScrollBeginDrag={handleScrollBegin}
         refreshControl={
           <RefreshControl 
-            refreshing={props.refreshing!}
             onRefresh={props.onRefresh}
-            progressViewOffset={props.collapseOffset/2}
+            refreshing={props.refreshing!}
             colors={[theme.colors.primary]}
+            progressViewOffset={props.collapseOffset/2}
+
           />
         }
+        onScroll={Animated.event([{
+          nativeEvent: {contentOffset: {y: scrollOffset}},
+          }], {
+              listener: (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+                handleScroll(event)
+              },
+              useNativeDriver: false,
+          })}
       >
         <View style={styles.sheet}>{props.children}</View>
       </Animated.ScrollView>

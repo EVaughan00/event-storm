@@ -1,15 +1,10 @@
-import { StackHeaderProps } from "@react-navigation/stack";
-import React, { FunctionComponent, useEffect, useRef } from "react";
-import { Animated, Dimensions } from "react-native";
-import { StatusBar, StyleSheet, View } from "react-native";
-import { Easing } from "react-native";
+import React, { FunctionComponent } from "react";
+import { Animated, StatusBar, StyleSheet, View } from "react-native";
 import { AppStore } from "../../../AppStore";
 import { LargeHeader } from "../../../components/Header";
+import { TabSwitch } from "../../../components/SelectionSwitch";
 import { Typography } from "../../../components/Typography";
 import { SvgLightning } from "../../../icons/Lightning";
-import { CardSection } from "../../../components/CardSection";
-import theme from "../../../theme";
-import { TabSwitch } from "../../../components/SelectionSwitch";
 
 interface HomeHeaderProps {
 }
@@ -34,11 +29,7 @@ const HomeHeader: FunctionComponent<HomeHeaderProps> = (props) => {
         <TopRowContent></TopRowContent>
       </Animated.View>
       <LargeHeader
-        scrolling={
-            home.verticalScroll.contentOffset ? 
-            home.verticalScroll.contentOffset.y > 20 :
-            false
-          }
+        fade={(home.verticalScroll as any)._value > 20}
       > 
       <MiddleRowContent 
             title={"Event Storming For The"}

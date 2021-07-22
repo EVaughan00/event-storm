@@ -18,7 +18,7 @@ export class EventStormService {
     public static getBySolution(solutionId: string) {
         const requestConfig: AxiosRequestConfig = {
             method: "GET",
-            url: API.server.eventStorm.getBySolution.replace('%solution', solutionId)
+            url: API.server.eventStorm.getBySolution.replace('%solutionid', solutionId)
         };
 
        return ApiClient.request(requestConfig)

@@ -1,5 +1,6 @@
 import React, { Dispatch, FunctionComponent, ReactElement, useEffect, useRef, useState } from "react";
 import {
+  Animated,
   Dimensions,
   NativeScrollEvent,
   NativeSyntheticEvent,
@@ -9,40 +10,44 @@ import { ScrollView } from "react-native-gesture-handler";
 
 interface Props {
   currentSection: number;
-  children: ReactElement[];
   collapseOffset: number;
+  children: ReactElement[];
+  onScroll?: (value: number) => void;
+  onScrollEnd?: (value: number) => void;
+  onScrollBegin?: (value: number) => void;
   selectSection: (sectionIndex: number) => void;
-  onScroll?: (event: NativeScrollEvent) => void;
-  onScrollBegin?: (event: NativeScrollEvent) => void;
+  onScrollDeltaSurpassed?: (surpassed: boolean) => void
 }
 
 export interface CardSectionSyncronizer {
   currentSection: number;
   collapseOffset: number;
-  currentSynchronizedCollapseOffset: number;
-  onScroll?: (event: NativeScrollEvent) => void;
-  onScrollBegin?: (event: NativeScrollEvent) => void;
-  updateCurrentSynchronizedCollapseOffset: Dispatch<React.SetStateAction<number>>;
+  onScroll?: (value: number) => void;
+  onScrollEnd?: (value: number) => void;
+  onScrollBegin?: (value: number) => void;
+  currentSynchronizedCollapseOffset: Animated.Value;
+  updateCurrentSynchronizedCollapseOffset: (value: number) => void;
 }
 
 export const Synchronized = React.createContext<CardSectionSyncronizer>({} as CardSectionSyncronizer)
 
 const CardSectionSwitch: FunctionComponent<Props> = (props) => {
 
+  const scrollView = useRef<ScrollView>(null);
   const [manualScroll, setManualScroll] = useState(false);
   const [scrollOffsets, setScrollOffsets] = useState<number[]>([]);
-  const [currentSyncronizedCollapseOffset, updateCurrentSynchronizedCollapseOffset] = useState(0);
+  const [syncronizedCollapseOffset, setSyncronizedCollapseOffset] = useState(0)
+  const currentSyncronizedCollapseOffset = new Animated.Value(syncronizedCollapseOffset);
 
   const syncronizer: CardSectionSyncronizer = {
     currentSection: props.currentSection,
     collapseOffset: props.collapseOffset,
     currentSynchronizedCollapseOffset: currentSyncronizedCollapseOffset,
     onScroll: props.onScroll,
+    onScrollEnd: props.onScrollEnd,
     onScrollBegin: props.onScrollBegin,
-    updateCurrentSynchronizedCollapseOffset: updateCurrentSynchronizedCollapseOffset,
+    updateCurrentSynchronizedCollapseOffset: setSyncronizedCollapseOffset
   }
-
-  const scrollView = useRef<ScrollView>(null);
 
   useEffect(() => {
     var scrollOffsets: number[] = []
@@ -62,7 +67,6 @@ const CardSectionSwitch: FunctionComponent<Props> = (props) => {
   }, [props.currentSection]);
 
   const handleScrollSnap = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
-
     if (manualScroll) {
       var nextIndex = Math.max(Math.min(Math.floor(
         event.nativeEvent.contentOffset.x /
@@ -71,9 +75,7 @@ const CardSectionSwitch: FunctionComponent<Props> = (props) => {
   
       if (nextIndex != props.currentSection) {
         props.selectSection(nextIndex);
-        setManualScroll(false);
       }
-  
       setManualScroll(false)
     }
   }
@@ -85,16 +87,15 @@ const CardSectionSwitch: FunctionComponent<Props> = (props) => {
   }
 
   return (
-
     <ScrollView
-      contentContainerStyle={[styles.container, dynamicStyles.container]}
-      horizontal={true}
-      showsHorizontalScrollIndicator={false}
-      snapToOffsets={scrollOffsets}
       ref={scrollView}
+      horizontal={true}
       decelerationRate="fast"
-      onScrollBeginDrag={() => setManualScroll(true)}
+      snapToOffsets={scrollOffsets}
+      showsHorizontalScrollIndicator={false}
       onMomentumScrollEnd={handleScrollSnap}
+      onScrollBeginDrag={() => setManualScroll(true)}
+      contentContainerStyle={[styles.container, dynamicStyles.container]}
     >
       <Synchronized.Provider value={syncronizer}>
         { props.children }

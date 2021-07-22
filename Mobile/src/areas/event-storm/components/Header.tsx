@@ -10,7 +10,7 @@ export const SolutionHeader: FunctionComponent<Props> = (props) => {
 
   return (
     <View>
- 
+      
     </View>
   );
 };

@@ -1,19 +1,21 @@
-import { NativeScrollEvent } from "react-native";
+import { Animated, NativeScrollEvent } from "react-native";
 import { BaseStore } from "../../utils/BaseStore";
 
 
 export interface HomeState {
     currentCardSection: number
-    verticalScroll: NativeScrollEvent
-    beginVerticalScroll: NativeScrollEvent
+    verticalScroll: Animated.Value
+    beginVerticalScroll: number
+    endVerticalScroll: number
     updatedSolutionCards: boolean
     updatedTemplateCards: boolean
 }
 
 export interface HomeActions {
     selectCardSection: (section: number) => void
-    updateVerticalScroll: (event: NativeScrollEvent) => void
-    updateBeginVerticalScroll: (event: NativeScrollEvent) => void
+    updateVerticalScroll: (value: number) => void
+    updateBeginVerticalScroll: (value: number) => void
+    updateEndVerticalScroll: (value: number) => void
     updateSolutionCards: (updated: boolean) => void
     updateTemplateCards: (updated: boolean) => void
 }
@@ -25,10 +27,11 @@ export class HomeStore
     protected prototype = HomeStore.prototype;
     protected initialState = {
         currentCardSection: 0,
-        verticalScroll: {} as NativeScrollEvent,
-        beginVerticalScroll: {} as NativeScrollEvent,
+        verticalScroll: new Animated.Value(0),
+        beginVerticalScroll: 0,
+        endVerticalScroll: 0,
         updatedSolutionCards: false,
-        updatedTemplateCards: false
+        updatedTemplateCards: false,
     }
 
     constructor() {
@@ -42,18 +45,21 @@ export class HomeStore
         })
     }
 
-    public updateVerticalScroll(event: NativeScrollEvent) {
+    public updateVerticalScroll(value: number) {
+        this.state.verticalScroll.setValue(value)
+    }
+
+    public updateBeginVerticalScroll(value: number) {
         this.setState({
             ...this.state,
-            verticalScroll: event,
-
+            beginVerticalScroll: value,
         })
     }
 
-    public updateBeginVerticalScroll(event: NativeScrollEvent) {
+    public updateEndVerticalScroll(value: number) {
         this.setState({
             ...this.state,
-            beginVerticalScroll: event,
+            endVerticalScroll: value,
         })
     }
 

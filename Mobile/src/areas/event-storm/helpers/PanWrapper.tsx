@@ -2,6 +2,7 @@ import React, { FunctionComponent, useCallback, useEffect, useRef, useState } fr
 import { useMemo } from "react";
 import {
   Animated,
+  Keyboard,
   PanResponder,
   PanResponderGestureState,
   StyleSheet,
@@ -144,6 +145,7 @@ const PanWrapper: FunctionComponent<Props> = (props) => {
       PanResponder.create({
         onStartShouldSetPanResponder: () => true,
         onPanResponderGrant: () => {
+          Keyboard.dismiss()
           pan.setOffset({
             x: (pan.x as any)._value,
             y: (pan.y as any)._value,

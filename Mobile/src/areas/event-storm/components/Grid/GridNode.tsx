@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { Keyboard, StyleSheet, View } from "react-native";
 import { Circle, Rect } from "react-native-svg";
 import Coordinate from "../../../../services/eventStorm/models/Coordinate";
 import EventBlockViewModel from "../../../../services/eventStorm/models/EventBlockViewModel";
@@ -39,22 +39,27 @@ export class GridNode extends Component<Props, State> {
   public get coordinate(): Coordinate {
     return this._coordinate;
   }
+
   public get isSelected(): boolean {
     return this._isSelected;
   }
+
   public set isSelected(status: boolean) {
     this._isSelected = status;
     this.scale()
   }
-  public get hasBlock(): boolean {
-    return this._hasBlock;
+
+  public get block(): EventBlockViewModel | undefined {
+    return this._block;
   }
-  public set hasBlock(status: boolean) {
-    this._hasBlock = status;
+
+  public set block(block: EventBlockViewModel | undefined) {
+    this.block = block
     this.blockify()
   }
 
   handlePress = (context: INodeActions) => {
+    Keyboard.dismiss()
     this.isSelected = !this.isSelected
     context.onNodePress(this);
   };
@@ -94,10 +99,10 @@ export class GridNode extends Component<Props, State> {
       <Circle
         cx={this._coordinate.x}
         cy={this._coordinate.y}
-        r={this.state.scaled ? "8" : "5"}
-        stroke="black"
-        strokeWidth="2"
-        fill="red"
+        r={this.state.scaled ? "6" : "3"}
+        stroke="grey"
+        strokeWidth="1"
+        fill="grey"
       />
     );
   };

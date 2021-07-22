@@ -1,4 +1,5 @@
 using BuildingBlocks.SeedWork;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Server.Domain
@@ -7,7 +8,7 @@ namespace Server.Domain
     {
         Task Create(EventBlock eventBlock);
         Task<EventBlock> GetById(string id);
-        // Task<EventBlock> GetBySolution(string solutionId);
+        Task<List<EventBlock>> GetAllBySolutionId(string solutionId);
         Task Update(EventBlock eventBlock);
         Task Delete(string id);
     }   

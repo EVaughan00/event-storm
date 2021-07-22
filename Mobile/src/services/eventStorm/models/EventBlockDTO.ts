@@ -16,6 +16,5 @@ export class EventBlockDTO extends FormModel implements Mappable {
         block.coordinate = this.coordinate
 
         return block
-
     }
 }

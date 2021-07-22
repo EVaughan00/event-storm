@@ -9,28 +9,26 @@ interface Props {
   showOnUpdate: any;
   hide?: boolean;
   scrollThreshold?: number;
-  beginScroll: NativeScrollPoint;
-  activeScroll: NativeScrollPoint;
   onPress: () => void
+  beginScroll?: number
+  activeScroll?: number
 }
 
 const FloatingAddButton: FunctionComponent<Props> = (props) => {
   const [showPlusButton, setShowPlusButton] = useState(true);
-
   const plusButtonPosition = useRef(new Animated.Value(0)).current;
 
-  const threshold = props.scrollThreshold ? props.scrollThreshold : 10;
+  const threshold = props.scrollThreshold ? props.scrollThreshold : 20
 
-  var activeScrollOffset: number
-  var initialScrollOffset: number
-  var scrollDelta: number;
+  var activeScrollOffset = 0
+  var initialScrollOffset = 0
 
   useEffect(() => {
-    Animated.timing(plusButtonPosition, {
-      toValue: showPlusButton ? 0 : 1,
-      duration: 100,
-      useNativeDriver: true,
-    }).start(() => {});
+      Animated.timing(plusButtonPosition, {
+        toValue: showPlusButton ? 0 : 1,
+        duration: 100,
+        useNativeDriver: true,
+      }).start(() => {});
   }, [showPlusButton]);
 
   useEffect(() => {
@@ -38,16 +36,20 @@ const FloatingAddButton: FunctionComponent<Props> = (props) => {
   }, [props.showOnUpdate]);
 
   useEffect(() => {
-    activeScrollOffset = props.activeScroll ? props.activeScroll.y : 0
-    initialScrollOffset = props.beginScroll ? props.beginScroll.y : 0
-    scrollDelta = activeScrollOffset - initialScrollOffset
+    initialScrollOffset = props.beginScroll ? props.beginScroll : 0
+  }, [props.beginScroll])
 
-    if (scrollDelta < threshold && !props.hide) {
+  useEffect(() => {
+    activeScrollOffset = props.activeScroll ? props.activeScroll : 0
+
+    const scrollDelta = activeScrollOffset - initialScrollOffset
+
+    if (scrollDelta < threshold && !props.hide)
       setShowPlusButton(true);
-    }
-    if (scrollDelta > threshold) {
+    
+    if (scrollDelta > threshold)
       setShowPlusButton(false);
-    }
+  
   }, [props.activeScroll]);
 
   const dynamicStyle = {

@@ -11,8 +11,6 @@ export class GridBuilder {
       var nodes: JSX.Element[] = [];
       var index = 0;
 
-      console.log("Building points")
-
       for (var row = 0; row < GridSettings.rows; row++) {
         for (var col = 0; col < GridSettings.columns; col++) {
 

@@ -18,7 +18,7 @@ const EventStormScreen: FC<NavigationProps<AppNavigation, "Solution">> = props =
 
   const { navigate } = props.navigation;
   const authContext = React.useContext(AuthenticationContext);
-  const [store, storeActions] = AppStore.solution.use()
+  const [store, storeActions] = AppStore.eventStorm.use()
 
   useEffect(() => {
     storeActions.setCurrentSolution(props.route.params.solution)
@@ -29,8 +29,6 @@ const EventStormScreen: FC<NavigationProps<AppNavigation, "Solution">> = props =
         navigate("Authenticated", {});
 
   }, [authContext.authenticated])
-
-
 
   return (
     <View style={styles.container}>
@@ -46,35 +44,11 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: StatusBar.currentHeight,
     paddingHorizontal: 0,
+    backgroundColor: 'white'
   },
   gridContainer: {
     justifyContent: 'center',
-    alignItems: 'center'
-  },
-  scrollView: {
-    backgroundColor: "#fff",
-    paddingHorizontal: 0,
-    marginHorizontal: 0,
-  },
-  text: {
-    textAlign: "left",
-    fontSize: 30,
-  },
-  divider: {
-    borderWidth: 1,
-    opacity: 0.2,
-    marginBottom: theme.unit * 2
-  },
-  button: {
-    position: "absolute",
-    alignSelf: "center",
-    height: 30,
-    width: "90%",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "purple",
-    borderRadius: 8,
-    top: "90%",
+    alignItems: 'center',
   },
 });
 

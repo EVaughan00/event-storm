@@ -44,8 +44,8 @@ const HomeFooter: FunctionComponent<Props> = (props) => {
         onPress={() => viewCreateSolutionForm(true)}
         hide={home.currentCardSection != 0}
         showOnUpdate={home.currentCardSection}
-        beginScroll={home.beginVerticalScroll.contentOffset}
-        activeScroll={home.verticalScroll.contentOffset}
+        beginScroll={home.beginVerticalScroll}
+        activeScroll={(home.verticalScroll as any)._value}
       />
     </View>
   );

@@ -20,15 +20,15 @@ namespace Server.Infrastructure
             _eventBlocks = context.GetCollection<EventBlock>(CollectionName);
         }
 
-       public async Task Create(EventBlock eventStorm)
+       public async Task Create(EventBlock block)
         {
-           var existing = _eventBlocks.FindOne(u => u.Id.Equals(eventStorm.Id));
+           var existing = _eventBlocks.FindOne(u => u.Id.Equals(block.Id));
 
             if (existing != null) 
-                throw new ServerInfrastructureException($"A event block with id: \"{eventStorm.Id}\" already exists");
+                throw new ServerInfrastructureException($"A event block with id: \"{block.Id}\" already exists");
 
             await Task.CompletedTask;
-            _eventBlocks.InsertOne(eventStorm);
+            _eventBlocks.InsertOne(block);
         }
 
         public async Task<EventBlock> GetById(string id) 
@@ -42,15 +42,26 @@ namespace Server.Infrastructure
             return result;
         }
 
-        public async Task Update(EventBlock eventStorm)
+        public async Task<List<EventBlock>> GetAllBySolutionId(string id) 
         {
-            var existing = _eventBlocks.FindOne(u => u.Id == eventStorm.Id);
+            var result = _eventBlocks.FindList(u => u.SolutionId == new ObjectId(id));
+
+            if (result == null) 
+                throw new ServerInfrastructureException($"No event block with a solution id: \"{id}\" exists");
+
+            await Task.CompletedTask;
+            return result;
+        }
+
+        public async Task Update(EventBlock block)
+        {
+            var existing = _eventBlocks.FindOne(u => u.Id == block.Id);
 
             if (existing == null)
                 throw new ServerInfrastructureException($"No event block exists to update");
 
             await Task.CompletedTask;
-            _eventBlocks.UpdateOne(eventStorm);
+            _eventBlocks.UpdateOne(block);
         }
 
         public async Task Delete(string id)

@@ -52,17 +52,18 @@ export const CardSection: FunctionComponent<CardSectionProps> = (props) => {
       {(value) => (
         <View>
           <SearchableScrollSheet
-            active={props.index == value.currentSection}
             name={props.name}
+            onScroll={value.onScroll}
+            refreshing={props.loading}
+            searchFilter={searchFilter}
+            onRefresh={props.onRefresh}
+            onScrollEnd={value.onScrollEnd}
+            setSearchFilter={setSearchFilter}
+            onScrollBegin={value.onScrollBegin}
+            collapseOffset={value.collapseOffset}
+            active={props.index == value.currentSection}
             syncronizedCollapseOffset={value.currentSynchronizedCollapseOffset}
             updateSynchronizedCollapseOffset={value.updateCurrentSynchronizedCollapseOffset}
-            collapseOffset={value.collapseOffset}
-            onScroll={value.onScroll}
-            onScrollBegin={value.onScrollBegin}
-            searchFilter={searchFilter}
-            setSearchFilter={setSearchFilter}
-            onRefresh={props.onRefresh}
-            refreshing={props.loading}
           >
             { dataFetched && props.data.length == 0 ? (
               <Typography.SubTitle level={3}>
