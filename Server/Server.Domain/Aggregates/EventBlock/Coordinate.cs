@@ -12,6 +12,11 @@ namespace Server.Domain
     {
         public double X {get; private set;}
         public double Y {get; private set;}
+        public Coordinate() {}
+        public void From(ICoordinate coordinate) {
+            X = coordinate.X;
+            Y = coordinate.Y;
+        }
         public Coordinate(double x, double y) {X = x;Y = Y;}
         public Coordinate(ICoordinate coordinate) {X=coordinate.X;Y=coordinate.Y;}
         protected override IEnumerable<object> GetAtomicValues()

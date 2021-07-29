@@ -14,17 +14,20 @@ namespace Server.API.Queries
     public class EventStormQueries : IEventStormQueries
     {
         private readonly IEventStormUtility _eventStorm;
+        private readonly IEventBlockRepository _eventBlocks;
         private readonly ILogger<UserQueries> _logger;
 
         public EventStormQueries(
             ILogger<UserQueries> logger, 
-            IEventStormUtility eventStorm
+            IEventStormUtility eventStorm,
+            IEventBlockRepository eventBlocks
         ) {
             _eventStorm = eventStorm;
+            _eventBlocks = eventBlocks;
             _logger = logger;
         }
 
-        public async Task<EventStormDTO> GetOneBySolutionId(string id) 
+        public async Task<EventStormDTO> GetBySolutionId(string id) 
         {
             _logger.LogInformation($"Retrieving event storm for solution [{id}]");
 
@@ -38,5 +41,21 @@ namespace Server.API.Queries
 
             return EventStormDTO.Map(result);   
         }    
+
+        public async Task<EventBlockDTO> GetBlockById(string id)
+        {
+            _logger.LogInformation($"Retrieving event block with id [{id}]");
+
+            EventBlock result = null;
+
+            try {
+                result = await _eventBlocks.GetById(id);
+            } catch {}
+
+            if (result == null)
+                throw new ServerDomainException("Failed to retrieve event block");
+
+            return EventBlockDTO.Map(result);
+        }
     }
 }

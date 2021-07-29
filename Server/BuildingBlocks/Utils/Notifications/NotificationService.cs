@@ -27,7 +27,7 @@ namespace BuildingBlocks.Utils
         }
 
         public async Task SendAsync(string userId, string channel, object message) {
-            var connections = _connectionManager.GetConnections(userId);
+            var connections = _connectionManager.GetConnections(userId);    
 
             if (connections == null || connections.Count == 0) {
                 _logger.LogCritical($"Could not notify user [{userId}]: no live connections in notification hub");

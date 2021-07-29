@@ -7,6 +7,7 @@ namespace Server.API.Queries
     using MongoDB.Bson;
 
     public interface IEventStormQueries {
-        Task<EventStormDTO> GetOneBySolutionId(string id);
+        Task<EventStormDTO> GetBySolutionId(string id);
+        Task<EventBlockDTO> GetBlockById(string id);
     }
 }
