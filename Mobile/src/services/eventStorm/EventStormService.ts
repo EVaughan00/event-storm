@@ -23,4 +23,13 @@ export class EventStormService {
 
        return ApiClient.request(requestConfig)
     }
+
+    public static getBlockById(id: string) {
+        const requestConfig: AxiosRequestConfig = {
+            method: "GET",
+            url: API.server.eventStorm.getBlockById.replace('%id', id)
+        };
+
+       return ApiClient.request(requestConfig)
+    }
 }

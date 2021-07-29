@@ -13,7 +13,7 @@ export class EventStormDTO extends FormModel implements Mappable {
     public Map(): EventStormViewModel {
         var storm = new EventStormViewModel()
 
-        storm.blocks = this.blocks.map((dto) => dto.Map())
+        storm.blocks = this.blocks.map((dto) => new EventBlockDTO().copy(dto).Map())
         storm.edges = this.edges.map((dto) => dto.Map())
             
         return storm

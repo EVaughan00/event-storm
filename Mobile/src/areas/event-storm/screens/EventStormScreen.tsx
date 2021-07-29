@@ -6,8 +6,8 @@ import { AppStore } from '../../../AppStore';
 import { NavigationProps } from '../../../helpers/NavigationProps';
 import { AuthenticationContext } from '../../../providers/AuthenticationProvider';
 import SolutionViewModel from '../../../services/solution/models/SolutionViewModel';
-import theme from '../../../theme';
 import { EventStormBody } from '../components/Body';
+import { EventStormHeader } from '../components/Header';
 
 
 export interface EventStormScreenProps {
@@ -22,6 +22,7 @@ const EventStormScreen: FC<NavigationProps<AppNavigation, "Solution">> = props =
 
   useEffect(() => {
     storeActions.setCurrentSolution(props.route.params.solution)
+    storeActions.updateEventStorm(true)
 }, [props.route.params.solution])
 
   useEffect(() => {
@@ -32,23 +33,21 @@ const EventStormScreen: FC<NavigationProps<AppNavigation, "Solution">> = props =
 
   return (
     <View style={styles.container}>
-      <View style={styles.gridContainer}>
-        <EventStormBody/>
-      </View>
+      <EventStormHeader />
+      <EventStormBody/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     paddingTop: StatusBar.currentHeight,
     paddingHorizontal: 0,
-    backgroundColor: 'white'
-  },
-  gridContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: 'white',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    height: '100%',
+    width: '100%'
   },
 });
 

@@ -1,16 +1,20 @@
-import { NativeScrollEvent } from "react-native";
+import EventStormViewModel from "../../services/eventStorm/models/EventStormViewModel";
 import SolutionViewModel from "../../services/solution/models/SolutionViewModel";
 import { BaseStore } from "../../utils/BaseStore";
 import { GridNode } from "./components/Grid/GridNode";
 
 
 export interface EventStormState {
-    currentSolution: SolutionViewModel
+    // eventStorm: EventStormViewModel | undefined
+    currentSolution: SolutionViewModel | undefined
+    currentGridNode: GridNode
     updatedEventStorm: boolean
 }
 
 export interface EventStormActions {
+    // setEventStorm: (eventStorm: EventStormViewModel) => void
     setCurrentSolution: (solution: SolutionViewModel) => void
+    setCurrentGridNode: (gridNode: GridNode) => void
     updateEventStorm: (updated: boolean) => void
 }
 
@@ -20,8 +24,10 @@ export class EventStormStore
 
     protected prototype = EventStormStore.prototype;
     protected initialState = {
-        currentSolution: {} as SolutionViewModel,
-        updatedEventStorm: false
+        eventStorm: undefined,
+        currentSolution: undefined,
+        currentGridNode: {} as GridNode,
+        updatedEventStorm: false,
     }
 
     constructor() {
@@ -35,10 +41,26 @@ export class EventStormStore
         })
     }
 
+    public setCurrentGridNode(gridNode: GridNode) {
+        this.setState({
+            ...this.state,
+            currentGridNode: gridNode,
+        })
+    }
+
+
     public updateEventStorm(updated: boolean) {
         this.setState({
             ...this.state,
             updatedEventStorm: updated,
         })
     }
+
+
+    // public setEventStorm(eventStorm: EventStormViewModel) {
+    //     this.setState({
+    //         ...this.state,
+    //         eventStorm: eventStorm,
+    //     })
+    // }
 }

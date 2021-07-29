@@ -13,6 +13,7 @@ import Coordinate, { ICoordinate } from "../../../services/eventStorm/models/Coo
 interface Props {
   size: number
   panToCoordinate: Coordinate | undefined;
+  defaultCoordinate: Coordinate
   zoomScale: number;
   zoomed: boolean;
 }
@@ -22,7 +23,7 @@ const PanWrapper: FunctionComponent<Props> = (props) => {
   const pan = useRef(new Animated.ValueXY()).current;
   const scale = useRef(new Animated.Value(1)).current;
 
-  const [currentPosition, setCurrentPosition] = useState<ICoordinate>(new Coordinate(0, 0));
+  const [currentPosition, setCurrentPosition] = useState<ICoordinate>(props.defaultCoordinate);
 
   useEffect(() => {
     Animated.timing(scale, {

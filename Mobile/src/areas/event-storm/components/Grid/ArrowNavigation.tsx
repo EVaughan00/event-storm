@@ -12,10 +12,11 @@ interface ArrowProps {
 }
 
 export enum Direction {
-  up=270,
-  down=90,
-  left=180,
-  right=0
+  Up=270,
+  Down=90,
+  Left=180,
+  Right=0,
+  None=-1
 }
 
 export const Arrow: FunctionComponent<ArrowProps> = props => {
@@ -107,26 +108,26 @@ export const ArrowNavigation: FunctionComponent<Props> = props => {
   return (   
     <> 
      {
-       props.canMoveDirection(Direction.right) && 
-       <Arrow scale={props.scale} coordinate={rightArrowOffset()} onPress={props.onPress} rotation={Direction.right} />
+       props.canMoveDirection(Direction.Right) && 
+       <Arrow scale={props.scale} coordinate={rightArrowOffset()} onPress={props.onPress} rotation={Direction.Right} />
      }         
      {
-      props.canMoveDirection(Direction.left) && 
-      <Arrow scale={props.scale} coordinate={leftArrowOffset()} onPress={props.onPress} rotation={Direction.left} />
+      props.canMoveDirection(Direction.Left) && 
+      <Arrow scale={props.scale} coordinate={leftArrowOffset()} onPress={props.onPress} rotation={Direction.Left} />
      }
      {
-       props.canMoveDirection(Direction.up) &&
-      <Arrow scale={props.scale} coordinate={upArrowOffset()} onPress={props.onPress} rotation={Direction.up} />
+       props.canMoveDirection(Direction.Up) &&
+      <Arrow scale={props.scale} coordinate={upArrowOffset()} onPress={props.onPress} rotation={Direction.Up} />
      } 
      {
-      props.canMoveDirection(Direction.down) &&
-      <Arrow scale={props.scale} coordinate={downArrowOffset()} onPress={props.onPress} rotation={Direction.down} />
+      props.canMoveDirection(Direction.Down) &&
+      <Arrow scale={props.scale} coordinate={downArrowOffset()} onPress={props.onPress} rotation={Direction.Down} />
      }
     </>
   )
 }
 
-export const Grid: FunctionComponent = () => {
+export const SvgGrid: FunctionComponent = () => {
   return (
     <Svg>
       <Path d="M10 0 V100" scale={2} strokeWidth="1" />

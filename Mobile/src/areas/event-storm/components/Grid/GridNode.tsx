@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Keyboard, StyleSheet, View } from "react-native";
 import { Circle, Rect } from "react-native-svg";
+import { AuthenticationContext } from "../../../../providers/AuthenticationProvider";
+import { WebSocketContext } from "../../../../providers/WebSocketProvider";
 import Coordinate from "../../../../services/eventStorm/models/Coordinate";
 import EventBlockViewModel from "../../../../services/eventStorm/models/EventBlockViewModel";
-import { INodeActions, NodeActions } from "../../helpers/GridActions";
+import { GridContext, IGridContext } from "./Grid";
 
 interface Props {
   coordinate: Coordinate;
@@ -19,7 +21,6 @@ interface State {
 export class GridNode extends Component<Props, State> {
 
   private _isSelected = false;
-  private _hasBlock = false;
   private _coordinate = new Coordinate(0,0)
   private _block: EventBlockViewModel | undefined = undefined
 
@@ -33,7 +34,7 @@ export class GridNode extends Component<Props, State> {
       lastPress: -400,
       hasBlock: props.block != undefined,
       scaled: false,
-    };
+    };    
   }
 
   public get coordinate(): Coordinate {
@@ -46,7 +47,11 @@ export class GridNode extends Component<Props, State> {
 
   public set isSelected(status: boolean) {
     this._isSelected = status;
-    this.scale()
+
+    this.setState({
+      ...this.state,
+      scaled: this._isSelected,
+    });
   }
 
   public get block(): EventBlockViewModel | undefined {
@@ -54,45 +59,55 @@ export class GridNode extends Component<Props, State> {
   }
 
   public set block(block: EventBlockViewModel | undefined) {
-    this.block = block
-    this.blockify()
+    this._block = block
+    
+    this.setState({
+      ...this.state,
+      hasBlock: block != undefined,
+    });
   }
 
-  handlePress = (context: INodeActions) => {
+  handlePress = (context: IGridContext) => {
     Keyboard.dismiss()
     this.isSelected = !this.isSelected
-    context.onNodePress(this);
+    context.selectNode(this)
+
+    if (!this._isSelected)
+      context.setZoomed(false)
+    else
+      context.setZoomed(true)
+
   };
 
-  handleDoublePress = (context: INodeActions) => {
-    const time = new Date().getTime();
-    const delta = time - this.state.lastPress;
+  // handleDoublePress = (context) => {
+  //   const time = new Date().getTime();
+  //   const delta = time - this.state.lastPress;
 
-    const DOUBLE_PRESS_DELAY = 400;
-    if (delta < DOUBLE_PRESS_DELAY) {
-      context.onNodeDoublePress(this);
-    }
-    this.setState({
-      ...this.state,
-      lastPress: time,
-    });
+  //   const DOUBLE_PRESS_DELAY = 400;
+  //   if (delta < DOUBLE_PRESS_DELAY) {
+  //     context.onNodeDoublePress(this);
+  //   }
+  //   this.setState({
+  //     ...this.state,
+  //     lastPress: time,
+  //   });
 
-    return true;
-  };
+  //   return true;
+  // };
+  componentDidMount() {
+    // const { notifications  } = this.context.service.connections;
 
-  scale = () => {
-    this.setState({
-      ...this.state,
-      scaled: this._isSelected,
-    });
-  };
+    // const handleBlockCreated = (id: string) => {
 
-  blockify = () => {
-    this.setState({
-      ...this.state,
-      hasBlock: this._hasBlock,
-    });
-  };
+    //   console.log(id)
+    // }
+
+    // notifications.on("blockCreated", handleBlockCreated)
+  }
+
+  shouldComponentUpdate(previousProps: Props) {
+    return previousProps.block != this.props.block
+  }
 
   node = () => {
     return (
@@ -109,27 +124,20 @@ export class GridNode extends Component<Props, State> {
 
   eventBlock = () => {
     return (
-      <Rect
-        x={
-          this.state.scaled
-            ? this._coordinate.x - 25
-            : this._coordinate.x - 20
-        }
-        y={
-          this.state.scaled
-            ? this._coordinate.y - 12.5
-            : this._coordinate.y - 10
-        }
-        width={this.state.scaled ? "50" : "40"}
-        height={this.state.scaled ? "25" : "20"}
-        fill="green"
+      <Circle
+        cx={this._coordinate.x}
+        cy={this._coordinate.y}
+        r={this.state.scaled ? "10" : "6"}
+        stroke="#EB5A5A"
+        strokeWidth="1"
+        fill="#EB5A5A"
       />
     );
   };
 
   render() {
     return (
-      <NodeActions.Consumer>
+      <GridContext.Consumer>
         {(actions) => (
           <View style={[StyleSheet.absoluteFill, styles.wrapper]}>
             {this.state.hasBlock ? this.eventBlock() : this.node()}
@@ -139,11 +147,11 @@ export class GridNode extends Component<Props, State> {
               width="40"
               height="40"
               onPress={() => this.handlePress(actions!)}
-              onStartShouldSetResponder={() => this.handleDoublePress(actions!)}
+              // onStartShouldSetResponder={() => this.handleDoublePress(actions!)}
             />
           </View>
         )}
-      </NodeActions.Consumer>
+      </GridContext.Consumer>
     );
   }
 }
@@ -159,3 +167,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
+
+function nodesAreEqual(prevNode, nextNode) {
+  return prevNode.block == nextNode.block
+}
+
+export const MemoizedGridNode = React.memo(GridNode, nodesAreEqual)

@@ -1,8 +1,21 @@
+import { FormModel } from "../../../utils/FormModel";
 
 export type ICoordinate = {
     x: number;
     y: number;
 };
+
+export class CoordinateDTO extends FormModel {
+    public x: number = 0;
+    public y: number = 0;
+
+    public Map(): Coordinate {
+        return new Coordinate(
+            this.x,
+            this.y
+        )
+    }
+}
 
 export default class Coordinate implements ICoordinate {
     private _x: number; 

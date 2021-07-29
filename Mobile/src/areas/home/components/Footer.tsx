@@ -16,7 +16,6 @@ const HomeFooter: FunctionComponent<Props> = (props) => {
   const navigation = useNavigation()
 
   const handleCreateSolution = name => {
-    viewCreateSolutionForm(false)
     homeActions.updateSolutionCards(true)
 
     SolutionService.getSolutionByName(name)
@@ -27,6 +26,7 @@ const HomeFooter: FunctionComponent<Props> = (props) => {
         )
       }
     )
+    viewCreateSolutionForm(false)
   }
 
   return (

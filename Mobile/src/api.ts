@@ -31,7 +31,8 @@ export const API = {
 
         eventStorm: {
             createBlock: `${ENV.connections.api}/event-storm/block/create`, // PUT
-            getBySolution: `${ENV.connections.api}/event-storm/%solutionid`, // GET
+            getBySolution: `${ENV.connections.api}/event-storm/grid/%solutionid`, // GET
+            getBlockById: `${ENV.connections.api}/event-storm/block/%id`, // GET
         },
 
         template: {

@@ -22,13 +22,20 @@ const WelcomeScreen: NavigatedFC<AppNavigation, "Welcome"> = props => {
     const authContext = React.useContext(AuthenticationContext);
     const { route, navigation } = props;     
 
+    const toRegistration = () => navigation.navigate("Register", {});
+    const toAuthenticated = () => navigation.navigate("Authenticated", {});
+
     React.useEffect(() => {
         if (authContext.authenticated)
-            navigation.navigate("Authenticated", {});
+            toAuthenticated()
 
     }, [authContext.authenticated])
 
-    const toRegistration = () => navigation.navigate("Register", {});
+
+    const handleLoggedIn = () => {
+        viewLoginForm(false)
+        toAuthenticated()
+    }
     
     return (
 
@@ -36,7 +43,7 @@ const WelcomeScreen: NavigatedFC<AppNavigation, "Welcome"> = props => {
             <Popup title={`Sign in`}
                 visible={loggingIn} 
                 onClose={() => viewLoginForm(false)}>
-                <LoginForm onFinish={() => viewLoginForm(false)} />
+                <LoginForm onFinish={handleLoggedIn} />
             </Popup>
                 <View style={ styles.container }>
                     <Image style={styles.image} source={assets.welcome} />

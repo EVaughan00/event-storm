@@ -1,137 +1,118 @@
-import React, { Component } from "react";
+import React, {
+  createContext,
+  FunctionComponent,
+  useContext,
+  useEffect,
+  useState
+} from "react";
 import { StyleSheet, View } from "react-native";
 import Svg from "react-native-svg";
+import { AppStore } from "../../../../AppStore";
+import { WebSocketContext } from "../../../../providers/WebSocketProvider";
+import { EventStormService } from "../../../../services/eventStorm/EventStormService";
 import Coordinate from "../../../../services/eventStorm/models/Coordinate";
-import EventStormViewModel from "../../../../services/eventStorm/models/EventStormViewModel";
-import { INodeActions, NodeActions } from "../../helpers/GridActions";
-import { GridBuilder } from "../../helpers/GridBuilder";
+import { EventBlockDTO } from "../../../../services/eventStorm/models/EventBlockDTO";
+import { GridSettings } from "../../helpers/GridBuilder";
 import PanWrapper from "../../helpers/PanWrapper";
 import { ArrowNavigation, Direction } from "./ArrowNavigation";
 import { GridNode } from "./GridNode";
-import { GridSettings } from "./GridSettings";
 
 interface Props {
-  eventStorm: EventStormViewModel | undefined;
-  onSelectNode: (node: GridNode | undefined) => void;
+  nodes: JSX.Element[];
 }
 
-interface State {
-  currentGridNode: GridNode;
-  zoomed: boolean;
-  panning: boolean;
-  showArrows: boolean;
+export interface IGridContext {
+  zoomed: boolean
+  selectedNode: GridNode | undefined
+  panning: boolean
+  showGridArrows: boolean
+  settings: GridSettings
+  setZoomed: (zoomed: boolean) => void
+  selectNode: (node: GridNode) => void
+  setPanning: (panning: boolean) => void
+  setShowGridArrows: (showArrows: boolean) => void
 }
 
-export class Grid extends Component<Props, State> {
+export const GridContext = createContext<IGridContext>({} as IGridContext)
 
-  private _nodeActions: INodeActions;
-  private _eventStorm: EventStormViewModel | undefined;
-  private _nodes: JSX.Element[];
+export const Grid: FunctionComponent<Props> = (props) => {
 
-  constructor(props: Props) {
-    super(props);
+  const gridContext = useContext(GridContext);
+  const [previousNode, setPreviousNode] = useState<GridNode | undefined>(undefined);
 
-    this._nodeActions = {
-      onNodePress: this.handleGridNodeSelection,
-      onNodeDoublePress: this.handleNodeDoublePress,
-    };
+  useEffect(() => {
+    const node = gridContext.selectedNode;
 
-    this.state = {
-      currentGridNode: {} as GridNode,
-      zoomed: false,
-      panning: false,
-      showArrows: false,
-    };
+    if (node) {
+      if (previousNode && previousNode != node)
+        previousNode.isSelected = false
 
-    this._eventStorm = props.eventStorm;
-    this._nodes = GridBuilder.buildNodes(this._eventStorm?.blocks);
-  }
-
-  handleNodeDoublePress = (node: GridNode) => {};
-
-  handleGridNodeSelection = (node: GridNode) => {
-    let zoom = false;
-
-    if (this.state.currentGridNode != node) {
-      zoom = true;
-      this.state.currentGridNode.isSelected = false;
-    } else if (this.state.currentGridNode == node && !this.state.zoomed) {
-      zoom = true;
+      gridContext.setShowGridArrows(node.isSelected);
+      setPreviousNode(node);
     }
 
-    this.setState({
-      ...this.state,
-      zoomed: zoom,
-      currentGridNode: node,
-      showArrows: node.isSelected,
-    });
+  }, [gridContext.selectedNode]);
 
-    this.props.onSelectNode(node.isSelected ? node : undefined);
-  };
-
-  handleArrowNavigation = (direction: Direction) => {
+  const handleArrowNavigation = (direction: Direction) => {
     console.log(direction);
-    if (!this.handleAvailableDirection(direction)) return;
+    if (!handleAvailableDirection(direction)) return;
   };
 
-  handleAvailableDirection = (direction: Direction) => {
+  const handleAvailableDirection = (direction: Direction) => {
     switch (direction) {
-      case Direction.right:
+      case Direction.Right:
         return (
-          this.state.currentGridNode.coordinate.x <
-          GridSettings.size - GridSettings.nodePixelOffset
+          gridContext.selectedNode!.coordinate.x <
+          gridContext.settings.size - gridContext.settings.nodePixelOffset
         );
-      case Direction.left:
+      case Direction.Left:
         return (
-          this.state.currentGridNode.coordinate.x > GridSettings.nodePixelOffset
+          gridContext.selectedNode!.coordinate.x > gridContext.settings.nodePixelOffset
         );
-      case Direction.up:
+      case Direction.Up:
         return (
-          this.state.currentGridNode.coordinate.y > GridSettings.nodePixelOffset
+          gridContext.selectedNode!.coordinate.y > gridContext.settings.nodePixelOffset
         );
       default:
         return (
-          this.state.currentGridNode.coordinate.y <
-          GridSettings.size - GridSettings.nodePixelOffset
+          gridContext.selectedNode!.coordinate.y <
+          gridContext.settings.size - gridContext.settings.nodePixelOffset
         );
     }
   };
 
-  render() {
-    return (
-      <PanWrapper
-        size={GridSettings.size}
-        zoomScale={1.5}
-        zoomed={this.state.zoomed}
-        panToCoordinate={this.state.currentGridNode.coordinate}
-      >
-        {this.state.zoomed && (
+  const styles = StyleSheet.create({
+    grid: {
+      zIndex: -1,
+      width: gridContext.settings.size,
+      height: gridContext.settings.size,
+    },
+  });
+
+  return (
+    <PanWrapper
+      size={gridContext.settings.size}
+      zoomScale={1.5}
+      zoomed={gridContext.zoomed}
+      defaultCoordinate={previousNode ? previousNode.coordinate : new Coordinate(0,0)}
+      panToCoordinate={gridContext.selectedNode?.coordinate}
+    >
+      {gridContext.zoomed && (
           <ArrowNavigation
-            canMoveDirection={this.handleAvailableDirection}
+            canMoveDirection={handleAvailableDirection}
             scale={1}
-            onPress={this.handleArrowNavigation}
+            onPress={handleArrowNavigation}
             coordinate={
               new Coordinate(
-                this.state.currentGridNode.coordinate.x,
-                this.state.currentGridNode.coordinate.y
+                gridContext.selectedNode!.coordinate.x,
+                gridContext.selectedNode!.coordinate.y
               )
             }
           />
         )}
-        <NodeActions.Provider value={this._nodeActions}>
-          <View style={styles.grid}>
-            <Svg>{this._nodes}</Svg>
-          </View>
-        </NodeActions.Provider>
-      </PanWrapper>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  grid: {
-    zIndex: -1,
-    width: GridSettings.size,
-    height: GridSettings.size,
-  },
-});
+      <View style={styles.grid}>
+        <Svg>{props.nodes}</Svg>
+      </View>
+    </PanWrapper>
+  );
+};

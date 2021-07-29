@@ -5,7 +5,6 @@ import { StyleSheet, View } from "react-native";
 import { AppStore } from "../../../AppStore";
 import { FloatingPopup } from "../../../components/FloatingPopup";
 import { Typography } from "../../../components/Typography";
-import { sleep } from "../../../helpers/sleep";
 import SvgBackArrow from "../../../icons/BackArrow";
 import Dots from "../../../icons/Dots";
 import { SolutionService } from "../../../services/solution/SolutionService";

@@ -24,6 +24,7 @@ export function useTemplateMapper(callback: () => void, deps?: DependencyList) {
             )
           )
           .then(callback)
+          .catch()
       }, deps);
 
       return templates
@@ -41,6 +42,7 @@ export function useSolutionMapper(callback: () => void, deps?: DependencyList) {
             )
           )
           .then(callback)
+          .catch()
       }, deps);
 
       return solutions

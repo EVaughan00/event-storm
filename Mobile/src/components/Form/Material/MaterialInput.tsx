@@ -84,6 +84,7 @@ const MaterialInput: FunctionComponent<Props> = props => {
         paddingLeft: 18,
     }
 
+
     return (
         <View style={[ styles.container, style ]}>
             <TextInput 

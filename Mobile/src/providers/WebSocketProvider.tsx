@@ -13,7 +13,7 @@ const initialContext = {
     connected: false
 };
 
-const WebSocketContext = React.createContext(initialContext);
+export const WebSocketContext = React.createContext(initialContext);
 
 interface Props {
     bypass?: boolean
